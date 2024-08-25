@@ -2,6 +2,8 @@
 #define TACTICALCOMMAND_H
 
 #include "BattleStrategy.h"
+#include "TacticalPlanner.h"
+#include "WarArchives.h"
 
 using namespace std;
 
@@ -12,12 +14,20 @@ using namespace std;
 class TacticalCommand
 {
     public:
+        TacticalCommand();
         void setStrategy(BattleStrategy* s);
+        //void restoreStrategy(const std::string& label);
         void executeStrategy(); //Executes the current strategy.
         void chooseBestStrategy(); //chooses an appropraite strategy based on previous results(using the Memento pattern)
+        ~TacticalCommand();
 
     private:
         BattleStrategy* strategy;
+        TacticalPlanner* planner;
+        WarArchives* archives;
+        int enemyStrength;
+        int terrainAdvantage;
+        bool isSurprisePossible;
 };
 
 

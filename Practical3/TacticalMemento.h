@@ -9,8 +9,10 @@ using namespace std;
 class TacticalMemento
 {
     public:
-        void storeStrategy(BattleStrategy* strategy);//aptures and stores the current strategy.
+        TacticalMemento(BattleStrategy* strategy);
+        //void storeStrategy(BattleStrategy* strategy);//aptures and stores the current strategy.
         BattleStrategy* getStoredStrategy() const;
+        ~TacticalMemento();
 
     private:
         BattleStrategy* storedStrategy;

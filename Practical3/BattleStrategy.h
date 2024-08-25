@@ -7,7 +7,7 @@ class BattleStrategy
 {
     public:
         virtual void engage() = 0; //Defines the combat engagement protocol.
-        //virtual ~BattleStrategy();
+        virtual ~BattleStrategy(){}
 };
 
 

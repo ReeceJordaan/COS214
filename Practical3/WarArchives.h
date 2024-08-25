@@ -13,6 +13,7 @@ class WarArchives
         void addTacticalMemento(TacticalMemento* memento, string label);
         void removeTacticalMemento(string label);
         TacticalMemento* getMemento(const std::string& label) const;
+        ~WarArchives();
         //Any other methods you might need
 
     private:
