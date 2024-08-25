@@ -8,6 +8,9 @@ using namespace std;
 class RiverbankArtillery : public Artillery
 {
 	//Trained and Optimised for riverbank terrain.
+	public:
+		void move();
+		void attack();
 };
 
 

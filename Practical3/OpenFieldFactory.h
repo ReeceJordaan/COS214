@@ -2,6 +2,9 @@
 #define OPENFIELDFACTORY_H
 
 #include "LegionFactory.h"
+#include "OpenFieldInfantry.h"
+#include "OpenFieldCavalry.h"
+#include "OpenFieldArtillery.h"
 
 
 using namespace std;

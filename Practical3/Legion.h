@@ -2,14 +2,14 @@
 #define LEGION_H
 
 #include "UnitComponent.h"
-#include <string
+#include <string>
 #include <vector>
 
 using namespace std;
 
 //Composite class
 class Legion : public UnitComponent {
-    
+
     public:
         void move();
         void fight();

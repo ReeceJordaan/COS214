@@ -2,6 +2,9 @@
 #define RIVERBANKFACTORY_H
 
 #include "LegionFactory.h"
+#include "RiverbankInfantry.h"
+#include "RiverbankCavalry.h"
+#include "RiverbankArtillery.h"
 
 using namespace std;
 

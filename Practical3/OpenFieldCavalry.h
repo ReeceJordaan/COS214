@@ -8,6 +8,9 @@ using namespace std;
 class OpenFieldCavalry : public Cavalry
 {
 	//Trained and Optimised for open fiedls terrain.
+	public:
+		void move();
+		void attack();
 };
 
 
