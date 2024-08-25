@@ -8,10 +8,12 @@ using namespace std;
 class UnitComponent
 {
     public:
-        void move();
-        void fight();
-        void add(UnitComponent* component);
-        UnitComponent* remove(UnitComponent* componet);
+        virtual void move() = 0;
+        virtual void fight() = 0;
+        virtual void add(UnitComponent* component) = 0;
+        virtual void remove(UnitComponent* component) = 0;
+        virtual UnitComponent* getChild(int param) = 0;
+        virtual ~UnitComponent();
 };
 
 
