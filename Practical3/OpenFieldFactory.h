@@ -6,17 +6,12 @@
 #include "OpenFieldCavalry.h"
 #include "OpenFieldArtillery.h"
 
-
-using namespace std;
-
-class OpenFieldFactory : public LegionFactory
-{
+class OpenFieldFactory : public LegionFactory {
 	public:
-		Infantry* createInfantry();
-		Cavalry* createCavalry();
-		Artillery* createArtillery();
+		Infantry* createInfantry(int health, int defence, int attack);
+		Cavalry* createCavalry(int health, int defence, int attack);
+		Artillery* createArtillery(int health, int defence, int attack);
 		void deployArtillery();
 };
-
 
 #endif

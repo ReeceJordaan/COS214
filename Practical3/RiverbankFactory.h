@@ -6,16 +6,12 @@
 #include "RiverbankCavalry.h"
 #include "RiverbankArtillery.h"
 
-using namespace std;
-
-class RiverbankFactory : public LegionFactory
-{
+class RiverbankFactory : public LegionFactory {
 	public:
-		Infantry* createInfantry();
-		Cavalry* createCavalry();
-		Artillery* createArtillery();
+		Infantry* createInfantry(int health, int defence, int attack);
+		Cavalry* createCavalry(int health, int defence, int attack);
+		Artillery* createArtillery(int health, int defence, int attack);
 		void deployArtillery();
 };
-
 
 #endif

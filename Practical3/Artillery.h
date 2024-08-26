@@ -3,17 +3,16 @@
 
 #include "UnitComponent.h"
 
-using namespace std;
-//Description: These classes inherit from LegionUnit and are tailored with specialised behaviors
-//and attributes that reflect their respective roles on the battlefield.
-
-class Artillery : public UnitComponent
-{
+class Artillery : public UnitComponent {
     public:
 		virtual void move() = 0;
-        virtual void attack() = 0;
+        virtual void fight() = 0;
         virtual ~Artillery() = default;
-    //Delivers long-range support and bombardment capabilities.
+
+    private: 
+        int health;
+        int defence;
+        int attack;
 };
 
 

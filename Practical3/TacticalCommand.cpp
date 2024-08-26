@@ -25,8 +25,7 @@ void TacticalCommand::setStrategy(BattleStrategy* strategy) {
 
 void TacticalCommand::chooseBestStrategy() {
     std::cout << "Choosing the best strategy based on previous engagements..." << std::endl;
-    
-    // Randomly pick between one of the three strategies or the best strategy
+
     int randomStrategy = std::rand() % 4;
 
     if (randomStrategy == 0) {
@@ -47,7 +46,7 @@ void TacticalCommand::chooseBestStrategy() {
         if (bestMemento != nullptr) {
             planner->restoreMemento(bestMemento);
         } else {
-            setStrategy(new Flanking()); // Default if no memento exists
+            setStrategy(new Flanking());
         }
     }
 }

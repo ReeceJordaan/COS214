@@ -1,16 +1,16 @@
 #include "OpenFieldFactory.h"
 #include <iostream>
 
-Infantry* OpenFieldFactory::createInfantry(){
-    return new OpenFieldInfantry();
+Infantry* OpenFieldFactory::createInfantry(int health, int defence, int attack){
+    return new OpenFieldInfantry(health, defence, attack);
 }
 
-Cavalry* OpenFieldFactory::createCavalry(){
-    return new OpenFieldCavalry();
+Cavalry* OpenFieldFactory::createCavalry(int health, int defence, int attack){
+    return new OpenFieldCavalry(health, defence, attack);
 }
 
-Artillery* OpenFieldFactory::createArtillery(){
-    return new OpenFieldArtillery();
+Artillery* OpenFieldFactory::createArtillery(int health, int defence, int attack){
+    return new OpenFieldArtillery(health, defence, attack);
 }
 
 void OpenFieldFactory::deployArtillery(){

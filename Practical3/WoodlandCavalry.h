@@ -3,14 +3,16 @@
 
 #include "Cavalry.h"
 
-using namespace std;
-
-class WoodlandCavalry : public Cavalry
-{
-	//Trained and optimised for woodlands terrain.
+class WoodlandCavalry : public Cavalry {
 	public:
+		WoodlandCavalry(int health, int defence, int attack);
 		void move();
-		void attack();
+		void fight();
+
+	private: 
+		int health;
+		int defence;
+		int attack;
 };
 
 

@@ -6,15 +6,11 @@
 #include "WoodlandCavalry.h"
 #include "WoodlandArtillery.h"
 
-
-using namespace std;
-
-class WoodlandFactory : public LegionFactory
-{
+class WoodlandFactory : public LegionFactory {
 	public:
-		Infantry* createInfantry();
-		Cavalry* createCavalry();
-		Artillery* createArtillery();
+		Infantry* createInfantry(int health, int defence, int attack);
+		Cavalry* createCavalry(int health, int defence, int attack);
+		Artillery* createArtillery(int health, int defence, int attack);
 		void deployArtillery();
 };
 

@@ -1,18 +1,23 @@
 #include "Legion.h"
 #include <algorithm>
 
+Legion::Legion(int health, int defence, int attack) {
+    this->health = health;
+    this->defence = defence;
+    this->attack = attack;
+}
+
 void Legion::move() {
     std::cout << "Legion marching forward in tight formation." << std::endl;
 }
 
-void Legion::attack() {
+void Legion::fight() {
     std::cout << "Legion engaging the enemy with disciplined precision." << std::endl;
 }
 
 void Legion::size() {
     std::cout << "There are " << children.size() << " units in the legion." << std::endl;
 }
-
 
 void Legion::add(UnitComponent* component) {
     children.push_back(component);

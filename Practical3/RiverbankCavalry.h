@@ -3,15 +3,16 @@
 
 #include "Cavalry.h"
 
-using namespace std;
-
-class RiverbankCavalry : public Cavalry
-{
-	//Trained and Optimised for riverbank terrain.
+class RiverbankCavalry : public Cavalry {
 	public:
+		RiverbankCavalry(int health, int defence, int attack);
 		void move();
-		void attack();
-};
+		void fight();
 
+	private: 
+		int health;
+		int defence;
+		int attack;
+};
 
 #endif

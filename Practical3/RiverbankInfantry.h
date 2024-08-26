@@ -3,15 +3,16 @@
 
 #include "Infantry.h"
 
-using namespace std;
-
-class RiverbankInfantry : public Infantry
-{
-	//Trained and Optimised for riverbank terrain.
+class RiverbankInfantry : public Infantry {
 	public:
+		RiverbankInfantry(int health, int defence, int attack);
 		void move();
-		void attack();
-};
+		void fight();
 
+	private: 
+		int health;
+		int defence;
+		int attack;
+};
 
 #endif

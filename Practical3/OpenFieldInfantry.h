@@ -3,14 +3,16 @@
 
 #include "Infantry.h"
 
-using namespace std;
-
-class OpenFieldInfantry : public Infantry
-{
-	//Trained and Optimised for open fiedls terrain.
+class OpenFieldInfantry : public Infantry {
 	public:
+		OpenFieldInfantry(int health, int defence, int attack);
 		void move();
-		void attack();
+		void fight();
+
+	private: 
+		int health;
+		int defence;
+		int attack;
 };
 
 #endif

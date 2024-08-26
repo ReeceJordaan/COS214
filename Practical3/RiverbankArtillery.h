@@ -3,15 +3,16 @@
 
 #include "Artillery.h"
 
-using namespace std;
-
-class RiverbankArtillery : public Artillery
-{
-	//Trained and Optimised for riverbank terrain.
+class RiverbankArtillery : public Artillery {
 	public:
+		RiverbankArtillery(int health, int defence, int attack);
 		void move();
-		void attack();
-};
+		void fight();
 
+	private: 
+		int health;
+		int defence;
+		int attack;
+};
 
 #endif

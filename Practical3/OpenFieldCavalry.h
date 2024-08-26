@@ -3,15 +3,16 @@
 
 #include "Cavalry.h"
 
-using namespace std;
-
-class OpenFieldCavalry : public Cavalry
-{
-	//Trained and Optimised for open fiedls terrain.
+class OpenFieldCavalry : public Cavalry {
 	public:
+		OpenFieldCavalry(int health, int defence, int attack);
 		void move();
-		void attack();
-};
+		void fight();
 
+	private: 
+		int health;
+		int defence;
+		int attack;
+};
 
 #endif

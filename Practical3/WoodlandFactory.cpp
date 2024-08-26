@@ -1,16 +1,16 @@
 #include "WoodlandFactory.h"
 #include <iostream>
 
-Infantry* WoodlandFactory::createInfantry() {
-    return new WoodlandInfantry();
+Infantry* WoodlandFactory::createInfantry(int health, int defence, int attack) {
+    return new WoodlandInfantry(health, defence, attack);
 }
 
-Cavalry* WoodlandFactory::createCavalry() {
-    return new WoodlandCavalry();
+Cavalry* WoodlandFactory::createCavalry(int health, int defence, int attack) {
+    return new WoodlandCavalry(health, defence, attack);
 }
 
-Artillery* WoodlandFactory::createArtillery() {
-    return new WoodlandArtillery();
+Artillery* WoodlandFactory::createArtillery(int health, int defence, int attack) {
+    return new WoodlandArtillery(health, defence, attack);
 }
 
 void WoodlandFactory::deployArtillery() {

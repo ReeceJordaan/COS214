@@ -1,16 +1,16 @@
 #include "RiverbankFactory.h"
 #include <iostream>
 
-Infantry* RiverbankFactory::createInfantry(){
-    return new RiverbankInfantry();
+Infantry* RiverbankFactory::createInfantry(int health, int defence, int attack){
+    return new RiverbankInfantry(health, defence, attack);
 }
 
-Cavalry* RiverbankFactory::createCavalry(){
-    return new RiverbankCavalry();
+Cavalry* RiverbankFactory::createCavalry(int health, int defence, int attack){
+    return new RiverbankCavalry(health, defence, attack);
 }
 
-Artillery* RiverbankFactory::createArtillery(){
-    return new RiverbankArtillery();
+Artillery* RiverbankFactory::createArtillery(int health, int defence, int attack){
+    return new RiverbankArtillery(health, defence, attack);
 }
 
 void RiverbankFactory::deployArtillery(){

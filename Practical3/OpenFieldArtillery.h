@@ -3,15 +3,16 @@
 
 #include "Artillery.h"
 
-using namespace std;
-
-class OpenFieldArtillery : public Artillery
-{
-	//Trained and Optimised for open fiedls terrain.
+class OpenFieldArtillery : public Artillery {
 	public:
+		OpenFieldArtillery(int health, int defence, int attack);
 		void move();
-		void attack();
-};
+		void fight();
 
+	private: 
+		int health;
+		int defence;
+		int attack;
+};
 
 #endif

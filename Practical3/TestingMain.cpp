@@ -10,50 +10,50 @@ int main() {
 
     // Testing OpenField units
     OpenFieldFactory openFieldFactory;
-    Infantry* openFieldInfantry = openFieldFactory.createInfantry();
-    Cavalry* openFieldCavalry = openFieldFactory.createCavalry();
-    Artillery* openFieldArtillery = openFieldFactory.createArtillery();
+    Infantry* openFieldInfantry = openFieldFactory.createInfantry(70, 60, 50);
+    Cavalry* openFieldCavalry = openFieldFactory.createCavalry(70, 60, 50);
+    Artillery* openFieldArtillery = openFieldFactory.createArtillery(70, 60, 50);
 
     openFieldInfantry->move();
     openFieldCavalry->move();
     openFieldArtillery->move();
     std::cout << "\n";
 
-    openFieldInfantry->attack();
-    openFieldCavalry->attack();
-    openFieldArtillery->attack();
+    openFieldInfantry->fight();
+    openFieldCavalry->fight();
+    openFieldArtillery->fight();
     std::cout << "\n\n";
 
     // Testing Riverbank units
     RiverbankFactory riverbankFactory;
-    Infantry* riverbankInfantry = riverbankFactory.createInfantry();
-    Cavalry* riverbankCavalry = riverbankFactory.createCavalry();
-    Artillery* riverbankArtillery = riverbankFactory.createArtillery();
+    Infantry* riverbankInfantry = riverbankFactory.createInfantry(60, 50, 40);
+    Cavalry* riverbankCavalry = riverbankFactory.createCavalry(60, 50, 40);
+    Artillery* riverbankArtillery = riverbankFactory.createArtillery(60, 50, 40);
 
     riverbankInfantry->move();
     riverbankCavalry->move();
     riverbankArtillery->move();
     std::cout << "\n";
 
-    riverbankInfantry->attack();
-    riverbankCavalry->attack();
-    riverbankArtillery->attack();
+    riverbankInfantry->fight();
+    riverbankCavalry->fight();
+    riverbankArtillery->fight();
     std::cout << "\n\n";
 
     // Testing Woodland units
     WoodlandFactory woodlandFactory;
-    Infantry* woodlandInfantry = woodlandFactory.createInfantry();
-    Cavalry* woodlandCavalry = woodlandFactory.createCavalry();
-    Artillery* woodlandArtillery = woodlandFactory.createArtillery();
+    Infantry* woodlandInfantry = woodlandFactory.createInfantry(50, 40, 30);
+    Cavalry* woodlandCavalry = woodlandFactory.createCavalry(50, 40, 30);
+    Artillery* woodlandArtillery = woodlandFactory.createArtillery(50, 40, 30);
 
     woodlandInfantry->move();
     woodlandCavalry->move();
     woodlandArtillery->move();
     std::cout << "\n";
 
-    woodlandInfantry->attack();
-    woodlandCavalry->attack();
-    woodlandArtillery->attack();
+    woodlandInfantry->fight();
+    woodlandCavalry->fight();
+    woodlandArtillery->fight();
 
     std::cout << "\n========== TESTING STRATEGY AND MEMENTO ==========\n\n";
 
@@ -76,7 +76,7 @@ int main() {
 
     std::cout << "\n========== TESTING COMPOSITE ==========\n\n";
 
-    Legion legion = Legion();
+    Legion legion = Legion(500, 400, 300);
 
     std::cout << "Adding units to the legion..." << std::endl;
     legion.add(openFieldInfantry);
@@ -95,7 +95,7 @@ int main() {
     //legion.toString(); create a fancy toString for bonus marks?
 
     legion.move();
-    legion.attack();
+    legion.fight();
     std::cout << "\n";
 
     std::cout << "Removing units from the legion..." << std::endl;

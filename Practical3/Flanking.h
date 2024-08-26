@@ -3,14 +3,10 @@
 
 #include "BattleStrategy.h"
 
-using namespace std;
-
-class Flanking : public BattleStrategy
-{
+class Flanking : public BattleStrategy {
 	public:
-                void engage();
-                BattleStrategy* clone() const;
+        void engage();
+        BattleStrategy* clone() const;
 };
-
 
 #endif

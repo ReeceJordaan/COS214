@@ -5,14 +5,11 @@
 #include "Cavalry.h"
 #include "Artillery.h"
 
-using namespace std;
-
-class LegionFactory
-{
+class LegionFactory {
 	public:
-		virtual Infantry* createInfantry() = 0;
-		virtual Cavalry* createCavalry() = 0;
-		virtual Artillery* createArtillery() = 0;
+		virtual Infantry* createInfantry(int health, int defence, int attack) = 0;
+		virtual Cavalry* createCavalry(int health, int defence, int attack) = 0;
+		virtual Artillery* createArtillery(int health, int defence, int attack) = 0;
 		virtual void deployArtillery() = 0;
 		virtual ~LegionFactory() = default;
 };

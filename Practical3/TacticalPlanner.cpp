@@ -40,14 +40,12 @@ void TacticalPlanner::setCurrentStrategy(BattleStrategy* strategy, int enemyStre
 }
 
 bool TacticalPlanner::decideOutcome(BattleStrategy* strategy, int enemyStrength, int terrainAdvantage, bool isSurprisePossible) {
-    // Random number generator
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dist(0, 100);
     
-    int successProbability = 50; // Base probability of success
+    int successProbability = 50;
 
-    // Adjust probability based on strategy
     if (dynamic_cast<Flanking*>(strategy)) {
         successProbability += 10;
     } else if (dynamic_cast<Ambush*>(strategy) && isSurprisePossible) {
@@ -56,16 +54,10 @@ bool TacticalPlanner::decideOutcome(BattleStrategy* strategy, int enemyStrength,
         successProbability += 5;
     }
 
-    // Adjust probability based on battlefield conditions
     successProbability -= enemyStrength / 10;      // Stronger enemy reduces success
     successProbability += terrainAdvantage / 10;   // Better terrain increases success
 
-    // Cap probability between 0 and 100
-    successProbability = std::max(0, std::min(100, successProbability));
-
-    // Decide outcome based on probability
-    int outcome = dist(gen);
-    return outcome < successProbability;
+    return dist(gen) < std::max(0, std::min(100, successProbability));
 }
 
 

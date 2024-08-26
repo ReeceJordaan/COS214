@@ -3,14 +3,16 @@
 
 #include "Artillery.h"
 
-using namespace std;
-
-class WoodlandArtillery : public Artillery
-{
-	//Trained and optimised for woodlands terrain.
+class WoodlandArtillery : public Artillery{
 	public:
+		WoodlandArtillery(int health, int defence, int attack);
 		void move();
-		void attack();
+		void fight();
+
+	private: 
+		int health;
+		int defence;
+		int attack;
 };
 
 

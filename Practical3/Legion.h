@@ -6,21 +6,22 @@
 #include <vector>
 #include <iostream>
 
-using namespace std;
-
-//Composite class
 class Legion : public UnitComponent {
 
     public:
+        Legion(int health, int defence, int attack);
         void move();
-        void attack();
+        void fight();
         void size();
         void add(UnitComponent* component);
         void remove(UnitComponent* component);
         UnitComponent* getChild(int index);
 
     private:
-        vector<UnitComponent*> children; //children = unit
+        std::vector<UnitComponent*> children;
+        int health;
+        int defence;
+        int attack;
 };
 
 #endif
