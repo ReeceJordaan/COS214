@@ -5,7 +5,7 @@
 
 class Cavalry : public UnitComponent {
     public:
-		    virtual void move() = 0;
+		virtual void move() = 0;
         virtual void fight() = 0;
         virtual ~Cavalry() = default;
         

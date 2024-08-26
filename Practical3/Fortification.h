@@ -5,8 +5,8 @@
 
 class Fortification : public BattleStrategy {
 	public:
-        void engage();
-        BattleStrategy* clone() const;
+                void engage();
+                BattleStrategy* clone() const;
 };
 
 #endif

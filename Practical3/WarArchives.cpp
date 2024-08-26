@@ -13,3 +13,12 @@ void WarArchives::addTacticalMemento(TacticalMemento* memento, const std::string
 TacticalMemento* WarArchives::getMemento(const std::string& label) {
     return mementos.count(label) ? mementos[label] : nullptr;
 }
+
+void WarArchives::removeTacticalMemento(const std::string& label) {
+    auto it = mementos.find(label);
+
+    if (it != mementos.end()) {
+        delete it->second;
+        mementos.erase(it);
+    }
+}

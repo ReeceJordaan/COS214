@@ -11,6 +11,7 @@ private:
 
 public:
     void addTacticalMemento(TacticalMemento* memento, const std::string& label);
+    void removeTacticalMemento(const std::string& label);
     TacticalMemento* getMemento(const std::string& label);
     ~WarArchives();
 };
