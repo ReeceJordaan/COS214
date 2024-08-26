@@ -8,7 +8,8 @@ using namespace std;
 class Fortification : public BattleStrategy
 {
 	public:
-        void engage();
+                void engage();
+                BattleStrategy* clone() const;
 };
 
 

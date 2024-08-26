@@ -14,7 +14,7 @@ using namespace std;
 class TacticalCommand
 {
     public:
-        TacticalCommand();
+        TacticalCommand(int enemyStrength, int terrainAdvantage, bool isSurprisePossible);
         void setStrategy(BattleStrategy* s);
         //void restoreStrategy(const std::string& label);
         void executeStrategy(); //Executes the current strategy.

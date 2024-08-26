@@ -6,10 +6,12 @@ TacticalPlanner::TacticalPlanner(){
 }
 
 void TacticalPlanner::setStrategy(BattleStrategy* strategy) {
-    if (currentStrategy != nullptr) {
+    // Check for self-assignment
+    if (currentStrategy != strategy) {
+        // If not the same, safely delete the current strategy
         delete currentStrategy;
+        currentStrategy = strategy->clone();
     }
-    currentStrategy = strategy;
 }
 
 TacticalMemento* TacticalPlanner::createMemento() {
@@ -20,6 +22,7 @@ void TacticalPlanner::restoreMemento(TacticalMemento* memento) {
     if (currentStrategy != nullptr) {
         delete currentStrategy;
     }
+
     currentStrategy = memento->getStoredStrategy();
 }
 
@@ -34,5 +37,6 @@ void TacticalPlanner::executeCurrentStrategy() {
 TacticalPlanner::~TacticalPlanner() {
     if (currentStrategy != nullptr) {
         delete currentStrategy;
+        currentStrategy = nullptr;
     }
 }

@@ -1,7 +1,7 @@
 #include "TacticalMemento.h"
 
 TacticalMemento::TacticalMemento(BattleStrategy* strategy){
-    storedStrategy = strategy;
+    storedStrategy = strategy->clone();
 }
 
 BattleStrategy* TacticalMemento::getStoredStrategy() const {

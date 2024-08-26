@@ -1,24 +1,26 @@
 #ifndef LEGION_H
 #define LEGION_H
 
-#include "UnitComponent.h"
+#include "LegionUnit.h"
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
 //Composite class
-class Legion : public UnitComponent {
+class Legion : public LegionUnit {
 
     public:
         void move();
-        void fight();
-        void add(UnitComponent* component);
-        void remove(UnitComponent* component);
-        UnitComponent* getChild(int param);
+        void attack();
+        void size();
+        void add(LegionUnit* component);
+        void remove(LegionUnit* component);
+        LegionUnit* getChild(int index);
 
     private:
-        vector<UnitComponent*> children; //children = unit
+        vector<LegionUnit*> children; //children = unit
 };
 
 #endif

@@ -9,6 +9,7 @@ class Ambush : public BattleStrategy
 {
         public:
                 void engage();
+                BattleStrategy* clone() const;
 };
 
 

@@ -1,4 +1,7 @@
 #include "TacticalCommand.h"
+#include "Flanking.h"
+#include "Ambush.h"
+#include "Fortification.h"
 #include <iostream>
 //Integrated Memento with TacticalCommand (Memento Client)
 //Constructor initializes with no strategy
@@ -13,29 +16,34 @@ TacticalCommand::TacticalCommand(int enemyStrength, int terrainAdvantage, bool i
 
 // Set the strategy at runtime
 void TacticalCommand::setStrategy(BattleStrategy* s) {
-    /*if (strategy != nullptr) {
-        delete strategy; // Clean up the previous strategy
+    if (strategy != s) {
+        // If not the same, safely delete the current strategy
+        delete strategy;
+        strategy = s->clone();
     }
-    strategy = s;*/
-    planner->setStrategy(s);
+
+    planner->setStrategy(strategy); // Pass the cloned strategy
 }
 
 // Execute the current strategy
 void TacticalCommand::executeStrategy() {
-    /*if (strategy != nullptr) {
+    if (strategy != nullptr) {
         strategy->engage();
     } else {
         std::cout << "No strategy set. Unable to execute." << std::endl;
-    }*/
+    }
+
+    std::string label = "???"; // temporary for testing
+
     TacticalMemento* memento = planner->createMemento();
     archives->addTacticalMemento(memento, label);
 }
 
 // Choose the best strategy based on previous results (to be implemented with Memento pattern)
 void TacticalCommand::chooseBestStrategy() {
-    // Placeholder for Memento-based strategy selection logic
     std::cout << "Choosing the best strategy based on previous engagements..." << std::endl;
-    // Simulated decision-making conditions (replace these with real conditions)
+    
+    // randomize instead?
 
     if (enemyStrength > 70 && terrainAdvantage < 60) {
         std::cout << "Choosing Fortification strategy based on battlefield conditions..." << std::endl;
@@ -47,14 +55,22 @@ void TacticalCommand::chooseBestStrategy() {
         std::cout << "Choosing Flanking strategy based on battlefield conditions..." << std::endl;
         setStrategy(new Flanking());
     }
-
-    // Execute the chosen strategy
-    executeStrategy();
 }
 
 TacticalCommand::~TacticalCommand() {
     if (strategy != nullptr) {
         delete strategy; //Clean up the current strategy
+        strategy = nullptr;
+    }
+
+    if (archives != nullptr) {
+        delete archives;
+        archives = nullptr;
+    }
+    
+    if (planner != nullptr) {
+        delete planner;
+        planner = nullptr;
     }
 }
 

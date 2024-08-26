@@ -13,5 +13,4 @@ class OpenFieldInfantry : public Infantry
 		void attack();
 };
 
-
 #endif
