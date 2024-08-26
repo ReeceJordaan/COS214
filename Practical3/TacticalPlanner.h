@@ -1,22 +1,24 @@
 #ifndef TACTICALPLANNER_H
 #define TACTICALPLANNER_H
+
+#include "BattleStrategy.h"
 #include "TacticalMemento.h"
 
-using namespace std;
-
-class TacticalPlanner
-{
+class TacticalPlanner {
     public:
         TacticalPlanner();
-        void setStrategy(BattleStrategy* strategy);
+        ~TacticalPlanner();
         TacticalMemento* createMemento();
         void restoreMemento(TacticalMemento* memento);
-        void executeCurrentStrategy();
-        ~TacticalPlanner();
+        void setCurrentStrategy(BattleStrategy* strategy,  int enemyStrength, int terrainAdvantage, bool isSurprisePossible);
 
     private:
+        bool decideOutcome(BattleStrategy* strategy, int enemyStrength, int terrainAdvantage, bool isSurprisePossible);
         BattleStrategy* currentStrategy;
+        int enemyStrength;
+        int terrainAdvantage;
+        bool isSurprisePossible;
+        bool wasSuccessful;
 };
 
-
-#endif
+#endif // TACTICALPLANNER_H

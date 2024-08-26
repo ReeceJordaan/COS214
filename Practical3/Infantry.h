@@ -1,7 +1,7 @@
 #ifndef INFANTRY_H
 #define INFANTRY_H
 
-#include "LegionUnit.h"
+#include "UnitComponent.h"
 
 using namespace std;
 //Description: These classes inherit from LegionUnit and are tailored with specialised behaviors

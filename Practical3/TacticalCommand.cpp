@@ -3,63 +3,68 @@
 #include "Ambush.h"
 #include "Fortification.h"
 #include <iostream>
-//Integrated Memento with TacticalCommand (Memento Client)
-//Constructor initializes with no strategy
+#include <ctime>
+
 TacticalCommand::TacticalCommand(int enemyStrength, int terrainAdvantage, bool isSurprisePossible) {
-    strategy = nullptr;
     planner = new TacticalPlanner();
     archives = new WarArchives();
+    strategy = nullptr;
     this->enemyStrength = enemyStrength;
     this->terrainAdvantage = terrainAdvantage;
     this->isSurprisePossible = isSurprisePossible;
-} 
-
-// Set the strategy at runtime
-void TacticalCommand::setStrategy(BattleStrategy* s) {
-    if (strategy != s) {
-        // If not the same, safely delete the current strategy
-        delete strategy;
-        strategy = s->clone();
-    }
-
-    planner->setStrategy(strategy); // Pass the cloned strategy
 }
 
-// Execute the current strategy
-void TacticalCommand::executeStrategy() {
-    if (strategy != nullptr) {
-        strategy->engage();
-    } else {
-        std::cout << "No strategy set. Unable to execute." << std::endl;
+void TacticalCommand::setStrategy(BattleStrategy* strategy) {
+    if (this->strategy != strategy) {
+        delete this->strategy;
     }
 
-    std::string label = "???"; // temporary for testing
-
-    TacticalMemento* memento = planner->createMemento();
-    archives->addTacticalMemento(memento, label);
+    this->strategy = strategy->clone();
+    planner->setCurrentStrategy(this->strategy, enemyStrength, terrainAdvantage, isSurprisePossible);
 }
 
-// Choose the best strategy based on previous results (to be implemented with Memento pattern)
 void TacticalCommand::chooseBestStrategy() {
     std::cout << "Choosing the best strategy based on previous engagements..." << std::endl;
     
-    // randomize instead?
+    // Randomly pick between one of the three strategies or the best strategy
+    int randomStrategy = std::rand() % 4;
 
-    if (enemyStrength > 70 && terrainAdvantage < 60) {
+    if (randomStrategy == 0) {
+        std::cout << "Choosing Flanking strategy based on battlefield conditions..." << std::endl;
+        setStrategy(new Flanking());
+    } else if (randomStrategy == 1) {
         std::cout << "Choosing Fortification strategy based on battlefield conditions..." << std::endl;
         setStrategy(new Fortification());
-    } else if (isSurprisePossible) {
+    } else if (randomStrategy == 2) {
         std::cout << "Choosing Ambush strategy based on battlefield conditions..." << std::endl;
         setStrategy(new Ambush());
     } else {
-        std::cout << "Choosing Flanking strategy based on battlefield conditions..." << std::endl;
-        setStrategy(new Flanking());
+        std::cout << "Reusing a successful strategy from previous engagements..." << std::endl;
+
+        std::string label = "Last Engagement";
+        TacticalMemento* bestMemento = archives->getMemento(label);
+
+        if (bestMemento != nullptr) {
+            planner->restoreMemento(bestMemento);
+        } else {
+            setStrategy(new Flanking()); // Default if no memento exists
+        }
+    }
+}
+
+void TacticalCommand::executeStrategy() {
+    if (strategy != nullptr) {
+        strategy->engage();
+        TacticalMemento* memento = planner->createMemento();
+        archives->addTacticalMemento(memento, "Last Engagement");
+    } else {
+        std::cout << "No strategy set. Unable to execute." << std::endl;
     }
 }
 
 TacticalCommand::~TacticalCommand() {
     if (strategy != nullptr) {
-        delete strategy; //Clean up the current strategy
+        delete strategy;
         strategy = nullptr;
     }
 
@@ -73,16 +78,3 @@ TacticalCommand::~TacticalCommand() {
         planner = nullptr;
     }
 }
-
-//If useful, UNCOMMENT the function below
-//don't forget to also UNCOMMENT it's definition in the .h file
-
-/*void TacticalCommand::restoreStrategy(const std::string& label) {
-    TacticalMemento* memento = archives->getTacticalMemento(label);
-    if (memento) {
-        planner->restoreMemento(memento);
-        executeStrategy();
-    } else {
-        std::cout << "No strategy found with the label: " << label << std::endl;
-    }
-}*/

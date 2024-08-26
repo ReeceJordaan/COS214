@@ -4,21 +4,13 @@
 #include "BattleStrategy.h"
 #include "TacticalPlanner.h"
 #include "WarArchives.h"
+#include <iostream>
 
-using namespace std;
-
-//Context
-//Also a Memento Client
-//Client for the Memento (as well as the Context for Strategy)
-//The idea is to use the saved mementos (from caretaker) to make informed decisions of the strategies to use
-class TacticalCommand
-{
+class TacticalCommand {
     public:
         TacticalCommand(int enemyStrength, int terrainAdvantage, bool isSurprisePossible);
-        void setStrategy(BattleStrategy* s);
-        //void restoreStrategy(const std::string& label);
-        void executeStrategy(); //Executes the current strategy.
-        void chooseBestStrategy(); //chooses an appropraite strategy based on previous results(using the Memento pattern)
+        void chooseBestStrategy();
+        void executeStrategy();
         ~TacticalCommand();
 
     private:
@@ -28,7 +20,8 @@ class TacticalCommand
         int enemyStrength;
         int terrainAdvantage;
         bool isSurprisePossible;
+        void setStrategy(BattleStrategy* strategy);
 };
 
+#endif // TACTICALCOMMAND_H
 
-#endif

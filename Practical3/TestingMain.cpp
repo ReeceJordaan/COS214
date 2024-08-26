@@ -55,7 +55,7 @@ int main() {
     woodlandCavalry->attack();
     woodlandArtillery->attack();
 
-    std::cout << "\n========== TESTING STRATEGY ==========\n\n";
+    std::cout << "\n========== TESTING STRATEGY AND MEMENTO ==========\n\n";
 
     TacticalCommand* command = new TacticalCommand(80, 50, true);
     command->chooseBestStrategy();
@@ -73,10 +73,6 @@ int main() {
     command->chooseBestStrategy();
     command->executeStrategy();
     delete command;
-
-    std::cout << "\n========== TESTING MEMENTO ==========\n\n";
-
-
 
     std::cout << "\n========== TESTING COMPOSITE ==========\n\n";
 
@@ -99,8 +95,6 @@ int main() {
     //legion.toString(); create a fancy toString for bonus marks?
 
     legion.move();
-    std::cout << "\n";
-
     legion.attack();
     std::cout << "\n";
 

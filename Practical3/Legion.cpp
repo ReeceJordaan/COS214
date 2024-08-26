@@ -14,11 +14,11 @@ void Legion::size() {
 }
 
 
-void Legion::add(LegionUnit* component) {
+void Legion::add(UnitComponent* component) {
     children.push_back(component);
 }
 
-void Legion::remove(LegionUnit* component) {
+void Legion::remove(UnitComponent* component) {
     auto it = std::find(children.begin(), children.end(), component);
 
     if (it != children.end()) {
@@ -26,7 +26,7 @@ void Legion::remove(LegionUnit* component) {
     }
 }
 
-LegionUnit* Legion::getChild(int index) {
+UnitComponent* Legion::getChild(int index) {
     if(children.empty() || index < 0 || index >= children.size()) {
         return nullptr;
     }else {
