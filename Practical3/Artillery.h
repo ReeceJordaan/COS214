@@ -8,7 +8,7 @@ using namespace std;
 //Description: These classes inherit from LegionUnit and are tailored with specialised behaviors
 //and attributes that reflect their respective roles on the battlefield.
 
-class Artillery : public LegionUnit
+class Artillery : public UnitComponent
 {
     public:
 		virtual void move() = 0;
