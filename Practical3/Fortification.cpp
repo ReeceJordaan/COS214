@@ -1,8 +1,9 @@
 #include "Fortification.h"
 #include <iostream>
+using namespace std;
 
 void Fortification::engage() {
-    std::cout << "Executing Fortification strategy: Strengthen defenses and hold the line!" << std::endl;
+   cout<<"Executing Fortification strategy."<<endl;
 }
 
 BattleStrategy* Fortification::clone() const {
