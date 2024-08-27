@@ -1,8 +1,9 @@
 #include "Ambush.h"
 #include <iostream>
+using namespace std;
 
 void Ambush::engage(){
-    std::cout << "Executing Ambush strategy: Lure the enemy into a trap!" << std::endl;
+    cout<<"Executing Ambush strategy."<endl;
 }
 
 BattleStrategy* Ambush::clone() const {
