@@ -1,8 +1,10 @@
 #include "TacticalPlanner.h"
+#include "BattleStrategy.h"
+#include "TacticalMemento.h"
 #include "Flanking.h"
 #include "Ambush.h"
 #include "Fortification.h"
-#include <random>
+#include <iostream>
 
 TacticalPlanner::TacticalPlanner() {
     currentStrategy = nullptr;
@@ -40,10 +42,7 @@ void TacticalPlanner::setCurrentStrategy(BattleStrategy* strategy, int enemyStre
 }
 
 bool TacticalPlanner::decideOutcome(BattleStrategy* strategy, int enemyStrength, int terrainAdvantage, bool isSurprisePossible) {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dist(0, 100);
-    
+    int random = std::rand() % 100;
     int successProbability = 50;
 
     if (dynamic_cast<Flanking*>(strategy)) {
@@ -57,7 +56,7 @@ bool TacticalPlanner::decideOutcome(BattleStrategy* strategy, int enemyStrength,
     successProbability -= enemyStrength / 10;      // Stronger enemy reduces success
     successProbability += terrainAdvantage / 10;   // Better terrain increases success
 
-    return dist(gen) < std::max(0, std::min(100, successProbability));
+    return random < std::max(0, std::min(100, successProbability));
 }
 
 

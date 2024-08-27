@@ -16,6 +16,7 @@ class Legion : public UnitComponent {
         void add(UnitComponent* component);
         void remove(UnitComponent* component);
         UnitComponent* getChild(int index);
+        std::string toString() const;
 
     private:
         std::vector<UnitComponent*> children;

@@ -1,5 +1,9 @@
 #include "Legion.h"
 #include <algorithm>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <sstream>
 
 Legion::Legion(int health, int defence, int attack) {
     this->health = health;
@@ -37,4 +41,21 @@ UnitComponent* Legion::getChild(int index) {
     }else {
         return children.at(index);
     }
+}
+
+std::string Legion::toString() const {
+    std::stringstream ss;
+    ss << "Legion Formation:\n";
+
+    for (const auto& child : children) {
+        std::string name = typeid(*child).name();
+        
+        size_t i = 0;
+        while (i < name.size() && std::isdigit(name[i])) {
+            ++i;
+        }
+        ss << "- " << name.substr(i) << "\n";
+    }
+
+    return ss.str();
 }

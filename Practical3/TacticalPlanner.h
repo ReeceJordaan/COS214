@@ -1,8 +1,13 @@
 #ifndef TACTICALPLANNER_H
 #define TACTICALPLANNER_H
 
+#include "TacticalPlanner.h"
 #include "BattleStrategy.h"
 #include "TacticalMemento.h"
+#include "Flanking.h"
+#include "Ambush.h"
+#include "Fortification.h"
+#include <iostream>
 
 class TacticalPlanner {
     public:

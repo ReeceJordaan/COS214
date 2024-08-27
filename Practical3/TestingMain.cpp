@@ -22,6 +22,7 @@ int main() {
     openFieldInfantry->fight();
     openFieldCavalry->fight();
     openFieldArtillery->fight();
+    openFieldFactory.deployArtillery();
     std::cout << "\n\n";
 
     // Testing Riverbank units
@@ -38,6 +39,7 @@ int main() {
     riverbankInfantry->fight();
     riverbankCavalry->fight();
     riverbankArtillery->fight();
+    riverbankFactory.deployArtillery();
     std::cout << "\n\n";
 
     // Testing Woodland units
@@ -54,6 +56,7 @@ int main() {
     woodlandInfantry->fight();
     woodlandCavalry->fight();
     woodlandArtillery->fight();
+    woodlandFactory.deployArtillery();
 
     std::cout << "\n========== TESTING STRATEGY AND MEMENTO ==========\n\n";
 
@@ -92,7 +95,7 @@ int main() {
     legion.size();
     std::cout << "\n";
 
-    //legion.toString(); create a fancy toString for bonus marks?
+    std::cout << legion.toString() << std::endl;
 
     legion.move();
     legion.fight();

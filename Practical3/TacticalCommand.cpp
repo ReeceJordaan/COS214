@@ -3,7 +3,6 @@
 #include "Ambush.h"
 #include "Fortification.h"
 #include <iostream>
-#include <ctime>
 
 TacticalCommand::TacticalCommand(int enemyStrength, int terrainAdvantage, bool isSurprisePossible) {
     planner = new TacticalPlanner();
@@ -55,6 +54,7 @@ void TacticalCommand::executeStrategy() {
     if (strategy != nullptr) {
         strategy->engage();
         TacticalMemento* memento = planner->createMemento();
+        std::cout << "Creating tactical memento..." << std::endl;
         archives->addTacticalMemento(memento, "Last Engagement");
     } else {
         std::cout << "No strategy set. Unable to execute." << std::endl;
