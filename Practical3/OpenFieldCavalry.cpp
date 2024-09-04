@@ -1,5 +1,6 @@
 #include "OpenFieldCavalry.h"
 #include <iostream>
+using namespace std;
 
 OpenFieldCavalry::OpenFieldCavalry(int health, int defence, int attack) {
     this->health = health;
@@ -8,9 +9,9 @@ OpenFieldCavalry::OpenFieldCavalry(int health, int defence, int attack) {
 }
 
 void OpenFieldCavalry::move() {
-    std::cout << "OpenField Cavalry galloping across the open terrain." << std::endl;
+    cout<<"OpenField Cavalry galloping across the open terrain."<<endl;
 }
 
 void OpenFieldCavalry::fight() {
-    std::cout << "OpenField Cavalry charging with devastating force." << std::endl;
+    cout<<"OpenField Cavalry charging with devastating force."<<endl;
 }

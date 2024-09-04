@@ -1,5 +1,6 @@
 #include "OpenFieldArtillery.h"
 #include <iostream>
+using namespace std;
 
 OpenFieldArtillery::OpenFieldArtillery(int health, int defence, int attack) {
     this->health = health;
@@ -8,9 +9,9 @@ OpenFieldArtillery::OpenFieldArtillery(int health, int defence, int attack) {
 }
 
 void OpenFieldArtillery::move(){
-    std::cout << "OpenField Artillery setting up on the plains." << std::endl;
+    cout<<"OpenField Artillery setting up on the plains."<<endl;
 }
 
 void OpenFieldArtillery::fight(){
-    std::cout << "OpenField Artillery launching a long-range bombardment." << std::endl;
+    cout<<"OpenField Artillery launching a long-range bombardment."<<endl;
 }

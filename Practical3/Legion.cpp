@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <sstream>
+#using namespace std;
 
 Legion::Legion(int health, int defence, int attack) {
     this->health = health;
@@ -12,15 +13,15 @@ Legion::Legion(int health, int defence, int attack) {
 }
 
 void Legion::move() {
-    std::cout << "Legion marching forward in tight formation." << std::endl;
+    cout<<"Legion marching forward in tight formation."<<endl;
 }
 
 void Legion::fight() {
-    std::cout << "Legion engaging the enemy with disciplined precision." << std::endl;
+    cout<<"Legion engaging the enemy with disciplined precision."<<endl;
 }
 
 void Legion::size() {
-    std::cout << "There are " << children.size() << " units in the legion." << std::endl;
+    cout<<"There are "<< children.size() <<" units in the legion."<<endl;
 }
 
 void Legion::add(UnitComponent* component) {
@@ -43,12 +44,12 @@ UnitComponent* Legion::getChild(int index) {
     }
 }
 
-std::string Legion::toString() const {
-    std::stringstream ss;
+string Legion::toString() const {
+    stringstream ss;
     ss << "Legion Formation:\n";
 
     for (const auto& child : children) {
-        std::string name = typeid(*child).name();
+        string name = typeid(*child).name();
         
         size_t i = 0;
         while (i < name.size() && std::isdigit(name[i])) {
