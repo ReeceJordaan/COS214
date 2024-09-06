@@ -1,8 +1,14 @@
 #ifndef TRUCK_H
 #define TRUCK_H
 
-class Truck {
-    
+#include<iostream>
+using namespace std;
+
+class Truck
+{
+    public:
+        virtual void startEngine() = 0;
 };
 
-#endif // TRUCK_H
+
+#endif
