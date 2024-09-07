@@ -1,9 +1,8 @@
-
 #ifndef FERTILIZERTRUCK_H
 #define FERTILIZERTRUCK_H
 
 #include "Truck.h"
-#include<iostream>
+#include <iostream>
 
 class FertilizerTruck : public Truck
 {
@@ -15,6 +14,4 @@ class FertilizerTruck : public Truck
         Soil* soilState;
 };
 
-
 #endif
-

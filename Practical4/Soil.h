@@ -17,5 +17,4 @@ class Soil
         string name;
 };
 
-
 #endif

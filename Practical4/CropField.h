@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include "SoilState.h"
+#include "Soil.h"
 #include "FarmUnit.h"
 
 class Barn;
@@ -12,13 +12,22 @@ class CropField : public FarmUnit {
     private:
         std::string cropType;
         std::vector<Barn*> barns;
-        SoilState* soilState;
+        Soil* soilState;
 
     public:
-        std::string getCropType() override;
-        SoilState* getSoilState() const;
-        void setSoilState(SoilState* state);
+        CropField(std::string cropType, int currentCapacity, int totalCapacity);
+        CropField(CropField* cropField);
+        ~CropField();
+
+        std::string getCropType();
+        Soil* getSoilState() const;
+        void setSoilState(Soil* soilState);
         std::string getSoilStateName() const;
+
+        int getCurrentCapacity() const;
+        void setCurrentCapacity(int currentCapacity);
+        int getTotalCapacity() const;
+        void setTotalCapacity(int totalCapacity);
 };
 
 #endif // CROPFIELD_H

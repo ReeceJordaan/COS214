@@ -11,6 +11,9 @@ class DrySoil : public Soil
     public:
         void harvestCrops();
         void rain();
+
+        //temp
+        DrySoil();
 };
 
 

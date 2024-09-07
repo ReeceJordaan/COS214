@@ -4,33 +4,39 @@
 #include <vector>
 #include <string>
 #include "Truck.h"
-#include "Iterator.h"
+#include "FertilizerTruck.h"
+#include "DeliveryTruck.h"
+
+class Iterator;
+class CropField;
 
 class FarmUnit {
-    private:
-        std::vector<Truck*> truckList;
+    protected:
+        std::vector<Truck*> trucks;
         int currentCapacity;
         int totalCapacity;
 
     public:
+        
+        FarmUnit(int currentCapacity, int totalCapacity);
+        FarmUnit(FarmUnit* farmUnit);
         virtual ~FarmUnit();
 
-        virtual void add(FarmUnit* farmUnit) = 0;
-        virtual void remove(FarmUnit* farmUnit) = 0;
-        virtual FarmUnit* getChild(int index) = 0;
+        virtual void add(CropField* cropField);
+        virtual void remove(CropField* cropField);
+        virtual CropField* getChild(int index);
 
-        virtual std::string getCropType() = 0;
-        virtual Iterator* createDFSIterator() = 0;
-        virtual Iterator* createBFSIterator() = 0;
+        virtual Iterator* createDFSIterator();
+        virtual Iterator* createBFSIterator();
 
-        Truck* buyTruck();
-        void sellTruck(Truck* truck);
-        void callTruck();
+        void buyTruck(std::string type);
+        void sellTruck(std::string type);
+        void callTruck(std::string type);
 
-        int getCurrentCapacity() const;
-        void setCurrentCapacity(int capacity);
-        int getTotalCapacity() const;
-        void setTotalCapacity(int capacity);
+        virtual int getCurrentCapacity() const = 0;
+        virtual void setCurrentCapacity(int currentCapacity) = 0;
+        virtual int getTotalCapacity() const = 0;
+        virtual void setTotalCapacity(int totalCapacity) = 0;
 };
 
 #endif // FARMUNIT_H

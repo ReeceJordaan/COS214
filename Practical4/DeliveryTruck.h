@@ -1,9 +1,8 @@
-
-#ifndef FERTILIZERTRUCK_H
-#define FERTILIZERTRUCK_H
+#ifndef DELIVERYTRUCK_H
+#define DELIVERYTRUCK_H
 
 #include "Truck.h"
-#include<iostream>
+#include <iostream>
 
 class DeliveryTruck : public Truck
 {
@@ -16,6 +15,4 @@ class DeliveryTruck : public Truck
         int totalCapacity;
 };
 
-
 #endif
-
