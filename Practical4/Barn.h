@@ -13,6 +13,8 @@ class Barn : public FarmUnit {
         void setCurrentCapacity(int currentCapacity);
         int getTotalCapacity() const;
         void setTotalCapacity(int totalCapacity);
+        //added function for collecting crops when the the strorage is about to be full
+        void collectCrops();
 };
 
 #endif // BARN_H
