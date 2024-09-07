@@ -2,6 +2,7 @@
 #include <vector>
 #include "CropField.h"
 #include "Barn.h"
+#include<iostream>
 
 CropField::CropField(std::string cropType, int currentCapacity, int totalCapacity) : FarmUnit(currentCapacity, totalCapacity) {
     this->cropType = cropType;
@@ -69,5 +70,5 @@ void CropField::setTotalCapacity(int totalCapacity) {
 }
 
 void CropField::applyFertilizer(){
-    cout<<"Fertilizer applied. Now we have Fruitful soil.";
+    std::cout<<"Fertilizer applied. Now we have Fruitful soil.\n";
 }
