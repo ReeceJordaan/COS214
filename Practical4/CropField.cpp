@@ -67,3 +67,7 @@ int CropField::getTotalCapacity() const {
 void CropField::setTotalCapacity(int totalCapacity) {
     this->totalCapacity = totalCapacity;
 }
+
+void CropField::applyFertilizer(){
+    cout<<"Fertilizer applied. Now we have Fruitful soil.";
+}
