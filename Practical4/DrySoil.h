@@ -1,19 +1,14 @@
 #ifndef DRYSOIL_H
 #define DRYSOIL_H
 
-#include "Soil.h"
-#include<iostream>
+#include "SoilState.h"
 
-using namespace std;
-
-class DrySoil : public Soil
+class DrySoil : public SoilState
 {
     public:
+        DrySoil();
         void harvestCrops();
         void rain();
-
-        //temp
-        DrySoil();
 };
 
 

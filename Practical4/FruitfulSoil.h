@@ -1,14 +1,12 @@
 #ifndef FRUITFULSOIL_H
 #define FRUITFULSOIL_H
 
-#include "Soil.h"
-#include<iostream>
+#include "SoilState.h"
 
-using namespace std;
-
-class FruitfulSoil : public Soil
+class FruitfulSoil : public SoilState
 {
     public:
+        FruitfulSoil();
         void harvestCrops();
         void rain();
 };

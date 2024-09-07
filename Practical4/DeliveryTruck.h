@@ -1,12 +1,15 @@
-#ifndef DELIVERYTRUCK_H
-#define DELIVERYTRUCK_H
+
+#ifndef FERTILIZERTRUCK_H
+#define FERTILIZERTRUCK_H
 
 #include "Truck.h"
-#include <iostream>
+#include "Barn.h"
+#include<iostream>
 
 class DeliveryTruck : public Truck
 {
     public:
+        DeliveryTruck(Barn* subject, int currentCapacity, int totalCapacity);
         void startEngine();
 
     private:
@@ -15,4 +18,6 @@ class DeliveryTruck : public Truck
         int totalCapacity;
 };
 
+
 #endif
+
