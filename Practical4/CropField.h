@@ -28,6 +28,9 @@ class CropField : public FarmUnit {
         void setCurrentCapacity(int currentCapacity);
         int getTotalCapacity() const;
         void setTotalCapacity(int totalCapacity);
+
+        //added applyFertilizer function
+        void applyFertilizer();
 };
 
 #endif // CROPFIELD_H
