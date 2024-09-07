@@ -1,4 +1,5 @@
 #include "Barn.h"
+#include<iostream>
 
 Barn::Barn(int currentCapacity, int totalCapacity) : FarmUnit(currentCapacity, totalCapacity) {
 
@@ -26,4 +27,8 @@ int Barn::getTotalCapacity() const {
 
 void Barn::setTotalCapacity(int totalCapacity) {
     this->totalCapacity = totalCapacity;
+}
+
+void Barn::collectCrops(){
+    std::cout<<"Collecting harvested crops since the storage capacity has reached a predefined threshold.\n";
 }
