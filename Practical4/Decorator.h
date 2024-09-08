@@ -9,12 +9,13 @@ using namespace std;
 class Decorator : public FarmUnit
 {
     public:
+        Decorator(FarmUnit* unit);
         virtual void harvest() = 0;
         virtual void increaseProduction() = 0;
         virtual void buildBarn() = 0;
         virtual void getLeftoverCapacity() = 0;
 
-    private:
+    protected:
         FarmUnit* farmUnit;
 };
 

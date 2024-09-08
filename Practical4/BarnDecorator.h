@@ -7,6 +7,7 @@
 class BarnDecorator : public Decorator
 {
 	public:
+		BarnDecorator(FarmUnit* unit);
 		void buildBarn();
         int getLeftoverCapacity();
 };

@@ -7,6 +7,7 @@
 class FertilizerDecorator : public Decorator
 {
 	public:
+		FertilizerDecorator(FarmUnit* unit);
 		void harvest();
         void increaseProduction();
 };
