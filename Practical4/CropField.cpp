@@ -72,3 +72,25 @@ void CropField::setTotalCapacity(int totalCapacity) {
 void CropField::applyFertilizer(){
     std::cout<<"Fertilizer applied. Now we have Fruitful soil.\n";
 }
+
+//for Decorator
+void CropField::harvest(){
+    std::cout<<"Harvesting "<<cropType<<" with current capacity: "<<currentCapacity<<"/"<<totalCapacity<<std::endl;
+}
+
+void CropField::increaseProduction(){
+    std::cout<<"Increasing production for "<<cropType<<"..."<<std::endl;
+    applyFertilizer();
+    cout<<"Fertilizer applied: Production increased!"<<endl;
+}
+
+void CropField::buildBarn(){
+    std::cout<<"Building a barn... Increasing total storage capacity."<<std::endl;
+    totalCapacity += 50;
+    std::cout<<"Total storage capacity is now: "<<totalCapacity<<std::endl;
+}
+
+int CropField::getLeftoverCapacity(){
+    //the remaining storage capacity
+    return totalCapacity - currentCapacity;
+}
