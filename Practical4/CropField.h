@@ -31,6 +31,11 @@ class CropField : public FarmUnit {
 
         //added applyFertilizer function
         void applyFertilizer();
+        //added these for Decorator pattern
+        void harvest();
+        void increaseProduction();
+        void buildBarn();
+        int getLeftoverCapacity();
 };
 
 #endif // CROPFIELD_H
