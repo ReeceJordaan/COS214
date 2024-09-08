@@ -37,6 +37,12 @@ class FarmUnit {
         virtual void setCurrentCapacity(int currentCapacity) = 0;
         virtual int getTotalCapacity() const = 0;
         virtual void setTotalCapacity(int totalCapacity) = 0;
+
+        //for Decorator pattern
+        virtual void harvest() = 0;
+        virtual void increaseProduction() = 0;
+        virtual void buildBarn() = 0;
+        virtual int getLeftoverCapacity() = 0;
 };
 
 #endif // FARMUNIT_H
