@@ -10,7 +10,10 @@ class BarnDecorator : public Decorator
 		BarnDecorator(FarmUnit* unit);
 		~BarnDecorator() = default;
 
-        int getLeftoverCapacity();
+		void harvest();
+	        void increaseProduction();
+	        int getLeftoverCapacity();
+
 		void print();
 };
 
