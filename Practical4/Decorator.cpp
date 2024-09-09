@@ -7,5 +7,5 @@ Decorator::Decorator(FarmUnit* unit) : FarmUnit(unit) {
 }
 
 void Decorator::print(){
-    //print something
+    cout<<"Print in BarnDecorator."<<endl;
 }
