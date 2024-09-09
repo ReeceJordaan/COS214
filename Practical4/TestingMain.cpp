@@ -1,4 +1,5 @@
 #include "CropField.h"
+#include "Barn.h"
 #include "Farm.h"
 
 int main() {
@@ -19,16 +20,30 @@ int main() {
     field7.setTotalCapacity(125);
     field8.setTotalCapacity(55);
 
-    field1.buildBarn();
-    field1.buildBarn();
-    field1.buildBarn();
-    field1.buildBarn();
+    field1.buildBarn(50);
+    field1.buildBarn(60);
+    field5.buildBarn(70);
+    field5.buildBarn(80);
 
     field1.print();
     field5.print();
     std::cout << std::endl;
 
-    std::cout << "========== Testing Farm ==========\n" << std::endl;
+    std::cout << "========== Testing Barn ==========" << std::endl;
+
+    Barn barn1 = Barn(60);
+    Barn barn2 = Barn(95);
+    Barn barn3 = Barn(&barn1);
+    Barn barn4 = Barn(&barn2);
+
+    barn3.setTotalCapacity(75);
+    barn4.setTotalCapacity(100);
+
+    barn2.print();
+    barn3.print();
+    std::cout << std::endl;
+
+    std::cout << "========== Testing Farm ==========" << std::endl;
 
     Farm farm = Farm(0, 0);
     farm.add(&field1);
@@ -43,51 +58,81 @@ int main() {
     farm.print();
     std::cout << std::endl;
 
-    std::cout << "========== Testing Iterators ==========\n" << std::endl;
+    farm.getChild(3)->print();
+    std::cout << std::endl;
+
+    farm.getChild(6)->print();
+    std::cout << std::endl;
+
+    farm.getChild(8);
+    std::cout << std::endl;
+
+    farm.getChild(-1);
+    std::cout << std::endl;
+
+    std::cout << "========== Testing Iterators ==========" << std::endl;
+
+    farm.print();
+    std::cout << std::endl << std::endl;
 
     Iterator* dfs = farm.createDFSIterator();
-    dfs->firstFarm()->print();
-    std::cout << std::endl;
-    
+
+    std::cout << "Farms cropFieldHeap (DFS):\n[";
     while(!dfs->isDone()) {
-        dfs->currentFarm()->print();
+        if (dfs->currentFarm() != dfs->firstFarm()) {
+            std::cout << ", ";
+        }
+
+        std::cout << dfs->currentFarm()->getTotalCapacity();
         dfs->next();
     }
-    std::cout << std::endl;
+    std::cout << "]" << std::endl;
 
     Iterator* bfs = farm.createBFSIterator();
-    bfs->firstFarm()->print();
-    std::cout << std::endl;
     
+    std::cout << "\nFarms cropFieldHeap (BFS):\n[";
     while(!bfs->isDone()) {
-        bfs->currentFarm()->print();
+        if (bfs->currentFarm() != bfs->firstFarm()) {
+            std::cout << ", ";
+        }
+
+        std::cout << bfs->currentFarm()->getTotalCapacity();
         bfs->next();
     }
-    std::cout << std::endl;
+    std::cout << "]" << std::endl;
 
+    std::cout << std::endl << std::endl;
+
+    std::cout << "Removing CropFields...\n" << std::endl;
     farm.remove(&field3);
     farm.remove(&field6);
 
     farm.print();
-    std::cout << std::endl;
+    std::cout << std::endl << std::endl;
 
     dfs = farm.createDFSIterator();
-    dfs->firstFarm()->print();
-    std::cout << std::endl;
     
+    std::cout << "Farms cropFieldHeap (DFS):\n[";
     while(!dfs->isDone()) {
-        dfs->currentFarm()->print();
+        if (dfs->currentFarm() != dfs->firstFarm()) {
+            std::cout << ", ";
+        }
+
+        std::cout << dfs->currentFarm()->getTotalCapacity();
         dfs->next();
     }
-    std::cout << std::endl;
+    std::cout << "]" << std::endl;
 
     bfs = farm.createBFSIterator();
-    bfs->firstFarm()->print();
-    std::cout << std::endl;
     
+    std::cout << "\nFarms cropFieldHeap (BFS):\n[";
     while(!bfs->isDone()) {
-        bfs->currentFarm()->print();
+        if (bfs->currentFarm() != bfs->firstFarm()) {
+            std::cout << ", ";
+        }
+
+        std::cout << bfs->currentFarm()->getTotalCapacity();
         bfs->next();
     }
-    std::cout << std::endl;
+    std::cout << "]" << std::endl;
 }

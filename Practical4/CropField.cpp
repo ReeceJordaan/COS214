@@ -10,8 +10,6 @@ CropField::CropField(std::string cropType, int currentCapacity, int totalCapacit
     this->cropType = cropType;
     this->barns = std::vector<Barn*>();
     this->soilState = new DrySoil();
-
-    // build barn loop
 }
 
 CropField::CropField(CropField* cropField) : FarmUnit(cropField) {
@@ -54,7 +52,9 @@ Soil* CropField::getSoilState() const {
 }
 
 void CropField::setSoilState(Soil* soilState) {
-    this->soilState = soilState;
+    if(soilState != nullptr) {
+        this->soilState = soilState;
+    }
 }
 
 std::string CropField::getSoilStateName() const {
@@ -65,13 +65,13 @@ std::string CropField::getSoilStateName() const {
     }
 }
 
-void CropField::buildBarn(){
+void CropField::buildBarn(int totalCapacity){
     std::cout<<"Building a barn... Increasing total storage capacity."<<std::endl;
 
-    totalCapacity += 50;
-    barns.push_back(new Barn(0, 50));
+    this->totalCapacity += totalCapacity;
+    barns.push_back(new Barn(totalCapacity));
 
-    std::cout<<"Total storage capacity is now: "<<totalCapacity<<std::endl;
+    std::cout << "Total storage capacity is now: " << this->totalCapacity << std::endl;
 }
 
 void CropField::buyTruck() {
@@ -109,7 +109,17 @@ void CropField::callTruck() {
 }
 
 void CropField::print() {
-    std::cout << "Print in CropField. " << getCropType() << " " << getCurrentCapacity() << "/" << getTotalCapacity() << std::endl;
+    std::cout << "\nCropField Information:\n";
+
+    std::cout << std::setw(20) << std::left << "Crop Type"
+              << std::setw(20) << std::left << "Soil State"
+              << std::setw(20) << std::left << "Total Capacity"
+              << std::setw(20) << std::left << "Current Capacity" << "\n";
+
+    std::cout << std::setw(20) << std::left << getCropType()
+              << std::setw(20) << std::left << getSoilStateName()
+              << std::setw(20) << std::left << getTotalCapacity()
+              << std::setw(20) << std::left << getCurrentCapacity() << "\n";
 }
 
 /* for Decorator

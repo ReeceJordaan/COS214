@@ -13,7 +13,7 @@ void Farm::add(CropField* cropField) {
         cropFieldHeap.push_back(cropField);
         totalCapacity += cropField->getTotalCapacity();
         currentCapacity += cropField->getCurrentCapacity();
-        //std::sort(cropFieldHeap.begin(), cropFieldHeap.end(), std::greater<int>());
+        std::sort(cropFieldHeap.begin(), cropFieldHeap.end(), [](CropField* a, CropField* b) { return a->getTotalCapacity() > b->getTotalCapacity(); });
     }
 }
 
@@ -44,8 +44,16 @@ Iterator* Farm::createBFSIterator() {
 }
 
 void Farm::print() {
-    std::cout << "Print in Farm. " << currentCapacity << "/" << totalCapacity << std::endl;
+    std::cout << "\nFarm Information:\n";
+
+    std::cout << std::setw(20) << std::left << "Total Capacity"
+              << std::setw(20) << std::left << "Current Capacity" << "\n";
+
+    std::cout << std::setw(20) << std::left << getTotalCapacity()
+              << std::setw(20) << std::left << getCurrentCapacity() << "\n";
     
+    std::cout << "\nCropField Max Heap:\n";
+
     std::cout << "[";
     for (size_t i = 0; i < cropFieldHeap.size(); ++i) {
         std::cout << cropFieldHeap.at(i)->getTotalCapacity();

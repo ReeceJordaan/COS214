@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <iomanip>
 #include "Soil.h"
 #include "FarmUnit.h"
 
@@ -24,7 +25,7 @@ class CropField : public FarmUnit {
         void setSoilState(Soil* soilState);
         std::string getSoilStateName() const;
 
-        void buildBarn();
+        void buildBarn(int totalCapacity);
 
         void buyTruck();
         void sellTruck();

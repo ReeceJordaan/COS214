@@ -1,7 +1,7 @@
 #include "Barn.h"
 #include<iostream>
 
-Barn::Barn(int currentCapacity, int totalCapacity) : FarmUnit(currentCapacity, totalCapacity) {
+Barn::Barn(int totalCapacity) : FarmUnit(0, totalCapacity) {
 
 }
 
@@ -48,5 +48,11 @@ void Barn::callTruck() {
 }
 
 void Barn::print() {
-    std::cout << "Print in Barn." << std::endl;
+    std::cout << "\nBarn Information:\n";
+
+    std::cout << std::setw(20) << std::left << "Total Capacity"
+              << std::setw(20) << std::left << "Current Capacity" << "\n";
+
+    std::cout << std::setw(20) << std::left << getTotalCapacity()
+              << std::setw(20) << std::left << getCurrentCapacity() << "\n";
 }
