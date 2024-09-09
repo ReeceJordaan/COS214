@@ -15,5 +15,6 @@ void DrySoil::harvestCrops() {
 }
 
 void DrySoil::rain() {
+    setName("Fruitful");
     cout<<"Rain has made the dry soil Fruitful!"<<endl;
 }
