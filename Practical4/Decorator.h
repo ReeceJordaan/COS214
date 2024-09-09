@@ -14,7 +14,7 @@ class Decorator : public FarmUnit
 
         virtual void harvest() = 0;
         virtual void increaseProduction() = 0;
-        virtual void getLeftoverCapacity() = 0;
+        virtual int getLeftoverCapacity() = 0;
         void print();
 
     protected:
