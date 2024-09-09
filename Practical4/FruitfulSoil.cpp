@@ -15,5 +15,6 @@ void FruitfulSoil::harvestCrops() {
 }
 
 void FruitfulSoil::rain() {
+    setName("Flooded");
     cout<<"Rain has flooded the fruitful soil!"<<endl;
 }
