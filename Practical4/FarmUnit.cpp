@@ -83,3 +83,8 @@ void FarmUnit::sellTruck() {
 void FarmUnit::callTruck() {
     std::cout << "Invalid object type. Call this on a CropField/Barn object." << std::endl;
 }
+
+void FarmUnit::applyFertilizer(){
+    std::cout<<"Applying fertilizer...\n";
+    std::cout<<"Fertilizer applied.\n";
+}
