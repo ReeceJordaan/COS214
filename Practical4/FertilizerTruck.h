@@ -3,19 +3,23 @@
 #define FERTILIZERTRUCK_H
 
 #include "Truck.h"
-#include "CropField.h"
-#include "SoilState.h"
-#include<iostream>
+#include "Soil.h"
+#include <iostream>
+
+class CropField;
 
 class FertilizerTruck : public Truck
 {
     public:
-        FertilizerTruck(CropField* subject, SoilState* soilState);
+        FertilizerTruck(CropField* subject, Soil* soilState);
+        FertilizerTruck(const FertilizerTruck* other);
+        ~FertilizerTruck() = default;
+
         void startEngine();
 
     private:
         CropField* subject;
-        SoilState* soilState;
+        Soil* soilState;
 };
 
 

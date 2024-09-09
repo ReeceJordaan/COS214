@@ -2,13 +2,18 @@
 #include <iostream>
 using namespace std;
 
-FruitfulSoil::FruitfulSoil() :  SoilState("Fruitful")
-{}
+FruitfulSoil::FruitfulSoil() :  Soil("Fruitful") {
 
-void FruitfulSoil::harvestCrops(){
-    cout<<"Harvesting abundant crops (x3)."<<endl;
 }
 
-void FruitfulSoil::rain(){
-    cout<<"Rain has flooded the soil!"<<endl;
+FruitfulSoil::FruitfulSoil(const FruitfulSoil* other) :  Soil("Fruitful") {
+
+}
+
+void FruitfulSoil::harvestCrops() {
+    cout<<"Harvesting abundant crops from fruitful soil (x3)."<<endl;
+}
+
+void FruitfulSoil::rain() {
+    cout<<"Rain has flooded the fruitful soil!"<<endl;
 }

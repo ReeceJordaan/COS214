@@ -24,18 +24,13 @@ class CropField : public FarmUnit {
         void setSoilState(Soil* soilState);
         std::string getSoilStateName() const;
 
-        int getCurrentCapacity() const;
-        void setCurrentCapacity(int currentCapacity);
-        int getTotalCapacity() const;
-        void setTotalCapacity(int totalCapacity);
-
-        //added applyFertilizer function
-        void applyFertilizer();
-        //added these for Decorator pattern
-        void harvest();
-        void increaseProduction();
         void buildBarn();
-        int getLeftoverCapacity();
+
+        void buyTruck();
+        void sellTruck();
+        void callTruck();
+
+        void print();
 };
 
 #endif // CROPFIELD_H

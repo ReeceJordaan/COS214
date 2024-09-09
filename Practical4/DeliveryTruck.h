@@ -1,21 +1,23 @@
 
-#ifndef FERTILIZERTRUCK_H
-#define FERTILIZERTRUCK_H
+#ifndef DELIVERYTRUCK_H
+#define DELIVERYTRUCK_H
 
 #include "Truck.h"
-#include "Barn.h"
-#include<iostream>
+#include <iostream>
+
+class Barn;
 
 class DeliveryTruck : public Truck
 {
     public:
-        DeliveryTruck(Barn* subject, int currentCapacity, int totalCapacity);
+        DeliveryTruck(Barn* subject);
+        DeliveryTruck(const DeliveryTruck* other);
+        ~DeliveryTruck() = default;
+
         void startEngine();
 
     private:
         Barn* subject;
-        int currentCapacity;
-        int totalCapacity;
 };
 
 

@@ -2,13 +2,18 @@
 #include<iostream>
 using namespace std;
 
-FloodedSoil::FloodedSoil() : SoilState("Flooded")
-{}
+FloodedSoil::FloodedSoil() : Soil("Flooded") {
 
-void FloodedSoil::harvestCrops(){
+}
+
+FloodedSoil::FloodedSoil(const FloodedSoil* other) : Soil("Flooded") {
+
+}
+
+void FloodedSoil::harvestCrops() {
     cout<<"No crops can be harvested; the soil is flooded."<<endl;
 }
 
-void FloodedSoil::rain(){
+void FloodedSoil::rain() {
     cout<<"The soil is already flooded."<<endl;
 }

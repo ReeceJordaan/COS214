@@ -10,10 +10,9 @@ class Decorator : public FarmUnit
 {
     public:
         Decorator(FarmUnit* unit);
-        virtual void harvest() = 0;
-        virtual void increaseProduction() = 0;
-        virtual void buildBarn() = 0;
-        virtual void getLeftoverCapacity() = 0;
+        virtual ~Decorator() = default;
+        
+        virtual void print() = 0;
 
     protected:
         FarmUnit* farmUnit;

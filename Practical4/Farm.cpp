@@ -5,17 +5,14 @@ Farm::Farm(int currentCapacity, int totalCapacity) : FarmUnit(currentCapacity, t
 }
 
 Farm::~Farm() {
-    while(!cropFieldHeap.empty()) {
-        delete cropFieldHeap.back();
-        cropFieldHeap.pop_back();
-    }
-
     cropFieldHeap.clear();
 }
 
 void Farm::add(CropField* cropField) {
     if(cropField != nullptr) {
-        cropFieldHeap.push_back(new CropField(cropField));
+        cropFieldHeap.push_back(cropField);
+        totalCapacity += cropField->getTotalCapacity();
+        currentCapacity += cropField->getCurrentCapacity();
         //std::sort(cropFieldHeap.begin(), cropFieldHeap.end(), std::greater<int>());
     }
 }
@@ -38,26 +35,23 @@ CropField* Farm::getChild(int index) {
     }
 }
 
-Iterator* Farm::createDFSIterator(std::vector<CropField*> cropFieldHeap) {
+Iterator* Farm::createDFSIterator() {
     return new DFS(cropFieldHeap);
 }
 
-Iterator* Farm::createBFSIterator(std::vector<CropField*> cropFieldHeap) {
+Iterator* Farm::createBFSIterator() {
     return new BFS(cropFieldHeap);
 }
 
-int Farm::getCurrentCapacity() const {
-    return currentCapacity;
-}
-
-void Farm::setCurrentCapacity(int currentCapacity) {
-    this->currentCapacity = currentCapacity;
-}
-
-int Farm::getTotalCapacity() const {
-    return totalCapacity;
-}
-
-void Farm::setTotalCapacity(int totalCapacity) {
-    this->totalCapacity = totalCapacity;
+void Farm::print() {
+    std::cout << "Print in Farm. " << currentCapacity << "/" << totalCapacity << std::endl;
+    
+    std::cout << "[";
+    for (size_t i = 0; i < cropFieldHeap.size(); ++i) {
+        std::cout << cropFieldHeap.at(i)->getTotalCapacity();
+        if (i < cropFieldHeap.size() - 1) {
+            std::cout << ", ";
+        }
+    }
+    std::cout << "]" << std::endl;
 }

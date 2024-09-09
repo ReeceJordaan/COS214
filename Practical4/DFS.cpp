@@ -9,25 +9,25 @@ DFS::~DFS() {
 }
 
 CropField* DFS::firstFarm() {
-    if(!cropFieldHeap.empty()) {
+    if(!this->cropFieldHeap.empty()) {
         int index = 0;
 
-        while((2 * index) + 1 < cropFieldHeap.size()) {
+        while((2 * index) + 1 < this->cropFieldHeap.size()) {
             index = (2 * index) + 1;
         }
 
-        return cropFieldHeap.at(index);
+        return this->cropFieldHeap.at(index);
     } else {
         return nullptr;
     }
 }
 
 void DFS::next() {
-    currentPos++;
+    this->currentPos++;
 }
 
 bool DFS::isDone() const {
-    if(currentPos >= cropFieldHeap.size()) {
+    if(this->currentPos >= this->cropFieldHeap.size()) {
         return true;
     } else {
         return false;
@@ -36,7 +36,7 @@ bool DFS::isDone() const {
 
 CropField* DFS::currentFarm() {
     if(!isDone()) {
-        return depthFirstSearch(0).at(currentPos);
+        return depthFirstSearch(0).at(this->currentPos);
     } else {
         return nullptr;
     }

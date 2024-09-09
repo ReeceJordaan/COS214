@@ -21,13 +21,10 @@ class Farm : public FarmUnit {
         void remove(CropField* cropField);
         CropField* getChild(int index);
 
-        Iterator* createDFSIterator(std::vector<CropField*> cropFieldHeap);
-        Iterator* createBFSIterator(std::vector<CropField*> cropFieldHeap);
+        Iterator* createDFSIterator();
+        Iterator* createBFSIterator();
 
-        int getCurrentCapacity() const;
-        void setCurrentCapacity(int currentCapacity);
-        int getTotalCapacity() const;
-        void setTotalCapacity(int totalCapacity);
+        void print();
 };
 
 #endif // FARM_H

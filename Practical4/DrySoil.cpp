@@ -1,14 +1,19 @@
 #include "DrySoil.h"
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-DrySoil::DrySoil() :  SoilState("Dry")
-{}
+DrySoil::DrySoil() :  Soil("Dry") {
 
-void DrySoil::harvestCrops(){
-    cout<<"Harvesting minimal crops (x1)."<<endl;
 }
 
-void DrySoil::rain(){
-    cout<<"Rain has made the soil Fruitful!"<<endl;
+DrySoil::DrySoil(const DrySoil* other) :  Soil("Dry") {
+
+}
+
+void DrySoil::harvestCrops() {
+    cout<<"Harvesting minimal crops from dry soil (x1)."<<endl;
+}
+
+void DrySoil::rain() {
+    cout<<"Rain has made the dry soil Fruitful!"<<endl;
 }

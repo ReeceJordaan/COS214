@@ -1,12 +1,15 @@
 #ifndef DRYSOIL_H
 #define DRYSOIL_H
 
-#include "SoilState.h"
+#include "Soil.h"
 
-class DrySoil : public SoilState
+class DrySoil : public Soil
 {
     public:
         DrySoil();
+        DrySoil(const DrySoil* other);
+        ~DrySoil() = default;
+
         void harvestCrops();
         void rain();
 };

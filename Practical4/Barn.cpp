@@ -13,22 +13,40 @@ Barn::~Barn() {
     
 }
 
-int Barn::getCurrentCapacity() const {
-    return currentCapacity;
+void Barn::buyTruck() {
+    trucks.push_back(new DeliveryTruck(this));
+    std::cout << "Bought one delivery truck." << std::endl;
 }
 
-void Barn::setCurrentCapacity(int currentCapacity) {
-    this->currentCapacity = currentCapacity;
+void Barn::sellTruck() {
+    for (auto it = trucks.begin(); it != trucks.end(); ++it) {
+        DeliveryTruck* deliveryTruck = dynamic_cast<DeliveryTruck*>(*it);
+
+        if (deliveryTruck != nullptr) {
+            delete deliveryTruck;
+            trucks.erase(it);
+            std::cout << "Sold one delivery truck." << std::endl;
+            return;
+        }
+    }
+
+    std::cout << "There are no delivery trucks left to sell!" << std::endl;
 }
 
-int Barn::getTotalCapacity() const {
-    return totalCapacity;
+void Barn::callTruck() {
+    for (auto it = trucks.begin(); it != trucks.end(); ++it) {
+        DeliveryTruck* deliveryTruck = dynamic_cast<DeliveryTruck*>(*it);
+
+        if (deliveryTruck != nullptr) {
+            (*it)->startEngine();
+            std::cout << "Called a delivery truck." << std::endl;
+            return;
+        }
+    }
+    
+    std::cout << "There are no delivery trucks available to call!" << std::endl;
 }
 
-void Barn::setTotalCapacity(int totalCapacity) {
-    this->totalCapacity = totalCapacity;
-}
-
-void Barn::collectCrops(){
-    std::cout<<"Collecting harvested crops since the storage capacity has reached a predefined threshold.\n";
+void Barn::print() {
+    std::cout << "Print in Barn." << std::endl;
 }

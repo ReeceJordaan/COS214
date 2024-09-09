@@ -1,12 +1,15 @@
 #ifndef FLOODEDSOIL_H
 #define FLOODEDSOIL_H
 
-#include "SoilState.h"
+#include "Soil.h"
 
-class FloodedSoil : public SoilState
+class FloodedSoil : public Soil
 {
     public:
         FloodedSoil();
+        FloodedSoil(const FloodedSoil* other);
+        ~FloodedSoil() = default;
+
         void harvestCrops();
         void rain();
 };

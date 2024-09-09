@@ -17,10 +17,18 @@ class FarmUnit {
         int totalCapacity;
 
     public:
-        
         FarmUnit(int currentCapacity, int totalCapacity);
         FarmUnit(FarmUnit* farmUnit);
         virtual ~FarmUnit();
+
+        virtual void buyTruck();
+        virtual void sellTruck();
+        virtual void callTruck();
+
+        int getCurrentCapacity() const;
+        void setCurrentCapacity(int currentCapacity);
+        int getTotalCapacity() const;
+        void setTotalCapacity(int totalCapacity);
 
         virtual void add(CropField* cropField);
         virtual void remove(CropField* cropField);
@@ -29,20 +37,7 @@ class FarmUnit {
         virtual Iterator* createDFSIterator();
         virtual Iterator* createBFSIterator();
 
-        void buyTruck(std::string type);
-        void sellTruck(std::string type);
-        void callTruck(std::string type);
-
-        virtual int getCurrentCapacity() const = 0;
-        virtual void setCurrentCapacity(int currentCapacity) = 0;
-        virtual int getTotalCapacity() const = 0;
-        virtual void setTotalCapacity(int totalCapacity) = 0;
-
-        //for Decorator pattern
-        virtual void harvest() = 0;
-        virtual void increaseProduction() = 0;
-        virtual void buildBarn() = 0;
-        virtual int getLeftoverCapacity() = 0;
+        virtual void print() = 0;
 };
 
 #endif // FARMUNIT_H

@@ -8,8 +8,10 @@ class BarnDecorator : public Decorator
 {
 	public:
 		BarnDecorator(FarmUnit* unit);
-		void buildBarn();
+		~BarnDecorator() = default;
+
         int getLeftoverCapacity();
+		void print();
 };
 
 #endif

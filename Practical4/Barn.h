@@ -9,12 +9,11 @@ class Barn : public FarmUnit {
         Barn(Barn* barn);
         ~Barn();
 
-        int getCurrentCapacity() const;
-        void setCurrentCapacity(int currentCapacity);
-        int getTotalCapacity() const;
-        void setTotalCapacity(int totalCapacity);
-        //added function for collecting crops when the the strorage is about to be full
-        void collectCrops();
+        void buyTruck();
+        void sellTruck();
+        void callTruck();
+
+        void print();
 };
 
 #endif // BARN_H

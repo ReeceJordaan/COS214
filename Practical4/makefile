@@ -4,6 +4,9 @@ main:
 run:
 	./main
 
+debug: main
+	gdb ./main
+
 clean:
 	rm -f *o main
 

@@ -1,17 +1,19 @@
 #include "DeliveryTruck.h"
-#include <iostream>
+#include "Barn.h"
 using namespace std;
 
-DeliveryTruck::DeliveryTruck(Barn* subject, int currentCapacity, int totalCapacity) : Truck("DeliveryTruck"){
+DeliveryTruck::DeliveryTruck(Barn* subject) : Truck(){
     this->subject = subject;
-    this->currentCapacity = currentCapacity;
-    this->totalCapacity = totalCapacity;
+}
+
+DeliveryTruck::DeliveryTruck(const DeliveryTruck* other) : Truck() {
+    this->subject = other->subject;
 }
 
 void DeliveryTruck::startEngine() {
-    if (currentCapacity >= totalCapacity * 0.8) {
+    if (subject->getCurrentCapacity() >= subject->getTotalCapacity() * 0.8) {
         cout<<"Delivery truck is collecting crops as the barn is near full capacity."<<endl;
-        subject->collectCrops();
+        subject->setCurrentCapacity(0);
     } else {
         cout<<"No crop collection needed at this time."<<endl;
     }

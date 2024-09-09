@@ -8,8 +8,11 @@ class FertilizerDecorator : public Decorator
 {
 	public:
 		FertilizerDecorator(FarmUnit* unit);
+		~FertilizerDecorator() = default;
+
 		void harvest();
         void increaseProduction();
+		void print();
 };
 
 

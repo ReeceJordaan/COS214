@@ -1,12 +1,15 @@
 #ifndef FRUITFULSOIL_H
 #define FRUITFULSOIL_H
 
-#include "SoilState.h"
+#include "Soil.h"
 
-class FruitfulSoil : public SoilState
+class FruitfulSoil : public Soil
 {
     public:
         FruitfulSoil();
+        FruitfulSoil(const FruitfulSoil* other);
+        ~FruitfulSoil() = default;
+
         void harvestCrops();
         void rain();
 };
