@@ -84,7 +84,17 @@ void FarmUnit::callTruck() {
     std::cout << "Invalid object type. Call this on a CropField/Barn object." << std::endl;
 }
 
-void FarmUnit::applyFertilizer(){
-    std::cout<<"Applying fertilizer...\n";
-    std::cout<<"Fertilizer applied.\n";
+void FarmUnit::applyFertilizer() {
+    std::cout << "Applying fertilizer...\n";
+    std::cout << "Fertilizer applied.\n";
+
+    currentCapacity += currentCapacity * 0.1; //Fertilizer increased the number of crops produced
+
+    //Ensures that current capacity does not exceed the total capacity
+    if (currentCapacity > totalCapacity) {
+        currentCapacity = totalCapacity;
+    }
+
+    std::cout << "Current capacity after applying fertilizer: " 
+              << currentCapacity << " (out of " << totalCapacity << " total capacity)\n";
 }
