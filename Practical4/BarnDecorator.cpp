@@ -8,7 +8,7 @@ BarnDecorator::BarnDecorator(FarmUnit* unit) : Decorator(unit) {
 
 void BarnDecorator::harvest(){
     if (farmUnit->getCurrentCapacity() > 0) {
-        cout<<"Harvesting "<<farmUnit->getCurrentCapacity()<<" units of "; //<<cropType<<endl;
+        cout<<"Harvesting "<<farmUnit->getCurrentCapacity()<<" units of crops."<<endl;
         farmUnit->setCurrentCapacity(0); //Reset after harvest
     } 
     else {
@@ -17,7 +17,9 @@ void BarnDecorator::harvest(){
 }
 
 void BarnDecorator::increaseProduction(){
-    
+    farmUnit->setTotalCapacity(farmUnit->getTotalCapacity() * 0.4); //increased the total capacity by 40%
+    cout<<"Barn boosts production capacity by increasing total capacity by 40%."<<endl; //thus crops to harvest and store in the barn
+    cout<<"Increased production: New total capacity is "<<farmUnit->getTotalCapacity()<<endl;
 }
 
 int BarnDecorator::getLeftoverCapacity(){
