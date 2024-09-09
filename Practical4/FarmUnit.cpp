@@ -88,7 +88,7 @@ void FarmUnit::applyFertilizer() {
     std::cout << "Applying fertilizer...\n";
     std::cout << "Fertilizer applied.\n";
 
-    currentCapacity += currentCapacity * 0.1; //Fertilizer increased the number of crops produced
+    currentCapacity += currentCapacity + (currentCapacity * 0.4); //Fertilizer increased the number of crops produced
 
     //Ensures that current capacity does not exceed the total capacity
     if (currentCapacity > totalCapacity) {
