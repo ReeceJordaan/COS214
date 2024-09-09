@@ -16,6 +16,7 @@ class Soil
         virtual void harvestCrops() = 0;
         virtual void rain() = 0;
         string getName();
+        void setName(string name);
 
     private:
         string name;
