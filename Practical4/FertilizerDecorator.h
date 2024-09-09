@@ -11,7 +11,9 @@ class FertilizerDecorator : public Decorator
 		~FertilizerDecorator() = default;
 
 		void harvest();
-        void increaseProduction();
+	        void increaseProduction();
+	        int getLeftoverCapacity();
+
 		void print();
 };
 
