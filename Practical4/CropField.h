@@ -58,6 +58,9 @@ class CropField : public FarmUnit {
         //! Builds a new barn with the specified total capacity.
         //! @param totalCapacity The total capacity of the new barn.
         void buildBarn(int totalCapacity);
+        
+        //! Modifies the state of the soil by increasing it's water content.
+        void rain();
 
         //! Buys a new truck for the crop field.
         void buyTruck();

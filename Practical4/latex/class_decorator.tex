@@ -1,5 +1,14 @@
 \doxysection{Decorator Class Reference}
 \hypertarget{class_decorator}{}\label{class_decorator}\index{Decorator@{Decorator}}
+
+
+An abstract decorator class that adds additional functionality to \doxylink{class_farm_unit}{Farm\+Unit} objects.  
+
+
+
+
+{\ttfamily \#include $<$Decorator.\+h$>$}
+
 Inheritance diagram for Decorator\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,18 +19,18 @@ Inheritance diagram for Decorator\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_decorator_a709701f27e52b4178bdf8c29103e2c50}{Decorator}} (\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}unit)
-\item 
-\Hypertarget{class_decorator_a324a9837f57ac6391523963bb97bcf11}\label{class_decorator_a324a9837f57ac6391523963bb97bcf11} 
-virtual void {\bfseries harvest} ()=0
-\item 
-\Hypertarget{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe}\label{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe} 
-virtual void {\bfseries increase\+Production} ()=0
-\item 
-\Hypertarget{class_decorator_a92a7f8199f7ca609e7fd37667016fc32}\label{class_decorator_a92a7f8199f7ca609e7fd37667016fc32} 
-virtual int {\bfseries get\+Leftover\+Capacity} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_decorator}{Decorator} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_decorator_a6956412353d9a21d703396cfe17ca5f0}\label{class_decorator_a6956412353d9a21d703396cfe17ca5f0} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Decorator} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_decorator_a324a9837f57ac6391523963bb97bcf11}{harvest}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method for harvesting crops. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe}{increase\+Production}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method for increasing production. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_decorator_a92a7f8199f7ca609e7fd37667016fc32}{get\+Leftover\+Capacity}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to calculate the leftover storage capacity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_decorator_a1cf864bc98530aa0463608d777a43851}{print}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints the details of the decorated farm unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -61,7 +70,7 @@ virtual \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farm\+Unit}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A pointer to the \doxylink{class_farm_unit}{Farm\+Unit} being decorated. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,9 +83,45 @@ int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+C
 
 
 \doxysubsection{Detailed Description}
+An abstract decorator class that adds additional functionality to \doxylink{class_farm_unit}{Farm\+Unit} objects. 
+
+The \doxylink{class_decorator}{Decorator} class is responsible for dynamically adding new functionalities, such as increasing production, harvesting, and calculating storage capacity. This class is intended to be subclassed to provide specific implementations for different types of decorators.
 
 
-Definition at line \mbox{\hyperlink{_decorator_8h_source_l00009}{9}} of file \mbox{\hyperlink{_decorator_8h_source}{Decorator.\+h}}.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & There’s no template method.\\
+\hline
+\end{DoxyTemplParams}
+class is an abstract decorator and inherits from \doxylink{class_farm_unit}{Farm\+Unit}.
+
+\begin{DoxyAuthor}{Author}
+Salome Kalaka 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 September 2024
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_farm_unit}{Farm\+Unit} class, \doxylink{class_decorator_a324a9837f57ac6391523963bb97bcf11}{harvest()}, \doxylink{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe}{increase\+Production()}, and \doxylink{class_decorator_a92a7f8199f7ca609e7fd37667016fc32}{get\+Leftover\+Capacity()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Implement specific decorators that inherit from this class.\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+No warning.
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+This class should not be instantiated directly; it serves as a base class for concrete decorators.
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+The virtual functions must be implemented in subclasses. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_decorator_8h_source_l00036}{36}} of file \mbox{\hyperlink{_decorator_8h_source}{Decorator.\+h}}.
 
 
 
@@ -89,25 +134,87 @@ Decorator\+::\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_
 
 
 
+Constructor for the \doxylink{class_decorator}{Decorator} class. 
+
+This constructor takes a \doxylink{class_farm_unit}{Farm\+Unit} pointer and decorates it with additional functionalities.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit} & A pointer to the \doxylink{class_farm_unit}{Farm\+Unit} that will be decorated. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{_decorator_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_decorator_8cpp_source}{Decorator.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}{FarmUnit}}(unit)\ \{}
-\DoxyCodeLine{00006\ \ \ \ \ farmUnit\ =\ unit;}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}\ =\ unit;}
 \DoxyCodeLine{00007\ \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_decorator_a92a7f8199f7ca609e7fd37667016fc32}\index{Decorator@{Decorator}!getLeftoverCapacity@{getLeftoverCapacity}}
+\index{getLeftoverCapacity@{getLeftoverCapacity}!Decorator@{Decorator}}
+\doxysubsubsection{\texorpdfstring{getLeftoverCapacity()}{getLeftoverCapacity()}}
+{\footnotesize\ttfamily \label{class_decorator_a92a7f8199f7ca609e7fd37667016fc32} 
+virtual int Decorator\+::get\+Leftover\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to calculate the leftover storage capacity. 
+
+This method should be implemented by subclasses to calculate the remaining storage capacity of the farm unit.
+
+\begin{DoxyReturn}{Returns}
+The leftover storage capacity of the farm unit. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_barn_decorator_a70f309317dfe38961b8f7b3fe2e3cde8}{Barn\+Decorator}}, and \mbox{\hyperlink{class_fertilizer_decorator_ac02729230004963cd6adadeb57f5abed}{Fertilizer\+Decorator}}.
+
+\Hypertarget{class_decorator_a324a9837f57ac6391523963bb97bcf11}\index{Decorator@{Decorator}!harvest@{harvest}}
+\index{harvest@{harvest}!Decorator@{Decorator}}
+\doxysubsubsection{\texorpdfstring{harvest()}{harvest()}}
+{\footnotesize\ttfamily \label{class_decorator_a324a9837f57ac6391523963bb97bcf11} 
+virtual void Decorator\+::harvest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method for harvesting crops. 
+
+This method should be implemented by subclasses to handle the harvesting process. 
+
+Implemented in \mbox{\hyperlink{class_barn_decorator_a4401a2e94832803fbdc69d1708b5d23a}{Barn\+Decorator}}, and \mbox{\hyperlink{class_fertilizer_decorator_a5fa392eb377e7de865123731f1af184a}{Fertilizer\+Decorator}}.
+
+\Hypertarget{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe}\index{Decorator@{Decorator}!increaseProduction@{increaseProduction}}
+\index{increaseProduction@{increaseProduction}!Decorator@{Decorator}}
+\doxysubsubsection{\texorpdfstring{increaseProduction()}{increaseProduction()}}
+{\footnotesize\ttfamily \label{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe} 
+virtual void Decorator\+::increase\+Production (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method for increasing production. 
+
+This method should be implemented by subclasses to handle the increase in production capacity. 
+
+Implemented in \mbox{\hyperlink{class_barn_decorator_aa4898972c8f698df363eb91075b11a88}{Barn\+Decorator}}, and \mbox{\hyperlink{class_fertilizer_decorator_a9d736a7916621dfa64e4e4d23e2044f7}{Fertilizer\+Decorator}}.
+
 \Hypertarget{class_decorator_a1cf864bc98530aa0463608d777a43851}\index{Decorator@{Decorator}!print@{print}}
 \index{print@{print}!Decorator@{Decorator}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
 {\footnotesize\ttfamily \label{class_decorator_a1cf864bc98530aa0463608d777a43851} 
 void Decorator\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Pure virtual function to print the details of the farm unit. Must be implemented by derived classes. 
+
+
+Prints the details of the decorated farm unit. 
+
+This method prints information related to the current farm unit and its decorator. 
 
 Implements \mbox{\hyperlink{class_farm_unit_a47bd9b493c8cffa294e5f7e9fa4afa38}{Farm\+Unit}}.
 
@@ -137,7 +244,11 @@ Definition at line \mbox{\hyperlink{_decorator_8cpp_source_l00009}{9}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_decorator_8h_source_l00021}{21}} of file \mbox{\hyperlink{_decorator_8h_source}{Decorator.\+h}}.
+A pointer to the \doxylink{class_farm_unit}{Farm\+Unit} being decorated. 
+
+This pointer is used to apply additional functionalities to the base farm unit. 
+
+Definition at line \mbox{\hyperlink{_decorator_8h_source_l00089}{89}} of file \mbox{\hyperlink{_decorator_8h_source}{Decorator.\+h}}.
 
 
 

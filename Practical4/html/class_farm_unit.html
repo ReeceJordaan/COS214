@@ -104,10 +104,10 @@ Inheritance diagram for FarmUnit:</div>
   <map id="FarmUnit_map" name="FarmUnit_map">
 <area href="class_barn.html" title="Represents a barn, inheriting from FarmUnit, with truck management and capacity functions." alt="Barn" shape="rect" coords="0,56,119,80"/>
 <area href="class_crop_field.html" title="Represents a crop field, inheriting from FarmUnit, with crop type, barns, and soil state." alt="CropField" shape="rect" coords="129,56,248,80"/>
-<area href="class_decorator.html" alt="Decorator" shape="rect" coords="258,56,377,80"/>
+<area href="class_decorator.html" title="An abstract decorator class that adds additional functionality to FarmUnit objects." alt="Decorator" shape="rect" coords="258,56,377,80"/>
 <area href="class_farm.html" title="Represents a farm, inheriting from FarmUnit, managing a collection of CropFields and providing iterat..." alt="Farm" shape="rect" coords="387,56,506,80"/>
-<area href="class_barn_decorator.html" alt="BarnDecorator" shape="rect" coords="193,112,312,136"/>
-<area href="class_fertilizer_decorator.html" alt="FertilizerDecorator" shape="rect" coords="322,112,441,136"/>
+<area href="class_barn_decorator.html" title="A decorator class that adds barn-related functionality to a FarmUnit." alt="BarnDecorator" shape="rect" coords="193,112,312,136"/>
+<area href="class_fertilizer_decorator.html" title="A concrete decorator class that adds fertilizer-related functionality to a FarmUnit." alt="FertilizerDecorator" shape="rect" coords="322,112,441,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -245,8 +245,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   23</span>        }</div>
 <div class="line"><span class="lineno">   24</span>    }</div>
 <div class="line"><span class="lineno">   25</span>}</div>
-<div class="ttc" id="aclass_delivery_truck_html"><div class="ttname"><a href="class_delivery_truck.html">DeliveryTruck</a></div><div class="ttdef"><b>Definition</b> <a href="_delivery_truck_8h_source.html#l00010">DeliveryTruck.h:11</a></div></div>
-<div class="ttc" id="aclass_fertilizer_truck_html"><div class="ttname"><a href="class_fertilizer_truck.html">FertilizerTruck</a></div><div class="ttdef"><b>Definition</b> <a href="_fertilizer_truck_8h_source.html#l00011">FertilizerTruck.h:12</a></div></div>
+<div class="ttc" id="aclass_delivery_truck_html"><div class="ttname"><a href="class_delivery_truck.html">DeliveryTruck</a></div><div class="ttdoc">A concrete observer class that reacts to changes in the Barn subject.</div><div class="ttdef"><b>Definition</b> <a href="_delivery_truck_8h_source.html#l00036">DeliveryTruck.h:37</a></div></div>
+<div class="ttc" id="aclass_fertilizer_truck_html"><div class="ttname"><a href="class_fertilizer_truck.html">FertilizerTruck</a></div><div class="ttdoc">A concrete observer class for trucks that deliver fertilizer in the Observer design pattern.</div><div class="ttdef"><b>Definition</b> <a href="_fertilizer_truck_8h_source.html#l00038">FertilizerTruck.h:39</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -320,9 +320,7 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented in <a class="el" href="class_farm.html#aefa9c580c6385c6b2c2ad12de265bd85">Farm</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00066">66</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                       {</div>
-<div class="line"><span class="lineno">   67</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid object type. Call this on a Farm object.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   68</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>{ }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -348,7 +346,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   53</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Applying fertilizer...\n&quot;</span>;</div>
 <div class="line"><span class="lineno">   54</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Fertilizer applied.\n&quot;</span>;</div>
 <div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>    <a class="code hl_variable" href="#aa97fc182b3ca0970a21ca53d4d8a8530">currentCapacity</a> += <a class="code hl_variable" href="#aa97fc182b3ca0970a21ca53d4d8a8530">currentCapacity</a> * 0.1;</div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_variable" href="#aa97fc182b3ca0970a21ca53d4d8a8530">currentCapacity</a> += <a class="code hl_variable" href="#aa97fc182b3ca0970a21ca53d4d8a8530">currentCapacity</a> + (<a class="code hl_variable" href="#aa97fc182b3ca0970a21ca53d4d8a8530">currentCapacity</a> * 0.4);</div>
 <div class="line"><span class="lineno">   57</span> </div>
 <div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa97fc182b3ca0970a21ca53d4d8a8530">currentCapacity</a> &gt; <a class="code hl_variable" href="#a547cf3ba87da60fb031828903f240466">totalCapacity</a>) {</div>
 <div class="line"><span class="lineno">   59</span>        <a class="code hl_variable" href="#aa97fc182b3ca0970a21ca53d4d8a8530">currentCapacity</a> = <a class="code hl_variable" href="#a547cf3ba87da60fb031828903f240466">totalCapacity</a>;</div>
@@ -387,10 +385,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_barn.html#a000266919a22c0f98edd24418916095c">Barn</a>, and <a class="el" href="class_crop_field.html#ab910627441cdc7f01adb27f5735b849a">CropField</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00089">89</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                        {</div>
-<div class="line"><span class="lineno">   90</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid object type. Call this on a CropField/Barn object.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   91</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00071">71</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>{ }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -421,10 +417,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_barn.html#a1f71f8e0f61297f85e979cae495a550c">Barn</a>, and <a class="el" href="class_crop_field.html#ad68a4ccd9c87331c64978a2a984f5caf">CropField</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00097">97</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                         {</div>
-<div class="line"><span class="lineno">   98</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid object type. Call this on a CropField/Barn object.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   99</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00073">73</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>{ }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -454,11 +448,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_farm.html#a8a0f6e2466374d62e72421ad1435f841">Farm</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00084">84</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                      {</div>
-<div class="line"><span class="lineno">   85</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid object type. Call this on a Farm object.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   87</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00070">70</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>{ <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -488,11 +479,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_farm.html#af0b58a72bf2225ea375b89930091df7e">Farm</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00079">79</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                      {</div>
-<div class="line"><span class="lineno">   80</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid object type. Call this on a Farm object.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   82</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00069">69</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>{ <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -528,11 +516,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_farm.html#a9563fb997a9dbd178905b17b36d1fb8c">Farm</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00074">74</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                       {</div>
-<div class="line"><span class="lineno">   75</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid object type. Call this on a Farm object.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   77</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00068">68</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>{ <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -641,10 +626,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_farm.html#ac02d057a56a5cc7f1753c33c76ef1db6">Farm</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00070">70</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                                          {</div>
-<div class="line"><span class="lineno">   71</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid object type. Call this on a Farm object.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   72</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00067">67</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>{ }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -675,10 +658,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_barn.html#afe0946e57131120eb5b7639601f1dc46">Barn</a>, and <a class="el" href="class_crop_field.html#a35c7747dea2718f10face80afa80fc4c">CropField</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00093">93</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                         {</div>
-<div class="line"><span class="lineno">   94</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Invalid object type. Call this on a CropField/Barn object.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   95</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_farm_unit_8cpp_source.html#l00072">72</a> of file <a class="el" href="_farm_unit_8cpp_source.html">FarmUnit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>{ }</div>
 </div><!-- fragment -->
 </div>
 </div>

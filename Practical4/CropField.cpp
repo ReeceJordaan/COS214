@@ -16,7 +16,7 @@ CropField::CropField(CropField* cropField) : FarmUnit(cropField) {
     this->barns = std::vector<Barn*>();
     this->cropType = cropField->cropType;
     
-    if (cropField->soilState != nullptr && cropField->soilState->getName() == "Dry") {
+    if (cropField->soilState->getName() == "Dry") {
         this->soilState = new DrySoil();
     } else if (cropField->soilState->getName() == "Fruitful") {
         this->soilState = new FruitfulSoil();
@@ -72,6 +72,16 @@ void CropField::buildBarn(int totalCapacity){
     barns.push_back(new Barn(totalCapacity));
 
     std::cout << "Total storage capacity is now: " << this->totalCapacity << std::endl;
+}
+
+void CropField::rain() {
+    this->soilState->rain();
+
+    if (this->soilState->getName() == "Dry") {
+        this->soilState = new FruitfulSoil();
+    } else if (this->soilState->getName() == "Fruitful") {
+        this->soilState = new FloodedSoil();
+    }
 }
 
 void CropField::buyTruck() {

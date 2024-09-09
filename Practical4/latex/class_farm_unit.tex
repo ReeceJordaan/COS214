@@ -181,9 +181,7 @@ Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00066}{66}} of file 
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00067\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00066\ \{\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}\index{FarmUnit@{FarmUnit}!applyFertilizer@{applyFertilizer}}
@@ -206,7 +204,7 @@ Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00052}{52}} of file 
 \DoxyCodeLine{00053\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Applying\ fertilizer...\(\backslash\)n"{}};}
 \DoxyCodeLine{00054\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Fertilizer\ applied.\(\backslash\)n"{}};}
 \DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ +=\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ *\ 0.1;}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ +=\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ +\ (\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ *\ 0.4);}
 \DoxyCodeLine{00057\ }
 \DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ >\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}})\ \{}
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ =\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}};}
@@ -233,13 +231,11 @@ Reimplemented in \mbox{\hyperlink{class_barn_a000266919a22c0f98edd24418916095c}{
 
 
 
-Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00090\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ CropField/Barn\ object."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00071\ \{\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_farm_unit_a353c6db3e864d468fb42a091fe8b380a}\index{FarmUnit@{FarmUnit}!callTruck@{callTruck}}
@@ -258,13 +254,11 @@ Reimplemented in \mbox{\hyperlink{class_barn_a1f71f8e0f61297f85e979cae495a550c}{
 
 
 
-Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00098\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ CropField/Barn\ object."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00073\ \{\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_farm_unit_ae7d3336a8f274645b3b4bcc2dfa4f570}\index{FarmUnit@{FarmUnit}!createBFSIterator@{createBFSIterator}}
@@ -282,14 +276,11 @@ Reimplemented in \mbox{\hyperlink{class_farm_a8a0f6e2466374d62e72421ad1435f841}{
 
 
 
-Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00085\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00087\ \}}
+\DoxyCodeLine{00070\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_farm_unit_a4623abfd4a7dde965a2dc8be8a9adf88}\index{FarmUnit@{FarmUnit}!createDFSIterator@{createDFSIterator}}
@@ -307,14 +298,11 @@ Reimplemented in \mbox{\hyperlink{class_farm_af0b58a72bf2225ea375b89930091df7e}{
 
 
 
-Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00080\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00082\ \}}
+\DoxyCodeLine{00069\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_farm_unit_a578cd41fe5dadcc81ab5c9f0b96e3e81}\index{FarmUnit@{FarmUnit}!getChild@{getChild}}
@@ -337,14 +325,11 @@ Reimplemented in \mbox{\hyperlink{class_farm_a9563fb997a9dbd178905b17b36d1fb8c}{
 
 
 
-Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00075\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00068\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}\index{FarmUnit@{FarmUnit}!getCurrentCapacity@{getCurrentCapacity}}
@@ -414,13 +399,11 @@ Reimplemented in \mbox{\hyperlink{class_farm_ac02d057a56a5cc7f1753c33c76ef1db6}{
 
 
 
-Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00071\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00072\ \}}
+\DoxyCodeLine{00067\ \{\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_farm_unit_a31a9c472afab1077a715d54030143625}\index{FarmUnit@{FarmUnit}!sellTruck@{sellTruck}}
@@ -439,13 +422,11 @@ Reimplemented in \mbox{\hyperlink{class_barn_afe0946e57131120eb5b7639601f1dc46}{
 
 
 
-Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00094\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ CropField/Barn\ object."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00095\ \}}
+\DoxyCodeLine{00072\ \{\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}\index{FarmUnit@{FarmUnit}!setCurrentCapacity@{setCurrentCapacity}}

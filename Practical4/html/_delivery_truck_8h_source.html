@@ -87,36 +87,38 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">DeliveryTruck.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef DELIVERYTRUCK_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define DELIVERYTRUCK_H</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Truck.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_class" href="class_barn.html">Barn</a>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_delivery_truck.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_delivery_truck.html">DeliveryTruck</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_truck.html">Truck</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_class" href="class_delivery_truck.html">DeliveryTruck</a>(<a class="code hl_class" href="class_barn.html">Barn</a>* subject);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="class_delivery_truck.html">DeliveryTruck</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_delivery_truck.html">DeliveryTruck</a>* other);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="class_delivery_truck.html">~DeliveryTruck</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> startEngine();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_class" href="class_barn.html">Barn</a>* subject;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DELIVERYTRUCK_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define DELIVERYTRUCK_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Truck.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="class_barn.html">Barn</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_delivery_truck.html">   36</a></span><span class="keyword">class </span><a class="code hl_class" href="class_delivery_truck.html">DeliveryTruck</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_truck.html">Truck</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_function" href="class_delivery_truck.html#a878e366aa5d776a72b92c3e8859ae7a3">DeliveryTruck</a>(<a class="code hl_class" href="class_barn.html">Barn</a>* subject);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_function" href="class_delivery_truck.html#a878e366aa5d776a72b92c3e8859ae7a3">DeliveryTruck</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_delivery_truck.html">DeliveryTruck</a>* other);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_delivery_truck.html#a22f32967dc8ec089129bb2e67cb7eb46">   60</a></span>        <a class="code hl_function" href="class_delivery_truck.html#a22f32967dc8ec089129bb2e67cb7eb46">~DeliveryTruck</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_delivery_truck.html#a2cc9028a83027b4c364bd1fb705475cc">startEngine</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="class_barn.html">Barn</a>* subject;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_barn_html"><div class="ttname"><a href="class_barn.html">Barn</a></div><div class="ttdoc">Represents a barn, inheriting from FarmUnit, with truck management and capacity functions.</div><div class="ttdef"><b>Definition</b> <a href="_barn_8h_source.html#l00012">Barn.h:12</a></div></div>
-<div class="ttc" id="aclass_delivery_truck_html"><div class="ttname"><a href="class_delivery_truck.html">DeliveryTruck</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">DeliveryTruck.h:11</a></div></div>
-<div class="ttc" id="aclass_truck_html"><div class="ttname"><a href="class_truck.html">Truck</a></div><div class="ttdef"><b>Definition</b> <a href="_truck_8h_source.html#l00008">Truck.h:9</a></div></div>
+<div class="ttc" id="aclass_delivery_truck_html"><div class="ttname"><a href="class_delivery_truck.html">DeliveryTruck</a></div><div class="ttdoc">A concrete observer class that reacts to changes in the Barn subject.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">DeliveryTruck.h:37</a></div></div>
+<div class="ttc" id="aclass_delivery_truck_html_a22f32967dc8ec089129bb2e67cb7eb46"><div class="ttname"><a href="class_delivery_truck.html#a22f32967dc8ec089129bb2e67cb7eb46">DeliveryTruck::~DeliveryTruck</a></div><div class="ttdeci">~DeliveryTruck()=default</div><div class="ttdoc">Default virtual destructor.</div></div>
+<div class="ttc" id="aclass_delivery_truck_html_a2cc9028a83027b4c364bd1fb705475cc"><div class="ttname"><a href="class_delivery_truck.html#a2cc9028a83027b4c364bd1fb705475cc">DeliveryTruck::startEngine</a></div><div class="ttdeci">void startEngine()</div><div class="ttdoc">Starts the engine of the delivery truck.</div><div class="ttdef"><b>Definition</b> <a href="_delivery_truck_8cpp_source.html#l00013">DeliveryTruck.cpp:13</a></div></div>
+<div class="ttc" id="aclass_delivery_truck_html_a878e366aa5d776a72b92c3e8859ae7a3"><div class="ttname"><a href="class_delivery_truck.html#a878e366aa5d776a72b92c3e8859ae7a3">DeliveryTruck::DeliveryTruck</a></div><div class="ttdeci">DeliveryTruck(Barn *subject)</div><div class="ttdoc">Constructor for the DeliveryTruck class.</div><div class="ttdef"><b>Definition</b> <a href="_delivery_truck_8cpp_source.html#l00005">DeliveryTruck.cpp:5</a></div></div>
+<div class="ttc" id="aclass_truck_html"><div class="ttname"><a href="class_truck.html">Truck</a></div><div class="ttdoc">Abstract base class representing a truck in the Observer design pattern.</div><div class="ttdef"><b>Definition</b> <a href="_truck_8h_source.html#l00035">Truck.h:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

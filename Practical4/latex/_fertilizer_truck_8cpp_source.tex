@@ -7,25 +7,25 @@
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}FloodedSoil.h"{}}}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_crop_field_8h}{CropField.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00007}00007\ FertilizerTruck::FertilizerTruck(\mbox{\hyperlink{class_crop_field}{CropField}}*\ subject,\ \mbox{\hyperlink{class_soil}{Soil}}*\ soilState)\ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00007}\mbox{\hyperlink{class_fertilizer_truck_a7a4af0f9c9b62a8a3270d62719929011}{00007}}\ \mbox{\hyperlink{class_fertilizer_truck_a7a4af0f9c9b62a8a3270d62719929011}{FertilizerTruck::FertilizerTruck}}(\mbox{\hyperlink{class_crop_field}{CropField}}*\ subject,\ \mbox{\hyperlink{class_soil}{Soil}}*\ soilState)\ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00008}00008\ \ \ \ \ this-\/>subject\ =\ subject;}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00009}00009\ \ \ \ \ this-\/>soilState\ =\ soilState;}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00010}00010\ \}}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00012}00012\ FertilizerTruck::FertilizerTruck(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ other)\ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00012}\mbox{\hyperlink{class_fertilizer_truck_ab3fb0e20d412027689a76cc4513f9f2d}{00012}}\ \mbox{\hyperlink{class_fertilizer_truck_a7a4af0f9c9b62a8a3270d62719929011}{FertilizerTruck::FertilizerTruck}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ other)\ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00013}00013\ \ \ \ \ this-\/>subject\ =\ other-\/>subject;}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (other-\/>soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (other-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ new\ DrySoil();}
-\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00017}00017\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ if\ (other-\/>soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00017}00017\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ if\ (other-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ new\ FruitfulSoil();}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00019}00019\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ new\ FloodedSoil();}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00021}00021\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00022}00022\ \}}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00024}00024\ \textcolor{keywordtype}{void}\ FertilizerTruck::startEngine()\ \{}
-\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00024}\mbox{\hyperlink{class_fertilizer_truck_a2a6d7b020b6bca2692c5ec59b974e147}{00024}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fertilizer_truck_a2a6d7b020b6bca2692c5ec59b974e147}{FertilizerTruck::startEngine}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Fertilizer\ truck\ is\ delivering\ fertilizer\ to\ the\ dry\ soil."{}}\ <<\ endl;}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ subject-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}();}
 \DoxyCodeLine{\Hypertarget{_fertilizer_truck_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ subject-\/>\mbox{\hyperlink{class_crop_field_ab01d92251a97f1cf12b6a992035d5b73}{setSoilState}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_fruitful_soil}{FruitfulSoil}}());}

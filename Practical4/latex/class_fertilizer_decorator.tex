@@ -1,5 +1,14 @@
 \doxysection{Fertilizer\+Decorator Class Reference}
 \hypertarget{class_fertilizer_decorator}{}\label{class_fertilizer_decorator}\index{FertilizerDecorator@{FertilizerDecorator}}
+
+
+A concrete decorator class that adds fertilizer-\/related functionality to a \doxylink{class_farm_unit}{Farm\+Unit}.  
+
+
+
+
+{\ttfamily \#include $<$Fertilizer\+Decorator.\+h$>$}
+
 Inheritance diagram for Fertilizer\+Decorator\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,20 +19,25 @@ Inheritance diagram for Fertilizer\+Decorator\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fertilizer_decorator_afbda6ca609629080161c3e839e6958fd}{Fertilizer\+Decorator}} (\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}unit)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_fertilizer_decorator}{Fertilizer\+Decorator} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_fertilizer_decorator_a728a425a8719b333f715b0583b74fee2}\label{class_fertilizer_decorator_a728a425a8719b333f715b0583b74fee2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Fertilizer\+Decorator} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_fertilizer_decorator_a5fa392eb377e7de865123731f1af184a}{harvest}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Enhances the harvest operation by applying fertilizer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_fertilizer_decorator_a9d736a7916621dfa64e4e4d23e2044f7}{increase\+Production}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Increases production capacity by applying fertilizer. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_fertilizer_decorator_ac02729230004963cd6adadeb57f5abed}{get\+Leftover\+Capacity}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the remaining storage capacity after applying fertilizers. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d}{print}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints the details of the \doxylink{class_fertilizer_decorator}{Fertilizer\+Decorator} and the associated farm unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_decorator}{Decorator}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_decorator_a709701f27e52b4178bdf8c29103e2c50}{Decorator}} (\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}unit)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_decorator}{Decorator} class. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Decorator} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -64,7 +78,7 @@ virtual \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farm\+Unit}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A pointer to the \doxylink{class_farm_unit}{Farm\+Unit} being decorated. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -77,9 +91,45 @@ int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+C
 
 
 \doxysubsection{Detailed Description}
+A concrete decorator class that adds fertilizer-\/related functionality to a \doxylink{class_farm_unit}{Farm\+Unit}. 
+
+The \doxylink{class_fertilizer_decorator}{Fertilizer\+Decorator} class enhances the functionality of a \doxylink{class_farm_unit}{Farm\+Unit} by adding features related to fertilizers, such as improving crop yield, harvesting crops, and calculating the remaining storage capacity. It follows the \doxylink{class_decorator}{Decorator} design pattern to dynamically add these functionalities.
 
 
-Definition at line \mbox{\hyperlink{_fertilizer_decorator_8h_source_l00007}{7}} of file \mbox{\hyperlink{_fertilizer_decorator_8h_source}{Fertilizer\+Decorator.\+h}}.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & There’s no template method.\\
+\hline
+\end{DoxyTemplParams}
+class is a concrete decorator and inherits from \doxylink{class_decorator}{Decorator}.
+
+\begin{DoxyAuthor}{Author}
+Salome Kalaka 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 September 2024
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_decorator}{Decorator} class, \doxylink{class_fertilizer_decorator_a5fa392eb377e7de865123731f1af184a}{harvest()}, \doxylink{class_fertilizer_decorator_a9d736a7916621dfa64e4e4d23e2044f7}{increase\+Production()}, and \doxylink{class_fertilizer_decorator_ac02729230004963cd6adadeb57f5abed}{get\+Leftover\+Capacity()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Implement specific behavior for fertilizer application and its effects.\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+No warning.
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+Ensure that fertilizer application does not exceed the farm unit\textquotesingle{}s storage capacity.
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+The \doxylink{class_fertilizer_decorator}{Fertilizer\+Decorator} adds fertilizer-\/related functionalities to an existing farm unit. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_fertilizer_decorator_8h_source_l00035}{35}} of file \mbox{\hyperlink{_fertilizer_decorator_8h_source}{Fertilizer\+Decorator.\+h}}.
 
 
 
@@ -92,11 +142,22 @@ Fertilizer\+Decorator\+::\+Fertilizer\+Decorator (\begin{DoxyParamCaption}\item[
 
 
 
-Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
+Constructor for the \doxylink{class_fertilizer_decorator}{Fertilizer\+Decorator} class. 
+
+This constructor initializes the \doxylink{class_fertilizer_decorator}{Fertilizer\+Decorator} with a \doxylink{class_farm_unit}{Farm\+Unit} to be decorated with fertilizer functionalities.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit} & A pointer to the \doxylink{class_farm_unit}{Farm\+Unit} that will be decorated with fertilizer features. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00005\ :\ \mbox{\hyperlink{class_decorator}{Decorator}}(unit)\ \{\}}
+\DoxyCodeLine{00006\ :\ \mbox{\hyperlink{class_decorator_a709701f27e52b4178bdf8c29103e2c50}{Decorator}}(unit)\ \{\}}
 
 \end{DoxyCode}
 
@@ -110,17 +171,26 @@ int Fertilizer\+Decorator\+::get\+Leftover\+Capacity (\begin{DoxyParamCaption}{}
 
 
 
-Implements \mbox{\hyperlink{class_decorator}{Decorator}}.
+Calculates the remaining storage capacity after applying fertilizers. 
+
+This method returns the leftover capacity of the farm unit after considering the increased production capacity due to fertilizers.
+
+\begin{DoxyReturn}{Returns}
+The remaining storage capacity of the farm unit. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_decorator_a92a7f8199f7ca609e7fd37667016fc32}{Decorator}}.
 
 
 
-Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
+Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()\ -\/\ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}();}
-\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()\ -\/\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}();}
+\DoxyCodeLine{00034\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_fertilizer_decorator_a5fa392eb377e7de865123731f1af184a}\index{FertilizerDecorator@{FertilizerDecorator}!harvest@{harvest}}
@@ -131,23 +201,36 @@ void Fertilizer\+Decorator\+::harvest (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 
 
 
-Implements \mbox{\hyperlink{class_decorator}{Decorator}}.
+Enhances the harvest operation by applying fertilizer. 
+
+This method handles the harvesting process with the added benefits of fertilizer, potentially increasing crop yield. 
+
+Implements \mbox{\hyperlink{class_decorator_a324a9837f57ac6391523963bb97bcf11}{Decorator}}.
 
 
 
-Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
+Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{if}\ (farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ >\ 0)\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ "{}}<<farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()<<\textcolor{stringliteral}{"{}\ units\ of\ crops."{}}<<endl;}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{setCurrentCapacity}}(0);\ \textcolor{comment}{//Reset\ after\ harvest}}
-\DoxyCodeLine{00011\ \ \ \ \ \}\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}No\ crops\ to\ harvest!"{}}<<endl;}
-\DoxyCodeLine{00014\ \ \ \ \ \}}
-\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ >\ 0)\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_crop_field}{CropField}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}))-\/>getSoilState()-\/>harvestCrops();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_crop_field}{CropField}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}))-\/>getSoilState()-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ "{}}\ <<\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ \textcolor{stringliteral}{"{}\ units\ of\ crops."{}}<<endl;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_crop_field}{CropField}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}))-\/>getSoilState()-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ "{}}\ <<\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()*3\ <<\ \textcolor{stringliteral}{"{}\ units\ of\ crops."{}}<<endl;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ "{}}\ <<\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()*0\ <<\ \textcolor{stringliteral}{"{}\ units\ of\ crops."{}}<<endl;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{setCurrentCapacity}}(0);\ \textcolor{comment}{//Reset\ after\ harvest}}
+\DoxyCodeLine{00021\ \ \ \ \ \}\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}No\ crops\ to\ harvest!"{}}<<endl;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_fertilizer_decorator_a9d736a7916621dfa64e4e4d23e2044f7}\index{FertilizerDecorator@{FertilizerDecorator}!increaseProduction@{increaseProduction}}
@@ -158,18 +241,22 @@ void Fertilizer\+Decorator\+::increase\+Production (\begin{DoxyParamCaption}{}{}
 
 
 
-Implements \mbox{\hyperlink{class_decorator}{Decorator}}.
+Increases production capacity by applying fertilizer. 
+
+This method improves the total production capacity of the farm unit by using fertilizers, allowing for more efficient crop growth. 
+
+Implements \mbox{\hyperlink{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe}{Decorator}}.
 
 
 
-Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
+Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}{applyFertilizer}}();}
-\DoxyCodeLine{00019\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Thus\ crop\ yield\ has\ increased\ by\ 10\%."{}}<<endl;}
-\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}{applyFertilizer}}();}
+\DoxyCodeLine{00029\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Thus\ crop\ yield\ has\ increased\ by\ 40\%."{}}<<endl;}
+\DoxyCodeLine{00030\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d}\index{FertilizerDecorator@{FertilizerDecorator}!print@{print}}
@@ -178,19 +265,23 @@ Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00017}{17
 {\footnotesize\ttfamily \label{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d} 
 void Fertilizer\+Decorator\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Pure virtual function to print the details of the farm unit. Must be implemented by derived classes. 
+
+
+Prints the details of the \doxylink{class_fertilizer_decorator}{Fertilizer\+Decorator} and the associated farm unit. 
+
+This method outputs information about the fertilizer-\/related enhancements made to the farm unit. 
 
 Reimplemented from \mbox{\hyperlink{class_decorator_a1cf864bc98530aa0463608d777a43851}{Decorator}}.
 
 
 
-Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
+Definition at line \mbox{\hyperlink{_fertilizer_decorator_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_fertilizer_decorator_8cpp_source}{Fertilizer\+Decorator.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00027\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Print\ in\ FertilizerDecorator."{}}\ <<\ std::endl;}
-\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Print\ in\ FertilizerDecorator."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00038\ \}}
 
 \end{DoxyCode}
 

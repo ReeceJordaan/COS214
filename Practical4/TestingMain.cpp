@@ -46,6 +46,11 @@ int main() {
     barn3.setTotalCapacity(75);
     barn4.setTotalCapacity(100);
 
+    barn1.setCurrentCapacity(55);
+    barn2.setCurrentCapacity(50);
+    barn3.setCurrentCapacity(60);
+    barn4.setCurrentCapacity(85);
+
     barn2.print();
     barn3.print();
     std::cout << std::endl;
@@ -83,6 +88,7 @@ int main() {
     std::cout << std::endl << std::endl;
 
     Iterator* dfs = farm.createDFSIterator();
+    dfs->firstFarm();
 
     std::cout << "Farms cropFieldHeap (DFS):\n[";
     while(!dfs->isDone()) {
@@ -94,8 +100,10 @@ int main() {
         dfs->next();
     }
     std::cout << "]" << std::endl;
+    dfs->currentFarm();
 
     Iterator* bfs = farm.createBFSIterator();
+    bfs->firstFarm();
     
     std::cout << "\nFarms cropFieldHeap (BFS):\n[";
     while(!bfs->isDone()) {
@@ -107,6 +115,7 @@ int main() {
         bfs->next();
     }
     std::cout << "]" << std::endl;
+    bfs->currentFarm();
 
     std::cout << std::endl << std::endl;
 
@@ -143,7 +152,7 @@ int main() {
     }
     std::cout << "]" << std::endl;
 
-    cout<<"========== Testing State Design Patten =========="<<endl;
+    cout<<"\n========== Testing State Design Patten ==========\n"<<endl;
 
     CropField* testField = new CropField("Wheat", 20, 100);
     testField->setSoilState(new DrySoil()); //we're going to start with dry soil
@@ -153,90 +162,105 @@ int main() {
     testField->getSoilState()->harvestCrops();
 
     std::cout << "\nSimulating rain on Dry Soil:" << std::endl;
-    testField->getSoilState()->rain();
+    testField->rain();
     std::cout << "New soil state: " << testField->getSoilState()->getName() << std::endl;
 
     std::cout << "\nTesting harvest on Fruitful Soil:" << std::endl;
     testField->getSoilState()->harvestCrops();
 
     std::cout << "\nSimulating rain on Fruitful Soil:" << std::endl;
-    testField->getSoilState()->rain();
+    testField->rain();
     std::cout << "New soil state: " << testField->getSoilState()->getName() << std::endl;
 
     std::cout << "\nTesting harvest on Flooded Soil:" << std::endl;
     testField->getSoilState()->harvestCrops();
 
     std::cout << "\nSimulating rain on Flooded Soil:" << std::endl;
-    testField->getSoilState()->rain();
+    testField->rain();
 
-    delete testField;
-
-    cout<<"========== Testing Observer Design Patten =========="<<endl;
+    cout<<"\n========== Testing Observer Design Patten ==========\n"<<endl;
 
     Soil* drySoil = new DrySoil();
-    FertilizerTruck* fertilizerTruck1 = new FertilizerTruck(field1, drySoil);
-    FertilizerTruck* fertilizerTruck2 = new FertilizerTruck(field2, drySoil);
-    FertilizerTruck* fertilizerTruck3 = new FertilizerTruck(field3, drySoil);
+    FertilizerTruck* fertilizerTruck1 = new FertilizerTruck(&field1, drySoil);
+    FertilizerTruck* fertilizerTruck2 = new FertilizerTruck(&field2, drySoil);
+    FertilizerTruck* fertilizerTruck3 = new FertilizerTruck(&field3, drySoil);
 
-    DeliveryTruck* deliveryTruck1 = new DeliveryTruck(barn1);
-    DeliveryTruck* deliveryTruck2 = new DeliveryTruck(barn2);
-    DeliveryTruck* deliveryTruck3 = new DeliveryTruck(barn3);
-    DeliveryTruck* deliveryTruck4 = new DeliveryTruck(barn4);
+    DeliveryTruck* deliveryTruck1 = new DeliveryTruck(&barn1);
+    DeliveryTruck* deliveryTruck2 = new DeliveryTruck(&barn2);
+    DeliveryTruck* deliveryTruck3 = new DeliveryTruck(&barn3);
+    DeliveryTruck* deliveryTruck4 = new DeliveryTruck(&barn4);
 
     std::cout << "Testing FertilizerTruck1 on Dry Soil:" << std::endl;
     fertilizerTruck1->startEngine();
-    std::cout << "New soil state: " << field1->getSoilState()->getName() << std::endl;
-    std::cout << "\nTesting FertilizerTruck1 on Fruitful Soil:" << std::endl;
-    fertilizerTruck1->startEngine();
+    std::cout << "New soil state: " << field1.getSoilState()->getName() << std::endl;
 
-    std::cout << "Testing FertilizerTruck2 on Dry Soil:" << std::endl;
+    std::cout << "\nTesting FertilizerTruck2 on Dry Soil:" << std::endl;
     fertilizerTruck2->startEngine();
-    std::cout << "New soil state: " << field2->getSoilState()->getName() << std::endl;
-    std::cout << "\nTesting FertilizerTruck2 on Fruitful Soil:" << std::endl;
-    fertilizerTruck2->startEngine();
+    std::cout << "New soil state: " << field2.getSoilState()->getName() << std::endl;
 
-    std::cout << "Testing FertilizerTruck3 on Dry Soil:" << std::endl;
+    std::cout << "\nTesting FertilizerTruck3 on Dry Soil:" << std::endl;
     fertilizerTruck3->startEngine();
-    std::cout << "New soil state: " << field3->getSoilState()->getName() << std::endl;
-    std::cout << "\nTesting FertilizerTruck3 on Fruitful Soil:" << std::endl;
-    fertilizerTruck1->startEngine();
+    std::cout << "New soil state: " << field3.getSoilState()->getName() << std::endl;
 
 
 
     std::cout << "\nTesting DeliveryTruck with Near-Full Barn:" << std::endl;
+    std::cout << "Barn current capacity before collection: " << barn1.getCurrentCapacity() << std::endl;
     deliveryTruck1->startEngine();
-    std::cout << "Barn current capacity after collection: " << barn1->getCurrentCapacity() << std::endl;
+    std::cout << "Barn current capacity after collection: " << barn1.getCurrentCapacity() << std::endl;
 
     std::cout << "\nTesting DeliveryTruck with Near-Full Barn:" << std::endl;
+    std::cout << "Barn current capacity before collection: " << barn2.getCurrentCapacity() << std::endl;
     deliveryTruck2->startEngine();
-    std::cout << "Barn current capacity after collection: " << barn2->getCurrentCapacity() << std::endl;
+    std::cout << "Barn current capacity after collection: " << barn2.getCurrentCapacity() << std::endl;
     
     std::cout << "\nTesting DeliveryTruck with Near-Full Barn:" << std::endl;
+    std::cout << "Barn current capacity before collection: " << barn3.getCurrentCapacity() << std::endl;
     deliveryTruck3->startEngine();
-    std::cout << "Barn current capacity after collection: " << barn3->getCurrentCapacity() << std::endl;
+    std::cout << "Barn current capacity after collection: " << barn3.getCurrentCapacity() << std::endl;
     
     std::cout << "\nTesting DeliveryTruck with Near-Full Barn:" << std::endl;
+    std::cout << "Barn current capacity before collection: " << barn4.getCurrentCapacity() << std::endl;
     deliveryTruck4->startEngine();
-    std::cout << "Barn current capacity after collection: " << barn4->getCurrentCapacity() << std::endl;
+    std::cout << "Barn current capacity after collection: " << barn4.getCurrentCapacity() << std::endl << std::endl;
+
+    barn1.buyTruck();
+    barn1.buyTruck();
+    barn1.sellTruck();
+    barn1.callTruck();
+    barn1.sellTruck();
+
+    std::cout << std::endl;
+
+    field1.buyTruck();
+    field1.buyTruck();
+    field1.sellTruck();
+    field1.callTruck();
+    field1.sellTruck();
     
+    cout<<"\n========== Testing Decorator Design Patten ==========\n"<<endl;
 
-    cout<<"========== Testing Decorator Design Patten =========="<<endl;
-
-    FarmUnit* fertilizedField = new FertilizerDecorator(field1);
+    FertilizerDecorator* fertilizedField = new FertilizerDecorator(&field1);
     fertilizedField->increaseProduction();
     fertilizedField->harvest();
     std::cout << "Leftover Capacity after FertilizerDecorator: " << fertilizedField->getLeftoverCapacity() << std::endl;
 
-    // Decorate Barn with BarnDecorator
-    FarmUnit* barnEnhanced = new BarnDecorator(barn1);
+    BarnDecorator* barnEnhanced = new BarnDecorator(&barn1);
     barnEnhanced->increaseProduction();
     barnEnhanced->harvest();
     std::cout << "Leftover Capacity after BarnDecorator: " << barnEnhanced->getLeftoverCapacity() << std::endl;
-    // Clean up dynamically allocated memory
-    //delete fertilizerTruck;
-    //delete deliveryTruck;
-    //delete cropField1;
-    //delete barn1;
-    //delete drySoil;
 
+    delete fertilizerTruck1;
+    delete fertilizerTruck2;
+    delete fertilizerTruck3;
+
+    delete deliveryTruck1;
+    delete deliveryTruck2;
+    delete deliveryTruck3;
+    delete deliveryTruck4;
+
+    delete barnEnhanced;
+    delete fertilizedField;
+    delete testField;
+    delete drySoil;
 }

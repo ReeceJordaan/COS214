@@ -92,26 +92,27 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Decorator.h&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include&lt;iostream&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_barn_decorator.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_barn_decorator.html">BarnDecorator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_decorator.html">Decorator</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <a class="code hl_class" href="class_barn_decorator.html">BarnDecorator</a>(<a class="code hl_class" href="class_farm_unit.html">FarmUnit</a>* unit);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_class" href="class_barn_decorator.html">~BarnDecorator</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">void</span> harvest();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordtype">void</span> increaseProduction();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordtype">int</span> getLeftoverCapacity();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_barn_decorator.html#a12a723b1f992f88f63b38bf0113027d2">print</a>();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_barn_decorator.html">   35</a></span><span class="keyword">class </span><a class="code hl_class" href="class_barn_decorator.html">BarnDecorator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_decorator.html">Decorator</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="class_barn_decorator.html">BarnDecorator</a>(<a class="code hl_class" href="class_farm_unit.html">FarmUnit</a>* unit);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_class" href="class_barn_decorator.html">~BarnDecorator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_barn_decorator.html#a4401a2e94832803fbdc69d1708b5d23a">harvest</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_barn_decorator.html#aa4898972c8f698df363eb91075b11a88">increaseProduction</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordtype">int</span> <a class="code hl_function" href="class_barn_decorator.html#a70f309317dfe38961b8f7b3fe2e3cde8">getLeftoverCapacity</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_barn_decorator.html#a12a723b1f992f88f63b38bf0113027d2">print</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_barn_decorator_html"><div class="ttname"><a href="class_barn_decorator.html">BarnDecorator</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">BarnDecorator.h:8</a></div></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_barn_decorator_html"><div class="ttname"><a href="class_barn_decorator.html">BarnDecorator</a></div><div class="ttdoc">A decorator class that adds barn-related functionality to a FarmUnit.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">BarnDecorator.h:36</a></div></div>
 <div class="ttc" id="aclass_barn_decorator_html_a12a723b1f992f88f63b38bf0113027d2"><div class="ttname"><a href="class_barn_decorator.html#a12a723b1f992f88f63b38bf0113027d2">BarnDecorator::print</a></div><div class="ttdeci">void print()</div><div class="ttdef"><b>Definition</b> <a href="_barn_decorator_8cpp_source.html#l00029">BarnDecorator.cpp:29</a></div></div>
-<div class="ttc" id="aclass_decorator_html"><div class="ttname"><a href="class_decorator.html">Decorator</a></div><div class="ttdef"><b>Definition</b> <a href="_decorator_8h_source.html#l00009">Decorator.h:10</a></div></div>
+<div class="ttc" id="aclass_barn_decorator_html_a4401a2e94832803fbdc69d1708b5d23a"><div class="ttname"><a href="class_barn_decorator.html#a4401a2e94832803fbdc69d1708b5d23a">BarnDecorator::harvest</a></div><div class="ttdeci">void harvest()</div><div class="ttdoc">Harvests crops from the farm unit.</div><div class="ttdef"><b>Definition</b> <a href="_barn_decorator_8cpp_source.html#l00009">BarnDecorator.cpp:9</a></div></div>
+<div class="ttc" id="aclass_barn_decorator_html_a70f309317dfe38961b8f7b3fe2e3cde8"><div class="ttname"><a href="class_barn_decorator.html#a70f309317dfe38961b8f7b3fe2e3cde8">BarnDecorator::getLeftoverCapacity</a></div><div class="ttdeci">int getLeftoverCapacity()</div><div class="ttdoc">Calculates the remaining storage capacity of the farm unit.</div><div class="ttdef"><b>Definition</b> <a href="_barn_decorator_8cpp_source.html#l00025">BarnDecorator.cpp:25</a></div></div>
+<div class="ttc" id="aclass_barn_decorator_html_aa4898972c8f698df363eb91075b11a88"><div class="ttname"><a href="class_barn_decorator.html#aa4898972c8f698df363eb91075b11a88">BarnDecorator::increaseProduction</a></div><div class="ttdeci">void increaseProduction()</div><div class="ttdoc">Increases the production capacity of the farm unit.</div><div class="ttdef"><b>Definition</b> <a href="_barn_decorator_8cpp_source.html#l00019">BarnDecorator.cpp:19</a></div></div>
+<div class="ttc" id="aclass_decorator_html"><div class="ttname"><a href="class_decorator.html">Decorator</a></div><div class="ttdoc">An abstract decorator class that adds additional functionality to FarmUnit objects.</div><div class="ttdef"><b>Definition</b> <a href="_decorator_8h_source.html#l00036">Decorator.h:37</a></div></div>
 <div class="ttc" id="aclass_farm_unit_html"><div class="ttname"><a href="class_farm_unit.html">FarmUnit</a></div><div class="ttdoc">The base class for all farm units, managing trucks and capacity.</div><div class="ttdef"><b>Definition</b> <a href="_farm_unit_8h_source.html#l00018">FarmUnit.h:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

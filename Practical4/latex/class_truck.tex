@@ -1,5 +1,14 @@
 \doxysection{Truck Class Reference}
 \hypertarget{class_truck}{}\label{class_truck}\index{Truck@{Truck}}
+
+
+Abstract base class representing a truck in the Observer design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Truck.\+h$>$}
+
 Inheritance diagram for Truck\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,17 +18,55 @@ Inheritance diagram for Truck\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_truck_a87e358bca8fe34e6299c6ff233afb08b}{Truck}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_truck}{Truck} class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_truck_a219d1f79f9d09d9f0ab34bd65156e861}{Truck}} (const \mbox{\hyperlink{class_truck}{Truck}} \texorpdfstring{$\ast$}{*}other)
-\item 
-\Hypertarget{class_truck_a2d914b649a601c31fff420b90a51dc7f}\label{class_truck_a2d914b649a601c31fff420b90a51dc7f} 
-virtual void {\bfseries start\+Engine} ()=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_truck}{Truck} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_truck_a63cd38356a74f868f7fa4785637104db}\label{class_truck_a63cd38356a74f868f7fa4785637104db} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Truck} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_truck_a2d914b649a601c31fff420b90a51dc7f}{start\+Engine}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to start the truck\textquotesingle{}s engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Abstract base class representing a truck in the Observer design pattern. 
+
+The \doxylink{class_truck}{Truck} class serves as an abstract base class for various types of trucks in the Observer design pattern. It defines the common interface for trucks that can observe and respond to changes in other objects (e.\+g., barns). Derived classes must implement the {\ttfamily \doxylink{class_truck_a2d914b649a601c31fff420b90a51dc7f}{start\+Engine()}} method to define specific behaviors for starting the truck\textquotesingle{}s engine.
 
 
-Definition at line \mbox{\hyperlink{_truck_8h_source_l00008}{8}} of file \mbox{\hyperlink{_truck_8h_source}{Truck.\+h}}.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & There’s no template method.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyAuthor}{Author}
+Salome Kalaka 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 September 2024
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+Derived classes (e.\+g., \doxylink{class_delivery_truck}{Delivery\+Truck}), \doxylink{class_truck_a2d914b649a601c31fff420b90a51dc7f}{start\+Engine()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000010}{Todo}}]Implement specific truck behaviors in derived classes.\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+Ensure proper implementation of the {\ttfamily \doxylink{class_truck_a2d914b649a601c31fff420b90a51dc7f}{start\+Engine()}} method to reflect accurate truck functionality.
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+Derived classes must provide concrete implementations for all pure virtual functions.
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+The \doxylink{class_truck}{Truck} class is part of an observer system where trucks may observe changes in other objects, such as barns. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_truck_8h_source_l00035}{35}} of file \mbox{\hyperlink{_truck_8h_source}{Truck.\+h}}.
 
 
 
@@ -31,6 +78,10 @@ Definition at line \mbox{\hyperlink{_truck_8h_source_l00008}{8}} of file \mbox{\
 Truck\+::\+Truck (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
+
+Default constructor for the \doxylink{class_truck}{Truck} class. 
+
+Initializes a \doxylink{class_truck}{Truck} object. The specific initialization details depend on derived classes. 
 
 Definition at line \mbox{\hyperlink{_truck_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_truck_8cpp_source}{Truck.\+cpp}}.
 
@@ -49,6 +100,17 @@ Truck\+::\+Truck (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_tr
 
 
 
+Copy constructor for the \doxylink{class_truck}{Truck} class. 
+
+Creates a copy of another \doxylink{class_truck}{Truck} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A pointer to the \doxylink{class_truck}{Truck} object to be copied. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{_truck_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_truck_8cpp_source}{Truck.\+cpp}}.
 
 
@@ -58,6 +120,23 @@ Definition at line \mbox{\hyperlink{_truck_8cpp_source_l00007}{7}} of file \mbox
 \DoxyCodeLine{00009\ \}}
 
 \end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_truck_a2d914b649a601c31fff420b90a51dc7f}\index{Truck@{Truck}!startEngine@{startEngine}}
+\index{startEngine@{startEngine}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{startEngine()}{startEngine()}}
+{\footnotesize\ttfamily \label{class_truck_a2d914b649a601c31fff420b90a51dc7f} 
+virtual void Truck\+::start\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to start the truck\textquotesingle{}s engine. 
+
+This function must be implemented by derived classes to define how the truck\textquotesingle{}s engine is started. 
+
+Implemented in \mbox{\hyperlink{class_delivery_truck_a2cc9028a83027b4c364bd1fb705475cc}{Delivery\+Truck}}, and \mbox{\hyperlink{class_fertilizer_truck_a2a6d7b020b6bca2692c5ec59b974e147}{Fertilizer\+Truck}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

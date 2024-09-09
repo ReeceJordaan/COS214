@@ -90,32 +90,51 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">FertilizerDecorator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A concrete decorator class that adds fertilizer-related functionality to a <a class="el" href="class_farm_unit.html" title="The base class for all farm units, managing trucks and capacity.">FarmUnit</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_fertilizer_decorator_8h_source.html">FertilizerDecorator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for FertilizerDecorator:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_fertilizer_decorator.png" usemap="#FertilizerDecorator_map" alt=""/>
   <map id="FertilizerDecorator_map" name="FertilizerDecorator_map">
-<area href="class_decorator.html" alt="Decorator" shape="rect" coords="0,56,119,80"/>
-<area href="class_farm_unit.html" title="The base class for all farm units, managing trucks and capacity." alt="FarmUnit" shape="rect" coords="0,0,119,24"/>
+<area href="class_decorator.html" title="An abstract decorator class that adds additional functionality to FarmUnit objects." alt="Decorator" shape="rect" coords="129,56,248,80"/>
+<area href="class_farm_unit.html" title="The base class for all farm units, managing trucks and capacity." alt="FarmUnit" shape="rect" coords="193,0,312,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afbda6ca609629080161c3e839e6958fd" id="r_afbda6ca609629080161c3e839e6958fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbda6ca609629080161c3e839e6958fd">FertilizerDecorator</a> (<a class="el" href="class_farm_unit.html">FarmUnit</a> *unit)</td></tr>
+<tr class="memdesc:afbda6ca609629080161c3e839e6958fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_fertilizer_decorator.html" title="A concrete decorator class that adds fertilizer-related functionality to a FarmUnit.">FertilizerDecorator</a> class.  <br /></td></tr>
 <tr class="separator:afbda6ca609629080161c3e839e6958fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728a425a8719b333f715b0583b74fee2" id="r_a728a425a8719b333f715b0583b74fee2"><td class="memItemLeft" align="right" valign="top"><a id="a728a425a8719b333f715b0583b74fee2" name="a728a425a8719b333f715b0583b74fee2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~FertilizerDecorator</b> ()=default</td></tr>
+<tr class="memdesc:a728a425a8719b333f715b0583b74fee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default virtual destructor. <br /></td></tr>
+<tr class="separator:a728a425a8719b333f715b0583b74fee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa392eb377e7de865123731f1af184a" id="r_a5fa392eb377e7de865123731f1af184a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fa392eb377e7de865123731f1af184a">harvest</a> ()</td></tr>
+<tr class="memdesc:a5fa392eb377e7de865123731f1af184a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enhances the harvest operation by applying fertilizer.  <br /></td></tr>
 <tr class="separator:a5fa392eb377e7de865123731f1af184a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d736a7916621dfa64e4e4d23e2044f7" id="r_a9d736a7916621dfa64e4e4d23e2044f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d736a7916621dfa64e4e4d23e2044f7">increaseProduction</a> ()</td></tr>
+<tr class="memdesc:a9d736a7916621dfa64e4e4d23e2044f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases production capacity by applying fertilizer.  <br /></td></tr>
 <tr class="separator:a9d736a7916621dfa64e4e4d23e2044f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac02729230004963cd6adadeb57f5abed" id="r_ac02729230004963cd6adadeb57f5abed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac02729230004963cd6adadeb57f5abed">getLeftoverCapacity</a> ()</td></tr>
+<tr class="memdesc:ac02729230004963cd6adadeb57f5abed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the remaining storage capacity after applying fertilizers.  <br /></td></tr>
 <tr class="separator:ac02729230004963cd6adadeb57f5abed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbc6787247029c7562f8fe98653cb91d" id="r_abbc6787247029c7562f8fe98653cb91d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc6787247029c7562f8fe98653cb91d">print</a> ()</td></tr>
+<tr class="memdesc:abbc6787247029c7562f8fe98653cb91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the details of the <a class="el" href="class_fertilizer_decorator.html" title="A concrete decorator class that adds fertilizer-related functionality to a FarmUnit.">FertilizerDecorator</a> and the associated farm unit.  <br /></td></tr>
 <tr class="separator:abbc6787247029c7562f8fe98653cb91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_decorator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_decorator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_decorator.html">Decorator</a></td></tr>
 <tr class="memitem:a709701f27e52b4178bdf8c29103e2c50 inherit pub_methods_class_decorator" id="r_a709701f27e52b4178bdf8c29103e2c50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_decorator.html#a709701f27e52b4178bdf8c29103e2c50">Decorator</a> (<a class="el" href="class_farm_unit.html">FarmUnit</a> *unit)</td></tr>
+<tr class="memdesc:a709701f27e52b4178bdf8c29103e2c50 inherit pub_methods_class_decorator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_decorator.html" title="An abstract decorator class that adds additional functionality to FarmUnit objects.">Decorator</a> class.  <br /></td></tr>
 <tr class="separator:a709701f27e52b4178bdf8c29103e2c50 inherit pub_methods_class_decorator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6956412353d9a21d703396cfe17ca5f0 inherit pub_methods_class_decorator" id="r_a6956412353d9a21d703396cfe17ca5f0"><td class="memItemLeft" align="right" valign="top">
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Decorator</b> ()=default</td></tr>
+<tr class="memdesc:a6956412353d9a21d703396cfe17ca5f0 inherit pub_methods_class_decorator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default virtual destructor. <br /></td></tr>
+<tr class="separator:a6956412353d9a21d703396cfe17ca5f0 inherit pub_methods_class_decorator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_farm_unit"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_farm_unit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_farm_unit.html">FarmUnit</a></td></tr>
 <tr class="memitem:a30e83ce86b2ad96dc3a4fe68254c9d63 inherit pub_methods_class_farm_unit" id="r_a30e83ce86b2ad96dc3a4fe68254c9d63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm_unit.html#a30e83ce86b2ad96dc3a4fe68254c9d63">FarmUnit</a> (int <a class="el" href="class_farm_unit.html#aa97fc182b3ca0970a21ca53d4d8a8530">currentCapacity</a>, int <a class="el" href="class_farm_unit.html#a547cf3ba87da60fb031828903f240466">totalCapacity</a>)</td></tr>
 <tr class="separator:a30e83ce86b2ad96dc3a4fe68254c9d63 inherit pub_methods_class_farm_unit"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +178,7 @@ Public Member Functions</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_decorator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_decorator')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_decorator.html">Decorator</a></td></tr>
 <tr class="memitem:aff8c220adcee5df2ba87285c83ca1235 inherit pro_attribs_class_decorator" id="r_aff8c220adcee5df2ba87285c83ca1235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_farm_unit.html">FarmUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a></td></tr>
+<tr class="memdesc:aff8c220adcee5df2ba87285c83ca1235 inherit pro_attribs_class_decorator"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the <a class="el" href="class_farm_unit.html" title="The base class for all farm units, managing trucks and capacity.">FarmUnit</a> being decorated.  <br /></td></tr>
 <tr class="separator:aff8c220adcee5df2ba87285c83ca1235 inherit pro_attribs_class_decorator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_farm_unit"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_farm_unit')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_farm_unit.html">FarmUnit</a></td></tr>
 <tr class="memitem:aa9d6b1a6a31f8d6c9a973ff0a50e6663 inherit pro_attribs_class_farm_unit" id="r_aa9d6b1a6a31f8d6c9a973ff0a50e6663"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_truck.html">Truck</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_farm_unit.html#aa9d6b1a6a31f8d6c9a973ff0a50e6663">trucks</a></td></tr>
@@ -172,8 +192,25 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a547cf3ba87da60fb031828903f240466 inherit pro_attribs_class_farm_unit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8h_source.html#l00007">7</a> of file <a class="el" href="_fertilizer_decorator_8h_source.html">FertilizerDecorator.h</a>.</p>
+<div class="textblock"><p>A concrete decorator class that adds fertilizer-related functionality to a <a class="el" href="class_farm_unit.html" title="The base class for all farm units, managing trucks and capacity.">FarmUnit</a>. </p>
+<p>The <a class="el" href="class_fertilizer_decorator.html" title="A concrete decorator class that adds fertilizer-related functionality to a FarmUnit.">FertilizerDecorator</a> class enhances the functionality of a <a class="el" href="class_farm_unit.html" title="The base class for all farm units, managing trucks and capacity.">FarmUnit</a> by adding features related to fertilizers, such as improving crop yield, harvesting crops, and calculating the remaining storage capacity. It follows the <a class="el" href="class_decorator.html" title="An abstract decorator class that adds additional functionality to FarmUnit objects.">Decorator</a> design pattern to dynamically add these functionalities.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>There’s no template method.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>class is a concrete decorator and inherits from <a class="el" href="class_decorator.html" title="An abstract decorator class that adds additional functionality to FarmUnit objects.">Decorator</a>.</p>
+<dl class="section author"><dt>Author</dt><dd>Salome Kalaka </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>09 September 2024</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_decorator.html" title="An abstract decorator class that adds additional functionality to FarmUnit objects.">Decorator</a> class, <a class="el" href="#a5fa392eb377e7de865123731f1af184a" title="Enhances the harvest operation by applying fertilizer.">harvest()</a>, <a class="el" href="#a9d736a7916621dfa64e4e4d23e2044f7" title="Increases production capacity by applying fertilizer.">increaseProduction()</a>, and <a class="el" href="#ac02729230004963cd6adadeb57f5abed" title="Calculates the remaining storage capacity after applying fertilizers.">getLeftoverCapacity()</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo</a></b></dt><dd>Implement specific behavior for fertilizer application and its effects.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>No warning.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>Ensure that fertilizer application does not exceed the farm unit's storage capacity.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="class_fertilizer_decorator.html" title="A concrete decorator class that adds fertilizer-related functionality to a FarmUnit.">FertilizerDecorator</a> adds fertilizer-related functionalities to an existing farm unit. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8h_source.html#l00035">35</a> of file <a class="el" href="_fertilizer_decorator_8h_source.html">FertilizerDecorator.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afbda6ca609629080161c3e839e6958fd" name="afbda6ca609629080161c3e839e6958fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbda6ca609629080161c3e839e6958fd">&#9670;&#160;</a></span>FertilizerDecorator()</h2>
@@ -190,9 +227,18 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00005">5</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    5</span>: <a class="code hl_class" href="class_decorator.html">Decorator</a>(unit) {}</div>
-<div class="ttc" id="aclass_decorator_html"><div class="ttname"><a href="class_decorator.html">Decorator</a></div><div class="ttdef"><b>Definition</b> <a href="_decorator_8h_source.html#l00009">Decorator.h:10</a></div></div>
+<p>Constructor for the <a class="el" href="class_fertilizer_decorator.html" title="A concrete decorator class that adds fertilizer-related functionality to a FarmUnit.">FertilizerDecorator</a> class. </p>
+<p>This constructor initializes the <a class="el" href="class_fertilizer_decorator.html" title="A concrete decorator class that adds fertilizer-related functionality to a FarmUnit.">FertilizerDecorator</a> with a <a class="el" href="class_farm_unit.html" title="The base class for all farm units, managing trucks and capacity.">FarmUnit</a> to be decorated with fertilizer functionalities.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unit</td><td>A pointer to the <a class="el" href="class_farm_unit.html" title="The base class for all farm units, managing trucks and capacity.">FarmUnit</a> that will be decorated with fertilizer features. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00006">6</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>: <a class="code hl_function" href="class_decorator.html#a709701f27e52b4178bdf8c29103e2c50">Decorator</a>(unit) {}</div>
+<div class="ttc" id="aclass_decorator_html_a709701f27e52b4178bdf8c29103e2c50"><div class="ttname"><a href="class_decorator.html#a709701f27e52b4178bdf8c29103e2c50">Decorator::Decorator</a></div><div class="ttdeci">Decorator(FarmUnit *unit)</div><div class="ttdoc">Constructor for the Decorator class.</div><div class="ttdef"><b>Definition</b> <a href="_decorator_8cpp_source.html#l00005">Decorator.cpp:5</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,12 +266,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_decorator.html">Decorator</a>.</p>
+<p>Calculates the remaining storage capacity after applying fertilizers. </p>
+<p>This method returns the leftover capacity of the farm unit after considering the increased production capacity due to fertilizers.</p>
+<dl class="section return"><dt>Returns</dt><dd>The remaining storage capacity of the farm unit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00022">22</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                            {</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> farmUnit-&gt;<a class="code hl_function" href="class_farm_unit.html#a00cae8dfd9011bb6500f019c679e5df4">getTotalCapacity</a>() - farmUnit-&gt;<a class="code hl_function" href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">getCurrentCapacity</a>();</div>
-<div class="line"><span class="lineno">   24</span>}</div>
+<p>Implements <a class="el" href="class_decorator.html#a92a7f8199f7ca609e7fd37667016fc32">Decorator</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00032">32</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                                            {</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>-&gt;<a class="code hl_function" href="class_farm_unit.html#a00cae8dfd9011bb6500f019c679e5df4">getTotalCapacity</a>() - <a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>-&gt;<a class="code hl_function" href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">getCurrentCapacity</a>();</div>
+<div class="line"><span class="lineno">   34</span>}</div>
+<div class="ttc" id="aclass_decorator_html_aff8c220adcee5df2ba87285c83ca1235"><div class="ttname"><a href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">Decorator::farmUnit</a></div><div class="ttdeci">FarmUnit * farmUnit</div><div class="ttdoc">A pointer to the FarmUnit being decorated.</div><div class="ttdef"><b>Definition</b> <a href="_decorator_8h_source.html#l00089">Decorator.h:89</a></div></div>
 <div class="ttc" id="aclass_farm_unit_html_a00cae8dfd9011bb6500f019c679e5df4"><div class="ttname"><a href="class_farm_unit.html#a00cae8dfd9011bb6500f019c679e5df4">FarmUnit::getTotalCapacity</a></div><div class="ttdeci">int getTotalCapacity() const</div><div class="ttdef"><b>Definition</b> <a href="_farm_unit_8cpp_source.html#l00044">FarmUnit.cpp:44</a></div></div>
 <div class="ttc" id="aclass_farm_unit_html_a79d5c7e1e3b403f24f72e39fbe6ffdd3"><div class="ttname"><a href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">FarmUnit::getCurrentCapacity</a></div><div class="ttdeci">int getCurrentCapacity() const</div><div class="ttdef"><b>Definition</b> <a href="_farm_unit_8cpp_source.html#l00036">FarmUnit.cpp:36</a></div></div>
 </div><!-- fragment -->
@@ -254,18 +305,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_decorator.html">Decorator</a>.</p>
+<p>Enhances the harvest operation by applying fertilizer. </p>
+<p>This method handles the harvesting process with the added benefits of fertilizer, potentially increasing crop yield. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00007">7</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>                                 {</div>
-<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">if</span> (farmUnit-&gt;<a class="code hl_function" href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">getCurrentCapacity</a>() &gt; 0) {</div>
-<div class="line"><span class="lineno">    9</span>        cout&lt;&lt;<span class="stringliteral">&quot;Harvesting &quot;</span>&lt;&lt;farmUnit-&gt;<a class="code hl_function" href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">getCurrentCapacity</a>()&lt;&lt;<span class="stringliteral">&quot; units of crops.&quot;</span>&lt;&lt;endl;</div>
-<div class="line"><span class="lineno">   10</span>        farmUnit-&gt;<a class="code hl_function" href="class_farm_unit.html#a6675cd1e310a5fcf38c6382796fe602c">setCurrentCapacity</a>(0); <span class="comment">//Reset after harvest</span></div>
-<div class="line"><span class="lineno">   11</span>    } </div>
-<div class="line"><span class="lineno">   12</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   13</span>        cout&lt;&lt;<span class="stringliteral">&quot;No crops to harvest!&quot;</span>&lt;&lt;endl;</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-<div class="line"><span class="lineno">   15</span>}</div>
+<p>Implements <a class="el" href="class_decorator.html#a324a9837f57ac6391523963bb97bcf11">Decorator</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00008">8</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>                                 {</div>
+<div class="line"><span class="lineno">    9</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>-&gt;<a class="code hl_function" href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">getCurrentCapacity</a>() &gt; 0) {</div>
+<div class="line"><span class="lineno">   10</span>        (<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_crop_field.html">CropField</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>))-&gt;getSoilState()-&gt;harvestCrops();</div>
+<div class="line"><span class="lineno">   11</span> </div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> ((<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_crop_field.html">CropField</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>))-&gt;getSoilState()-&gt;getName() == <span class="stringliteral">&quot;Dry&quot;</span>) {</div>
+<div class="line"><span class="lineno">   13</span>            cout&lt;&lt;<span class="stringliteral">&quot;Harvesting &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>-&gt;<a class="code hl_function" href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">getCurrentCapacity</a>() &lt;&lt; <span class="stringliteral">&quot; units of crops.&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><span class="lineno">   14</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_crop_field.html">CropField</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>))-&gt;getSoilState()-&gt;getName() == <span class="stringliteral">&quot;Fruitful&quot;</span>) {</div>
+<div class="line"><span class="lineno">   15</span>            cout&lt;&lt;<span class="stringliteral">&quot;Harvesting &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>-&gt;<a class="code hl_function" href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">getCurrentCapacity</a>()*3 &lt;&lt; <span class="stringliteral">&quot; units of crops.&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><span class="lineno">   16</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   17</span>            cout&lt;&lt;<span class="stringliteral">&quot;Harvesting &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>-&gt;<a class="code hl_function" href="class_farm_unit.html#a79d5c7e1e3b403f24f72e39fbe6ffdd3">getCurrentCapacity</a>()*0 &lt;&lt; <span class="stringliteral">&quot; units of crops.&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>-&gt;<a class="code hl_function" href="class_farm_unit.html#a6675cd1e310a5fcf38c6382796fe602c">setCurrentCapacity</a>(0); <span class="comment">//Reset after harvest</span></div>
+<div class="line"><span class="lineno">   21</span>    } </div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   23</span>        cout&lt;&lt;<span class="stringliteral">&quot;No crops to harvest!&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="line"><span class="lineno">   25</span>}</div>
+<div class="ttc" id="aclass_crop_field_html"><div class="ttname"><a href="class_crop_field.html">CropField</a></div><div class="ttdoc">Represents a crop field, inheriting from FarmUnit, with crop type, barns, and soil state.</div><div class="ttdef"><b>Definition</b> <a href="_crop_field_8h_source.html#l00017">CropField.h:17</a></div></div>
 <div class="ttc" id="aclass_farm_unit_html_a6675cd1e310a5fcf38c6382796fe602c"><div class="ttname"><a href="class_farm_unit.html#a6675cd1e310a5fcf38c6382796fe602c">FarmUnit::setCurrentCapacity</a></div><div class="ttdeci">void setCurrentCapacity(int currentCapacity)</div><div class="ttdef"><b>Definition</b> <a href="_farm_unit_8cpp_source.html#l00040">FarmUnit.cpp:40</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -293,13 +357,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_decorator.html">Decorator</a>.</p>
+<p>Increases production capacity by applying fertilizer. </p>
+<p>This method improves the total production capacity of the farm unit by using fertilizers, allowing for more efficient crop growth. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00017">17</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                            {</div>
-<div class="line"><span class="lineno">   18</span>    farmUnit-&gt;<a class="code hl_function" href="class_farm_unit.html#a7485921c8fb37749548e4ea88f334dca">applyFertilizer</a>();</div>
-<div class="line"><span class="lineno">   19</span>    cout&lt;&lt;<span class="stringliteral">&quot;Thus crop yield has increased by 10%.&quot;</span>&lt;&lt;endl;</div>
-<div class="line"><span class="lineno">   20</span>}</div>
+<p>Implements <a class="el" href="class_decorator.html#a66e7fb1eb3d71b18f119eba8ae0b22fe">Decorator</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00027">27</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                                            {</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a>-&gt;<a class="code hl_function" href="class_farm_unit.html#a7485921c8fb37749548e4ea88f334dca">applyFertilizer</a>();</div>
+<div class="line"><span class="lineno">   29</span>    cout&lt;&lt;<span class="stringliteral">&quot;Thus crop yield has increased by 40%.&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><span class="lineno">   30</span>}</div>
 <div class="ttc" id="aclass_farm_unit_html_a7485921c8fb37749548e4ea88f334dca"><div class="ttname"><a href="class_farm_unit.html#a7485921c8fb37749548e4ea88f334dca">FarmUnit::applyFertilizer</a></div><div class="ttdeci">void applyFertilizer()</div><div class="ttdoc">Applies fertilizer using a fertilizer truck.</div><div class="ttdef"><b>Definition</b> <a href="_farm_unit_8cpp_source.html#l00052">FarmUnit.cpp:52</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -326,14 +393,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Pure virtual function to print the details of the farm unit. Must be implemented by derived classes. </p>
+
+<p>Prints the details of the <a class="el" href="class_fertilizer_decorator.html" title="A concrete decorator class that adds fertilizer-related functionality to a FarmUnit.">FertilizerDecorator</a> and the associated farm unit. </p>
+<p>This method outputs information about the fertilizer-related enhancements made to the farm unit. </p>
 
 <p>Reimplemented from <a class="el" href="class_decorator.html#a1cf864bc98530aa0463608d777a43851">Decorator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00026">26</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                {</div>
-<div class="line"><span class="lineno">   27</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Print in FertilizerDecorator.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   28</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_fertilizer_decorator_8cpp_source.html#l00036">36</a> of file <a class="el" href="_fertilizer_decorator_8cpp_source.html">FertilizerDecorator.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                                {</div>
+<div class="line"><span class="lineno">   37</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Print in FertilizerDecorator.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   38</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

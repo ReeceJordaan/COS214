@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['_7ebarn_0',['~Barn',['../class_barn.html#a24235aae94c8da869b27b02c07f2420e',1,'Barn']]],
-  ['_7ebfs_1',['~BFS',['../class_b_f_s.html#a49eae2c37b1083d19f70640f0848b1cd',1,'BFS']]],
-  ['_7ecropfield_2',['~CropField',['../class_crop_field.html#a3650366847c5ab679905acc348593112',1,'CropField']]],
-  ['_7edfs_3',['~DFS',['../class_d_f_s.html#aa013205788e77bad8ea56e138420c1ea',1,'DFS']]],
-  ['_7efarm_4',['~Farm',['../class_farm.html#a551fad409c44962866226b3eb4d4b518',1,'Farm']]],
-  ['_7efarmunit_5',['~FarmUnit',['../class_farm_unit.html#a27f47dcdc8757e3bf5121b686d140bdc',1,'FarmUnit']]],
-  ['_7eiterator_6',['~Iterator',['../class_iterator.html#aab6716f5bdecb49e9cdd754359408ab6',1,'Iterator']]]
+  ['selltruck_0',['sellTruck',['../class_barn.html#afe0946e57131120eb5b7639601f1dc46',1,'Barn::sellTruck()'],['../class_crop_field.html#a35c7747dea2718f10face80afa80fc4c',1,'CropField::sellTruck()'],['../class_farm_unit.html#a31a9c472afab1077a715d54030143625',1,'FarmUnit::sellTruck()']]],
+  ['setcurrentcapacity_1',['setCurrentCapacity',['../class_farm_unit.html#a6675cd1e310a5fcf38c6382796fe602c',1,'FarmUnit']]],
+  ['setname_2',['setName',['../class_soil.html#a49bd88fa5018a8f5200a0bfabc07945c',1,'Soil']]],
+  ['setsoilstate_3',['setSoilState',['../class_crop_field.html#ab01d92251a97f1cf12b6a992035d5b73',1,'CropField']]],
+  ['settotalcapacity_4',['setTotalCapacity',['../class_farm_unit.html#ae09dde8bee8fbbcdc17f1b369604634f',1,'FarmUnit']]],
+  ['soil_5',['Soil',['../class_soil.html#ab1b416ed1251bd3e6c11a66457668eef',1,'Soil::Soil(string name)'],['../class_soil.html#acdbb3e814cb73a0d062a3b088578bbe4',1,'Soil::Soil(const Soil *other)']]],
+  ['startengine_6',['startEngine',['../class_delivery_truck.html#a2cc9028a83027b4c364bd1fb705475cc',1,'DeliveryTruck::startEngine()'],['../class_fertilizer_truck.html#a2a6d7b020b6bca2692c5ec59b974e147',1,'FertilizerTruck::startEngine()'],['../class_truck.html#a2d914b649a601c31fff420b90a51dc7f',1,'Truck::startEngine()']]]
 ];

@@ -1,5 +1,14 @@
 \doxysection{Fertilizer\+Truck Class Reference}
 \hypertarget{class_fertilizer_truck}{}\label{class_fertilizer_truck}\index{FertilizerTruck@{FertilizerTruck}}
+
+
+A concrete observer class for trucks that deliver fertilizer in the Observer design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Fertilizer\+Truck.\+h$>$}
+
 Inheritance diagram for Fertilizer\+Truck\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,22 +19,65 @@ Inheritance diagram for Fertilizer\+Truck\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fertilizer_truck_a7a4af0f9c9b62a8a3270d62719929011}{Fertilizer\+Truck}} (\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}subject, \mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}soil\+State)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_fertilizer_truck}{Fertilizer\+Truck} class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_fertilizer_truck_ab3fb0e20d412027689a76cc4513f9f2d}{Fertilizer\+Truck}} (const \mbox{\hyperlink{class_fertilizer_truck}{Fertilizer\+Truck}} \texorpdfstring{$\ast$}{*}other)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_fertilizer_truck}{Fertilizer\+Truck} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_fertilizer_truck_a9ff0e6bf62a48a35d4c272f0d8f4429e}\label{class_fertilizer_truck_a9ff0e6bf62a48a35d4c272f0d8f4429e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Fertilizer\+Truck} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_fertilizer_truck_a2a6d7b020b6bca2692c5ec59b974e147}{start\+Engine}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Starts the truck\textquotesingle{}s engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_truck}{Truck}}}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_truck_a87e358bca8fe34e6299c6ff233afb08b}{Truck}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_truck}{Truck} class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_truck_a219d1f79f9d09d9f0ab34bd65156e861}{Truck}} (const \mbox{\hyperlink{class_truck}{Truck}} \texorpdfstring{$\ast$}{*}other)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_truck}{Truck} class. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Truck} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+A concrete observer class for trucks that deliver fertilizer in the Observer design pattern. 
+
+\doxylink{class_fertilizer_truck}{Fertilizer\+Truck} is a concrete implementation of the \doxylink{class_truck}{Truck} class, designed to deliver fertilizer based on the state of a \doxylink{class_crop_field}{Crop\+Field}. It observes changes in the \doxylink{class_crop_field}{Crop\+Field} and reacts accordingly. The \doxylink{class_fertilizer_truck}{Fertilizer\+Truck} also maintains a reference to the current soil state, which may affect its operations.
 
 
-Definition at line \mbox{\hyperlink{_fertilizer_truck_8h_source_l00011}{11}} of file \mbox{\hyperlink{_fertilizer_truck_8h_source}{Fertilizer\+Truck.\+h}}.
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & There’s no template method.\\
+\hline
+\end{DoxyTemplParams}
+class is a Concrete Observer and inherits from \doxylink{class_truck}{Truck}.
+
+\begin{DoxyAuthor}{Author}
+Salome Kalaka 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 September 2024
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_truck}{Truck} class, \doxylink{class_crop_field}{Crop\+Field} class, \doxylink{class_soil}{Soil} class, \doxylink{class_fertilizer_truck_a2a6d7b020b6bca2692c5ec59b974e147}{start\+Engine()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Implement specific logic for reacting to changes in the \doxylink{class_crop_field}{Crop\+Field} and soil state.\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+Ensure the correct handling of fertilizer delivery based on soil conditions and crop field status.
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+Maintain synchronization between the truck, crop field, and soil state to ensure accurate operations.
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+\doxylink{class_fertilizer_truck}{Fertilizer\+Truck} is part of an observer system where it reacts to changes in the \doxylink{class_crop_field}{Crop\+Field} and adjusts its behavior accordingly. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_fertilizer_truck_8h_source_l00038}{38}} of file \mbox{\hyperlink{_fertilizer_truck_8h_source}{Fertilizer\+Truck.\+h}}.
 
 
 
@@ -38,11 +90,24 @@ Fertilizer\+Truck\+::\+Fertilizer\+Truck (\begin{DoxyParamCaption}\item[{\mbox{\
 
 
 
+Constructor for the \doxylink{class_fertilizer_truck}{Fertilizer\+Truck} class. 
+
+Initializes a \doxylink{class_fertilizer_truck}{Fertilizer\+Truck} object with references to the \doxylink{class_crop_field}{Crop\+Field} and \doxylink{class_soil}{Soil} state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & A pointer to the \doxylink{class_crop_field}{Crop\+Field} that the truck will observe. \\
+\hline
+{\em soil\+State} & A pointer to the current soil state that affects the truck\textquotesingle{}s operations. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{_fertilizer_truck_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_fertilizer_truck_8cpp_source}{Fertilizer\+Truck.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck_a87e358bca8fe34e6299c6ff233afb08b}{Truck}}()\ \{}
 \DoxyCodeLine{00008\ \ \ \ \ this-\/>subject\ =\ subject;}
 \DoxyCodeLine{00009\ \ \ \ \ this-\/>soilState\ =\ soilState;}
 \DoxyCodeLine{00010\ \}}
@@ -56,16 +121,27 @@ Fertilizer\+Truck\+::\+Fertilizer\+Truck (\begin{DoxyParamCaption}\item[{const \
 
 
 
+Copy constructor for the \doxylink{class_fertilizer_truck}{Fertilizer\+Truck} class. 
+
+Creates a copy of another \doxylink{class_fertilizer_truck}{Fertilizer\+Truck} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A pointer to the \doxylink{class_fertilizer_truck}{Fertilizer\+Truck} object to be copied. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{_fertilizer_truck_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_fertilizer_truck_8cpp_source}{Fertilizer\+Truck.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck_a87e358bca8fe34e6299c6ff233afb08b}{Truck}}()\ \{}
 \DoxyCodeLine{00013\ \ \ \ \ this-\/>subject\ =\ other-\/>subject;}
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (other-\/>soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (other-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
 \DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dry_soil}{DrySoil}}();}
-\DoxyCodeLine{00017\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (other-\/>soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (other-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_fruitful_soil}{FruitfulSoil}}();}
 \DoxyCodeLine{00019\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flooded_soil}{FloodedSoil}}();}
@@ -84,7 +160,11 @@ void Fertilizer\+Truck\+::start\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyPa
 
 
 
-Implements \mbox{\hyperlink{class_truck}{Truck}}.
+Starts the truck\textquotesingle{}s engine. 
+
+This function defines how the truck\textquotesingle{}s engine is started. It may involve preparing the truck for fertilizer delivery. 
+
+Implements \mbox{\hyperlink{class_truck_a2d914b649a601c31fff420b90a51dc7f}{Truck}}.
 
 
 
@@ -93,7 +173,7 @@ Definition at line \mbox{\hyperlink{_fertilizer_truck_8cpp_source_l00024}{24}} o
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Fertilizer\ truck\ is\ delivering\ fertilizer\ to\ the\ dry\ soil."{}}\ <<\ endl;}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ subject-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}();}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ subject-\/>\mbox{\hyperlink{class_crop_field_ab01d92251a97f1cf12b6a992035d5b73}{setSoilState}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_fruitful_soil}{FruitfulSoil}}());}

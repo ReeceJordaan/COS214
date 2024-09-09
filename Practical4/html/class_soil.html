@@ -90,38 +90,67 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Soil Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract base class representing soil in the State design pattern.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_soil_8h_source.html">Soil.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Soil:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_soil.png" usemap="#Soil_map" alt=""/>
   <map id="Soil_map" name="Soil_map">
-<area href="class_dry_soil.html" alt="DrySoil" shape="rect" coords="0,56,79,80"/>
-<area href="class_flooded_soil.html" alt="FloodedSoil" shape="rect" coords="89,56,168,80"/>
-<area href="class_fruitful_soil.html" alt="FruitfulSoil" shape="rect" coords="178,56,257,80"/>
+<area href="class_dry_soil.html" title="A concrete state representing dry soil in the State design pattern." alt="DrySoil" shape="rect" coords="0,56,79,80"/>
+<area href="class_flooded_soil.html" title="A concrete state representing flooded soil in the State design pattern." alt="FloodedSoil" shape="rect" coords="89,56,168,80"/>
+<area href="class_fruitful_soil.html" title="A concrete state representing fruitful soil in the State design pattern." alt="FruitfulSoil" shape="rect" coords="178,56,257,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab1b416ed1251bd3e6c11a66457668eef" id="r_ab1b416ed1251bd3e6c11a66457668eef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1b416ed1251bd3e6c11a66457668eef">Soil</a> (string name)</td></tr>
+<tr class="memdesc:ab1b416ed1251bd3e6c11a66457668eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> class.  <br /></td></tr>
 <tr class="separator:ab1b416ed1251bd3e6c11a66457668eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdbb3e814cb73a0d062a3b088578bbe4" id="r_acdbb3e814cb73a0d062a3b088578bbe4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdbb3e814cb73a0d062a3b088578bbe4">Soil</a> (const <a class="el" href="class_soil.html">Soil</a> *other)</td></tr>
+<tr class="memdesc:acdbb3e814cb73a0d062a3b088578bbe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor for the <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> class.  <br /></td></tr>
 <tr class="separator:acdbb3e814cb73a0d062a3b088578bbe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fffdd8cace04e9fdecd5376dc174a7a" id="r_a2fffdd8cace04e9fdecd5376dc174a7a"><td class="memItemLeft" align="right" valign="top"><a id="a2fffdd8cace04e9fdecd5376dc174a7a" name="a2fffdd8cace04e9fdecd5376dc174a7a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>harvestCrops</b> ()=0</td></tr>
+<tr class="memitem:ae412ae84af94173df867e03a16ee0982" id="r_ae412ae84af94173df867e03a16ee0982"><td class="memItemLeft" align="right" valign="top"><a id="ae412ae84af94173df867e03a16ee0982" name="ae412ae84af94173df867e03a16ee0982"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Soil</b> ()=default</td></tr>
+<tr class="memdesc:ae412ae84af94173df867e03a16ee0982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default virtual destructor. <br /></td></tr>
+<tr class="separator:ae412ae84af94173df867e03a16ee0982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fffdd8cace04e9fdecd5376dc174a7a" id="r_a2fffdd8cace04e9fdecd5376dc174a7a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fffdd8cace04e9fdecd5376dc174a7a">harvestCrops</a> ()=0</td></tr>
+<tr class="memdesc:a2fffdd8cace04e9fdecd5376dc174a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to handle crop harvesting.  <br /></td></tr>
 <tr class="separator:a2fffdd8cace04e9fdecd5376dc174a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2932e8ab8e7bd3a78664c1709e25730e" id="r_a2932e8ab8e7bd3a78664c1709e25730e"><td class="memItemLeft" align="right" valign="top"><a id="a2932e8ab8e7bd3a78664c1709e25730e" name="a2932e8ab8e7bd3a78664c1709e25730e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>rain</b> ()=0</td></tr>
+<tr class="memitem:a2932e8ab8e7bd3a78664c1709e25730e" id="r_a2932e8ab8e7bd3a78664c1709e25730e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2932e8ab8e7bd3a78664c1709e25730e">rain</a> ()=0</td></tr>
+<tr class="memdesc:a2932e8ab8e7bd3a78664c1709e25730e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to handle rain.  <br /></td></tr>
 <tr class="separator:a2932e8ab8e7bd3a78664c1709e25730e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae429597e2ed1d615210b5798f8a555cd" id="r_ae429597e2ed1d615210b5798f8a555cd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae429597e2ed1d615210b5798f8a555cd">getName</a> ()</td></tr>
+<tr class="memdesc:ae429597e2ed1d615210b5798f8a555cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of the soil type.  <br /></td></tr>
 <tr class="separator:ae429597e2ed1d615210b5798f8a555cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49bd88fa5018a8f5200a0bfabc07945c" id="r_a49bd88fa5018a8f5200a0bfabc07945c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49bd88fa5018a8f5200a0bfabc07945c">setName</a> (string name)</td></tr>
+<tr class="memdesc:a49bd88fa5018a8f5200a0bfabc07945c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name of the soil type.  <br /></td></tr>
 <tr class="separator:a49bd88fa5018a8f5200a0bfabc07945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_soil_8h_source.html#l00009">9</a> of file <a class="el" href="_soil_8h_source.html">Soil.h</a>.</p>
+<div class="textblock"><p>Abstract base class representing soil in the State design pattern. </p>
+<p>The <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> class serves as an abstract base class for different soil states in the State design pattern. It defines the common interface for various concrete soil states and includes functionality for harvesting crops and handling rain. Specific soil states like <a class="el" href="class_dry_soil.html" title="A concrete state representing dry soil in the State design pattern.">DrySoil</a>, <a class="el" href="class_flooded_soil.html" title="A concrete state representing flooded soil in the State design pattern.">FloodedSoil</a>, and <a class="el" href="class_fruitful_soil.html" title="A concrete state representing fruitful soil in the State design pattern.">FruitfulSoil</a> inherit from this class and implement the specific behaviors.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>There’s no template method.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Salome Kalaka </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>09 September 2024</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Derived classes (<a class="el" href="class_dry_soil.html" title="A concrete state representing dry soil in the State design pattern.">DrySoil</a>, <a class="el" href="class_flooded_soil.html" title="A concrete state representing flooded soil in the State design pattern.">FloodedSoil</a>, <a class="el" href="class_fruitful_soil.html" title="A concrete state representing fruitful soil in the State design pattern.">FruitfulSoil</a>), <a class="el" href="#a2fffdd8cace04e9fdecd5376dc174a7a" title="Pure virtual function to handle crop harvesting.">harvestCrops()</a>, <a class="el" href="#a2932e8ab8e7bd3a78664c1709e25730e" title="Pure virtual function to handle rain.">rain()</a>, <a class="el" href="#ae429597e2ed1d615210b5798f8a555cd" title="Gets the name of the soil type.">getName()</a>, <a class="el" href="#a49bd88fa5018a8f5200a0bfabc07945c" title="Sets the name of the soil type.">setName()</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo</a></b></dt><dd>Implement specific soil state behaviors in derived classes.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure proper state transitions to avoid invalid soil conditions.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>Derived classes must implement the pure virtual functions to define specific soil behaviors.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> class is part of a state machine that manages soil conditions in a farm environment. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_soil_8h_source.html#l00035">35</a> of file <a class="el" href="_soil_8h_source.html">Soil.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab1b416ed1251bd3e6c11a66457668eef" name="ab1b416ed1251bd3e6c11a66457668eef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1b416ed1251bd3e6c11a66457668eef">&#9670;&#160;</a></span>Soil() <span class="overload">[1/2]</span></h2>
@@ -137,6 +166,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>rain</b> ()=0
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor for the <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> class. </p>
+<p>Initializes the <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> object with a name representing the type of soil.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the soil type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_soil_8cpp_source.html#l00003">3</a> of file <a class="el" href="_soil_8cpp_source.html">Soil.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    3</span>                      {</div>
@@ -159,6 +197,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>rain</b> ()=0
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Copy constructor for the <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> class. </p>
+<p>Creates a copy of another <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>A pointer to the <a class="el" href="class_soil.html" title="Abstract base class representing soil in the State design pattern.">Soil</a> object to be copied. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_soil_8cpp_source.html#l00007">7</a> of file <a class="el" href="_soil_8cpp_source.html">Soil.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    7</span>                            {</div>
@@ -183,11 +230,74 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>rain</b> ()=0
       </table>
 </div><div class="memdoc">
 
+<p>Gets the name of the soil type. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name of the soil type. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="_soil_8cpp_source.html#l00011">11</a> of file <a class="el" href="_soil_8cpp_source.html">Soil.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   11</span>                     {</div>
 <div class="line"><span class="lineno">   12</span>    <span class="keywordflow">return</span> name;</div>
 <div class="line"><span class="lineno">   13</span>}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a2fffdd8cace04e9fdecd5376dc174a7a" name="a2fffdd8cace04e9fdecd5376dc174a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fffdd8cace04e9fdecd5376dc174a7a">&#9670;&#160;</a></span>harvestCrops()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Soil::harvestCrops </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pure virtual function to handle crop harvesting. </p>
+<p>This function must be implemented by derived classes to define how crops are harvested based on the soil condition. </p>
+
+<p>Implemented in <a class="el" href="class_dry_soil.html#a00a28e2ced7d0cfb9e4a18fbd353bcd7">DrySoil</a>, <a class="el" href="class_flooded_soil.html#a550f663f27fa4f35f62c975f64e287c3">FloodedSoil</a>, and <a class="el" href="class_fruitful_soil.html#a428d794b2503405a0ce54a9aea4c8758">FruitfulSoil</a>.</p>
+
+</div>
+</div>
+<a id="a2932e8ab8e7bd3a78664c1709e25730e" name="a2932e8ab8e7bd3a78664c1709e25730e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2932e8ab8e7bd3a78664c1709e25730e">&#9670;&#160;</a></span>rain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Soil::rain </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pure virtual function to handle rain. </p>
+<p>This function must be implemented by derived classes to define how the soil state reacts to rain. </p>
+
+<p>Implemented in <a class="el" href="class_dry_soil.html#acd2186aa4038cd458f15a71eec9656e1">DrySoil</a>, <a class="el" href="class_flooded_soil.html#a7f6dc00c1f4cc3c3889bd27d88ec5188">FloodedSoil</a>, and <a class="el" href="class_fruitful_soil.html#a56942389eb0450cbedcf54cf0efa4460">FruitfulSoil</a>.</p>
+
 </div>
 </div>
 <a id="a49bd88fa5018a8f5200a0bfabc07945c" name="a49bd88fa5018a8f5200a0bfabc07945c"></a>
@@ -204,6 +314,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>rain</b> ()=0
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the name of the soil type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The new name of the soil type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_soil_8cpp_source.html#l00015">15</a> of file <a class="el" href="_soil_8cpp_source.html">Soil.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   15</span>                             {</div>

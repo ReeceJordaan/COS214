@@ -2,32 +2,42 @@
 \hypertarget{_fertilizer_decorator_8cpp_source}{}\label{_fertilizer_decorator_8cpp_source}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}FertilizerDecorator.h"{}}}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00003}00003\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00005}00005\ FertilizerDecorator::FertilizerDecorator(\mbox{\hyperlink{class_farm_unit}{FarmUnit}}*\ unit)\ :\ \mbox{\hyperlink{class_decorator}{Decorator}}(unit)\ \{\}}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00007}00007\ \textcolor{keywordtype}{void}\ FertilizerDecorator::harvest()\{}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{if}\ (farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ >\ 0)\ \{}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ "{}}<<farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()<<\textcolor{stringliteral}{"{}\ units\ of\ crops."{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{setCurrentCapacity}}(0);\ \textcolor{comment}{//Reset\ after\ harvest}}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00011}00011\ \ \ \ \ \}\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}No\ crops\ to\ harvest!"{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00014}00014\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00015}00015\ \}}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00017}00017\ \textcolor{keywordtype}{void}\ FertilizerDecorator::increaseProduction()\{}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00018}00018\ \ \ \ \ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}{applyFertilizer}}();}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00019}00019\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Thus\ crop\ yield\ has\ increased\ by\ 10\%."{}}<<endl;}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00020}00020\ \}}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00022}00022\ \textcolor{keywordtype}{int}\ FertilizerDecorator::getLeftoverCapacity()\{}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()\ -\/\ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}();}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00024}00024\ \}}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00026}\mbox{\hyperlink{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d}{FertilizerDecorator::print}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00027}00027\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Print\ in\ FertilizerDecorator."{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_crop_field_8h}{CropField.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00004}00004\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00006}\mbox{\hyperlink{class_fertilizer_decorator_afbda6ca609629080161c3e839e6958fd}{00006}}\ \mbox{\hyperlink{class_fertilizer_decorator_afbda6ca609629080161c3e839e6958fd}{FertilizerDecorator::FertilizerDecorator}}(\mbox{\hyperlink{class_farm_unit}{FarmUnit}}*\ unit)\ :\ \mbox{\hyperlink{class_decorator}{Decorator}}(unit)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00008}\mbox{\hyperlink{class_fertilizer_decorator_a5fa392eb377e7de865123731f1af184a}{00008}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fertilizer_decorator_a5fa392eb377e7de865123731f1af184a}{FertilizerDecorator::harvest}}()\{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_crop_field}{CropField}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}))-\/>getSoilState()-\/>harvestCrops();}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_crop_field}{CropField}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}))-\/>getSoilState()-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ "{}}\ <<\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ \textcolor{stringliteral}{"{}\ units\ of\ crops."{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_crop_field}{CropField}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}))-\/>getSoilState()-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ "{}}\ <<\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()*3\ <<\ \textcolor{stringliteral}{"{}\ units\ of\ crops."{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ "{}}\ <<\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()*0\ <<\ \textcolor{stringliteral}{"{}\ units\ of\ crops."{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{setCurrentCapacity}}(0);\ \textcolor{comment}{//Reset\ after\ harvest}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00021}00021\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}No\ crops\ to\ harvest!"{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00027}\mbox{\hyperlink{class_fertilizer_decorator_a9d736a7916621dfa64e4e4d23e2044f7}{00027}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fertilizer_decorator_a9d736a7916621dfa64e4e4d23e2044f7}{FertilizerDecorator::increaseProduction}}()\{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}{applyFertilizer}}();}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00029}00029\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Thus\ crop\ yield\ has\ increased\ by\ 40\%."{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00032}\mbox{\hyperlink{class_fertilizer_decorator_ac02729230004963cd6adadeb57f5abed}{00032}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_fertilizer_decorator_ac02729230004963cd6adadeb57f5abed}{FertilizerDecorator::getLeftoverCapacity}}()\{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()\ -\/\ \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farmUnit}}-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}();}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00036}\mbox{\hyperlink{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d}{FertilizerDecorator::print}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00037}00037\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Print\ in\ FertilizerDecorator."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_fertilizer_decorator_8cpp_source_l00038}00038\ \}}
 
 \end{DoxyCode}

@@ -19,9 +19,9 @@
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00016}00016\ \ \ \ \ this-\/>barns\ =\ std::vector<Barn*>();}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00017}00017\ \ \ \ \ this-\/>cropType\ =\ cropField-\/>cropType;}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00018}00018\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (cropField-\/>soilState\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ cropField-\/>soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (cropField-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dry_soil}{DrySoil}}();}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00021}00021\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (cropField-\/>soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00021}00021\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (cropField-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_fruitful_soil}{FruitfulSoil}}();}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00023}00023\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flooded_soil}{FloodedSoil}}();}
@@ -62,7 +62,7 @@
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00059}00059\ }
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00060}\mbox{\hyperlink{class_crop_field_a9f952f85cd1409022e808f87b563ca76}{00060}}\ std::string\ \mbox{\hyperlink{class_crop_field_a9f952f85cd1409022e808f87b563ca76}{CropField::getSoilStateName}}()\textcolor{keyword}{\ const\ }\{}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>soilState\ !=\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>soilState-\/>getName();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}();}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00063}00063\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Null\ soil\ state."{}};}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00065}00065\ \ \ \ \ \}}
@@ -77,52 +77,62 @@
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00074}00074\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Total\ storage\ capacity\ is\ now:\ "{}}\ <<\ this-\/>totalCapacity\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00075}00075\ \}}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00076}00076\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00077}\mbox{\hyperlink{class_crop_field_ab910627441cdc7f01adb27f5735b849a}{00077}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_ab910627441cdc7f01adb27f5735b849a}{CropField::buyTruck}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}(\textcolor{keyword}{this},\ soilState));}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00079}00079\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Bought\ one\ fertilizer\ truck."{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00080}00080\ \}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00082}\mbox{\hyperlink{class_crop_field_a35c7747dea2718f10face80afa80fc4c}{00082}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_a35c7747dea2718f10face80afa80fc4c}{CropField::sellTruck}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.begin();\ it\ !=\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.end();\ ++it)\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ fertilizerTruck\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\textcolor{keyword}{>}(*it);}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fertilizerTruck\ !=\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ fertilizerTruck;}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.erase(it);}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Sold\ one\ fertilizer\ truck."{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00092}00092\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00093}00093\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00094}00094\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}There\ are\ no\ fertilizer\ trucks\ left\ to\ sell!"{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00095}00095\ \}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00096}00096\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00097}\mbox{\hyperlink{class_crop_field_ad68a4ccd9c87331c64978a2a984f5caf}{00097}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_ad68a4ccd9c87331c64978a2a984f5caf}{CropField::callTruck}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.begin();\ it\ !=\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.end();\ ++it)\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ fertilizerTruck\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\textcolor{keyword}{>}(*it);}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00100}00100\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fertilizerTruck\ !=\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ (*it)-\/>startEngine();}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Called\ a\ fertilizer\ truck."{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00106}00106\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00107}00107\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00108}00108\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}There\ are\ no\ fertilizer\ trucks\ available\ to\ call!"{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00109}00109\ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00077}\mbox{\hyperlink{class_crop_field_aa89a0cf85108686582f52ea5465d85de}{00077}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_aa89a0cf85108686582f52ea5465d85de}{CropField::rain}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00078}00078\ \ \ \ \ this-\/>soilState-\/>\mbox{\hyperlink{class_soil_a2932e8ab8e7bd3a78664c1709e25730e}{rain}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_fruitful_soil}{FruitfulSoil}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00082}00082\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>soilState-\/>\mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{getName}}()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flooded_soil}{FloodedSoil}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00085}00085\ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00087}\mbox{\hyperlink{class_crop_field_ab910627441cdc7f01adb27f5735b849a}{00087}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_ab910627441cdc7f01adb27f5735b849a}{CropField::buyTruck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00088}00088\ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}(\textcolor{keyword}{this},\ soilState));}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00089}00089\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Bought\ one\ fertilizer\ truck."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00092}\mbox{\hyperlink{class_crop_field_a35c7747dea2718f10face80afa80fc4c}{00092}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_a35c7747dea2718f10face80afa80fc4c}{CropField::sellTruck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.begin();\ it\ !=\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.end();\ ++it)\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ fertilizerTruck\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\textcolor{keyword}{>}(*it);}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fertilizerTruck\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ fertilizerTruck;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.erase(it);}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Sold\ one\ fertilizer\ truck."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00104}00104\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}There\ are\ no\ fertilizer\ trucks\ left\ to\ sell!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00107}\mbox{\hyperlink{class_crop_field_ad68a4ccd9c87331c64978a2a984f5caf}{00107}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_ad68a4ccd9c87331c64978a2a984f5caf}{CropField::callTruck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.begin();\ it\ !=\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.end();\ ++it)\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ fertilizerTruck\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\textcolor{keyword}{>}(*it);}
 \DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00110}00110\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00111}\mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{00111}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{CropField::print}}()\ \{}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00112}00112\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCropField\ Information:\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00113}00113\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00114}00114\ \ \ \ \ std::cout\ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Crop\ Type"{}}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Soil\ State"{}}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Total\ Capacity"{}}}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Current\ Capacity"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00118}00118\ }
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00119}00119\ \ \ \ \ std::cout\ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_crop_field_a14363175d2a442ac3f72b98fa16b1adc}{getCropType}}()}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_crop_field_a9f952f85cd1409022e808f87b563ca76}{getSoilStateName}}()}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00123}00123\ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fertilizerTruck\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ (*it)-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Called\ a\ fertilizer\ truck."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00117}00117\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00118}00118\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}There\ are\ no\ fertilizer\ trucks\ available\ to\ call!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00119}00119\ \}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00121}\mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{00121}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{CropField::print}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00122}00122\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCropField\ Information:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00124}00124\ \ \ \ \ std::cout\ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Crop\ Type"{}}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Soil\ State"{}}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Total\ Capacity"{}}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Current\ Capacity"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00129}00129\ \ \ \ \ std::cout\ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_crop_field_a14363175d2a442ac3f72b98fa16b1adc}{getCropType}}()}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_crop_field_a9f952f85cd1409022e808f87b563ca76}{getSoilStateName}}()}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8cpp_source_l00133}00133\ \}}
 
 \end{DoxyCode}

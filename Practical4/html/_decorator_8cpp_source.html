@@ -91,16 +91,20 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>Decorator::Decorator(<a class="code hl_class" href="class_farm_unit.html">FarmUnit</a>* unit) : <a class="code hl_class" href="class_farm_unit.html">FarmUnit</a>(unit) {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    farmUnit = unit;</div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_decorator.html#a709701f27e52b4178bdf8c29103e2c50">    5</a></span><a class="code hl_function" href="class_decorator.html#a709701f27e52b4178bdf8c29103e2c50">Decorator::Decorator</a>(<a class="code hl_class" href="class_farm_unit.html">FarmUnit</a>* unit) : <a class="code hl_class" href="class_farm_unit.html">FarmUnit</a>(unit) {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <a class="code hl_variable" href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">farmUnit</a> = unit;</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>}</div>
+</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_decorator.html#a1cf864bc98530aa0463608d777a43851">    9</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_decorator.html#a1cf864bc98530aa0463608d777a43851">Decorator::print</a>(){</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    cout&lt;&lt;<span class="stringliteral">&quot;Print in Decorator.&quot;</span>&lt;&lt;endl;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
 </div>
-<div class="ttc" id="aclass_decorator_html_a1cf864bc98530aa0463608d777a43851"><div class="ttname"><a href="class_decorator.html#a1cf864bc98530aa0463608d777a43851">Decorator::print</a></div><div class="ttdeci">void print()</div><div class="ttdef"><b>Definition</b> <a href="#l00009">Decorator.cpp:9</a></div></div>
+<div class="ttc" id="aclass_decorator_html_a1cf864bc98530aa0463608d777a43851"><div class="ttname"><a href="class_decorator.html#a1cf864bc98530aa0463608d777a43851">Decorator::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Prints the details of the decorated farm unit.</div><div class="ttdef"><b>Definition</b> <a href="#l00009">Decorator.cpp:9</a></div></div>
+<div class="ttc" id="aclass_decorator_html_a709701f27e52b4178bdf8c29103e2c50"><div class="ttname"><a href="class_decorator.html#a709701f27e52b4178bdf8c29103e2c50">Decorator::Decorator</a></div><div class="ttdeci">Decorator(FarmUnit *unit)</div><div class="ttdoc">Constructor for the Decorator class.</div><div class="ttdef"><b>Definition</b> <a href="#l00005">Decorator.cpp:5</a></div></div>
+<div class="ttc" id="aclass_decorator_html_aff8c220adcee5df2ba87285c83ca1235"><div class="ttname"><a href="class_decorator.html#aff8c220adcee5df2ba87285c83ca1235">Decorator::farmUnit</a></div><div class="ttdeci">FarmUnit * farmUnit</div><div class="ttdoc">A pointer to the FarmUnit being decorated.</div><div class="ttdef"><b>Definition</b> <a href="_decorator_8h_source.html#l00089">Decorator.h:89</a></div></div>
 <div class="ttc" id="aclass_farm_unit_html"><div class="ttname"><a href="class_farm_unit.html">FarmUnit</a></div><div class="ttdoc">The base class for all farm units, managing trucks and capacity.</div><div class="ttdef"><b>Definition</b> <a href="_farm_unit_8h_source.html#l00018">FarmUnit.h:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
