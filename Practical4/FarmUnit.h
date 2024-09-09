@@ -29,6 +29,7 @@ class FarmUnit {
         void setCurrentCapacity(int currentCapacity);
         int getTotalCapacity() const;
         void setTotalCapacity(int totalCapacity);
+        void applyFertilizer();
 
         virtual void add(CropField* cropField);
         virtual void remove(CropField* cropField);
