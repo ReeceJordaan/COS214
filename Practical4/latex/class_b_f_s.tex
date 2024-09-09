@@ -1,0 +1,218 @@
+\doxysection{BFS Class Reference}
+\hypertarget{class_b_f_s}{}\label{class_b_f_s}\index{BFS@{BFS}}
+
+
+Implements the breadth-\/first search (\doxylink{class_b_f_s}{BFS}) traversal for a collection of Crop\+Fields.  
+
+
+
+
+{\ttfamily \#include $<$BFS.\+h$>$}
+
+Inheritance diagram for BFS\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_f_s}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_f_s_ab6d1782aed995a33eab848acfe7d69b6}{BFS}} (std\+::vector$<$ \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{crop\+Field\+Heap}})
+\item 
+\mbox{\hyperlink{class_b_f_s_a49eae2c37b1083d19f70640f0848b1cd}{\texorpdfstring{$\sim$}{\string~}\+BFS}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_b_f_s}{BFS}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_b_f_s_a3b3956339b6cb4623d6e2700f89e704d}{first\+Farm}} ()
+\item 
+void \mbox{\hyperlink{class_b_f_s_a2153e4cb2b44704f4be35e63658e5f76}{next}} ()
+\begin{DoxyCompactList}\small\item\em Moves to the next \doxylink{class_crop_field}{Crop\+Field} in the \doxylink{class_b_f_s}{BFS} traversal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_f_s_abe5440766e3ea4dbc0817e8a88fac4e3}{is\+Done}} () const
+\item 
+\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_b_f_s_aefe56db7566b463ac603496f28211e46}{current\+Farm}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_iterator}{Iterator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_iterator_adc61d41a9ff3ae0479a4068e527a5e05}{Iterator}} (std\+::vector$<$ \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{crop\+Field\+Heap}})
+\item 
+virtual \mbox{\hyperlink{class_iterator_aab6716f5bdecb49e9cdd754359408ab6}{\texorpdfstring{$\sim$}{\string~}\+Iterator}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_iterator}{Iterator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_iterator}{Iterator}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{crop\+Field\+Heap}}
+\begin{DoxyCompactList}\small\item\em A heap of Crop\+Fields, typically managed by the farm, ordered by total capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_iterator_a4f3e53340004e627f5200e74f54d2bec}{current\+Pos}}
+\begin{DoxyCompactList}\small\item\em The current position in the heap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the breadth-\/first search (\doxylink{class_b_f_s}{BFS}) traversal for a collection of Crop\+Fields. 
+
+Definition at line \mbox{\hyperlink{_b_f_s_8h_source_l00014}{14}} of file \mbox{\hyperlink{_b_f_s_8h_source}{BFS.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_b_f_s_ab6d1782aed995a33eab848acfe7d69b6}\index{BFS@{BFS}!BFS@{BFS}}
+\index{BFS@{BFS}!BFS@{BFS}}
+\doxysubsubsection{\texorpdfstring{BFS()}{BFS()}}
+{\footnotesize\ttfamily \label{class_b_f_s_ab6d1782aed995a33eab848acfe7d69b6} 
+BFS\+::\+BFS (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} $>$}]{crop\+Field\+Heap}{}\end{DoxyParamCaption})}
+
+Constructor for \doxylink{class_b_f_s}{BFS}. 
+\begin{DoxyParams}{Parameters}
+{\em crop\+Field\+Heap} & A vector of Crop\+Fields to perform \doxylink{class_b_f_s}{BFS} on. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_b_f_s_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_b_f_s_8cpp_source}{BFS.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_iterator_adc61d41a9ff3ae0479a4068e527a5e05}{Iterator}}(\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}})\ \{}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_b_f_s_a49eae2c37b1083d19f70640f0848b1cd}\index{BFS@{BFS}!````~BFS@{\texorpdfstring{$\sim$}{\string~}BFS}}
+\index{````~BFS@{\texorpdfstring{$\sim$}{\string~}BFS}!BFS@{BFS}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BFS()}{\string~BFS()}}
+{\footnotesize\ttfamily \label{class_b_f_s_a49eae2c37b1083d19f70640f0848b1cd} 
+BFS\+::\texorpdfstring{$\sim$}{\string~}\+BFS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_b_f_s}{BFS}. 
+
+
+
+Definition at line \mbox{\hyperlink{_b_f_s_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_b_f_s_8cpp_source}{BFS.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_f_s_aefe56db7566b463ac603496f28211e46}\index{BFS@{BFS}!currentFarm@{currentFarm}}
+\index{currentFarm@{currentFarm}!BFS@{BFS}}
+\doxysubsubsection{\texorpdfstring{currentFarm()}{currentFarm()}}
+{\footnotesize\ttfamily \label{class_b_f_s_aefe56db7566b463ac603496f28211e46} 
+\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} BFS\+::current\+Farm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the current \doxylink{class_crop_field}{Crop\+Field} in the \doxylink{class_b_f_s}{BFS} traversal. \begin{DoxyReturn}{Returns}
+Pointer to the current \doxylink{class_crop_field}{Crop\+Field}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{Iterator}}.
+
+
+
+Definition at line \mbox{\hyperlink{_b_f_s_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_b_f_s_8cpp_source}{BFS.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_b_f_s_abe5440766e3ea4dbc0817e8a88fac4e3}{isDone}}())\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}.at(this-\/>\mbox{\hyperlink{class_iterator_a4f3e53340004e627f5200e74f54d2bec}{currentPos}});}
+\DoxyCodeLine{00034\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_b_f_s_a3b3956339b6cb4623d6e2700f89e704d}\index{BFS@{BFS}!firstFarm@{firstFarm}}
+\index{firstFarm@{firstFarm}!BFS@{BFS}}
+\doxysubsubsection{\texorpdfstring{firstFarm()}{firstFarm()}}
+{\footnotesize\ttfamily \label{class_b_f_s_a3b3956339b6cb4623d6e2700f89e704d} 
+\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} BFS\+::first\+Farm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the first \doxylink{class_crop_field}{Crop\+Field} in the \doxylink{class_b_f_s}{BFS} traversal. \begin{DoxyReturn}{Returns}
+Pointer to the first \doxylink{class_crop_field}{Crop\+Field}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_iterator_a67f7e6cd8165bde917bc1268dcfb2063}{Iterator}}.
+
+
+
+Definition at line \mbox{\hyperlink{_b_f_s_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_b_f_s_8cpp_source}{BFS.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}.empty())\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}.at(0);}
+\DoxyCodeLine{00014\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_b_f_s_abe5440766e3ea4dbc0817e8a88fac4e3}\index{BFS@{BFS}!isDone@{isDone}}
+\index{isDone@{isDone}!BFS@{BFS}}
+\doxysubsubsection{\texorpdfstring{isDone()}{isDone()}}
+{\footnotesize\ttfamily \label{class_b_f_s_abe5440766e3ea4dbc0817e8a88fac4e3} 
+bool BFS\+::is\+Done (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks if the \doxylink{class_b_f_s}{BFS} traversal is complete. \begin{DoxyReturn}{Returns}
+{\ttfamily true} if the traversal is done, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_iterator_aaee909d23a98abaf18ed7aa2ee9bee6f}{Iterator}}.
+
+
+
+Definition at line \mbox{\hyperlink{_b_f_s_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_b_f_s_8cpp_source}{BFS.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_iterator_a4f3e53340004e627f5200e74f54d2bec}{currentPos}}\ >=\ this-\/>\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}.size())\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00026\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_b_f_s_a2153e4cb2b44704f4be35e63658e5f76}\index{BFS@{BFS}!next@{next}}
+\index{next@{next}!BFS@{BFS}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \label{class_b_f_s_a2153e4cb2b44704f4be35e63658e5f76} 
+void BFS\+::next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves to the next \doxylink{class_crop_field}{Crop\+Field} in the \doxylink{class_b_f_s}{BFS} traversal. 
+
+
+
+Implements \mbox{\hyperlink{class_iterator_ac639e96c519e2e78cff17bee372ad750}{Iterator}}.
+
+
+
+Definition at line \mbox{\hyperlink{_b_f_s_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_b_f_s_8cpp_source}{BFS.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ this-\/>\mbox{\hyperlink{class_iterator_a4f3e53340004e627f5200e74f54d2bec}{currentPos}}++;}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_b_f_s_8h}{BFS.\+h}}\item 
+BFS.\+cpp\end{DoxyCompactItemize}

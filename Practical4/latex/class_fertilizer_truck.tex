@@ -1,0 +1,111 @@
+\doxysection{Fertilizer\+Truck Class Reference}
+\hypertarget{class_fertilizer_truck}{}\label{class_fertilizer_truck}\index{FertilizerTruck@{FertilizerTruck}}
+Inheritance diagram for Fertilizer\+Truck\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fertilizer_truck}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fertilizer_truck_a7a4af0f9c9b62a8a3270d62719929011}{Fertilizer\+Truck}} (\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}subject, \mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}soil\+State)
+\item 
+\mbox{\hyperlink{class_fertilizer_truck_ab3fb0e20d412027689a76cc4513f9f2d}{Fertilizer\+Truck}} (const \mbox{\hyperlink{class_fertilizer_truck}{Fertilizer\+Truck}} \texorpdfstring{$\ast$}{*}other)
+\item 
+void \mbox{\hyperlink{class_fertilizer_truck_a2a6d7b020b6bca2692c5ec59b974e147}{start\+Engine}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_truck}{Truck}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_truck_a219d1f79f9d09d9f0ab34bd65156e861}{Truck}} (const \mbox{\hyperlink{class_truck}{Truck}} \texorpdfstring{$\ast$}{*}other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_fertilizer_truck_8h_source_l00011}{11}} of file \mbox{\hyperlink{_fertilizer_truck_8h_source}{Fertilizer\+Truck.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_fertilizer_truck_a7a4af0f9c9b62a8a3270d62719929011}\index{FertilizerTruck@{FertilizerTruck}!FertilizerTruck@{FertilizerTruck}}
+\index{FertilizerTruck@{FertilizerTruck}!FertilizerTruck@{FertilizerTruck}}
+\doxysubsubsection{\texorpdfstring{FertilizerTruck()}{FertilizerTruck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_fertilizer_truck_a7a4af0f9c9b62a8a3270d62719929011} 
+Fertilizer\+Truck\+::\+Fertilizer\+Truck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}}]{subject}{, }\item[{\mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}}]{soil\+State}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_fertilizer_truck_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_fertilizer_truck_8cpp_source}{Fertilizer\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>subject\ =\ subject;}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>soilState\ =\ soilState;}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_fertilizer_truck_ab3fb0e20d412027689a76cc4513f9f2d}\index{FertilizerTruck@{FertilizerTruck}!FertilizerTruck@{FertilizerTruck}}
+\index{FertilizerTruck@{FertilizerTruck}!FertilizerTruck@{FertilizerTruck}}
+\doxysubsubsection{\texorpdfstring{FertilizerTruck()}{FertilizerTruck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_fertilizer_truck_ab3fb0e20d412027689a76cc4513f9f2d} 
+Fertilizer\+Truck\+::\+Fertilizer\+Truck (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_fertilizer_truck}{Fertilizer\+Truck}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_fertilizer_truck_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_fertilizer_truck_8cpp_source}{Fertilizer\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>subject\ =\ other-\/>subject;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (other-\/>soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dry_soil}{DrySoil}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (other-\/>soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_fruitful_soil}{FruitfulSoil}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ this-\/>soilState\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flooded_soil}{FloodedSoil}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_fertilizer_truck_a2a6d7b020b6bca2692c5ec59b974e147}\index{FertilizerTruck@{FertilizerTruck}!startEngine@{startEngine}}
+\index{startEngine@{startEngine}!FertilizerTruck@{FertilizerTruck}}
+\doxysubsubsection{\texorpdfstring{startEngine()}{startEngine()}}
+{\footnotesize\ttfamily \label{class_fertilizer_truck_a2a6d7b020b6bca2692c5ec59b974e147} 
+void Fertilizer\+Truck\+::start\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_truck}{Truck}}.
+
+
+
+Definition at line \mbox{\hyperlink{_fertilizer_truck_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_fertilizer_truck_8cpp_source}{Fertilizer\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (soilState-\/>getName()\ ==\ \textcolor{stringliteral}{"{}Dry"{}})\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Fertilizer\ truck\ is\ delivering\ fertilizer\ to\ the\ dry\ soil."{}}\ <<\ endl;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ subject-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ subject-\/>\mbox{\hyperlink{class_crop_field_ab01d92251a97f1cf12b6a992035d5b73}{setSoilState}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_fruitful_soil}{FruitfulSoil}}());}
+\DoxyCodeLine{00029\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}No\ fertilizer\ needed\ at\ this\ time."{}}\ <<\ endl;}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Fertilizer\+Truck.\+h\item 
+Fertilizer\+Truck.\+cpp\end{DoxyCompactItemize}

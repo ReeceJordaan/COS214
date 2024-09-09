@@ -1,0 +1,112 @@
+\doxysection{Soil Class Reference}
+\hypertarget{class_soil}{}\label{class_soil}\index{Soil@{Soil}}
+Inheritance diagram for Soil\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_soil}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_soil_ab1b416ed1251bd3e6c11a66457668eef}{Soil}} (string name)
+\item 
+\mbox{\hyperlink{class_soil_acdbb3e814cb73a0d062a3b088578bbe4}{Soil}} (const \mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}other)
+\item 
+\Hypertarget{class_soil_a2fffdd8cace04e9fdecd5376dc174a7a}\label{class_soil_a2fffdd8cace04e9fdecd5376dc174a7a} 
+virtual void {\bfseries harvest\+Crops} ()=0
+\item 
+\Hypertarget{class_soil_a2932e8ab8e7bd3a78664c1709e25730e}\label{class_soil_a2932e8ab8e7bd3a78664c1709e25730e} 
+virtual void {\bfseries rain} ()=0
+\item 
+string \mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{class_soil_a49bd88fa5018a8f5200a0bfabc07945c}{set\+Name}} (string name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_soil_8h_source_l00009}{9}} of file \mbox{\hyperlink{_soil_8h_source}{Soil.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_soil_ab1b416ed1251bd3e6c11a66457668eef}\index{Soil@{Soil}!Soil@{Soil}}
+\index{Soil@{Soil}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{Soil()}{Soil()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_soil_ab1b416ed1251bd3e6c11a66457668eef} 
+Soil\+::\+Soil (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_soil_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_soil_8cpp_source}{Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00004\ \ \ \ \ this-\/>name\ =\ name;}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_soil_acdbb3e814cb73a0d062a3b088578bbe4}\index{Soil@{Soil}!Soil@{Soil}}
+\index{Soil@{Soil}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{Soil()}{Soil()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_soil_acdbb3e814cb73a0d062a3b088578bbe4} 
+Soil\+::\+Soil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_soil_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_soil_8cpp_source}{Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>name\ =\ other-\/>name;}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_soil_ae429597e2ed1d615210b5798f8a555cd}\index{Soil@{Soil}!getName@{getName}}
+\index{getName@{getName}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_soil_ae429597e2ed1d615210b5798f8a555cd} 
+string Soil\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_soil_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_soil_8cpp_source}{Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_soil_a49bd88fa5018a8f5200a0bfabc07945c}\index{Soil@{Soil}!setName@{setName}}
+\index{setName@{setName}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_soil_a49bd88fa5018a8f5200a0bfabc07945c} 
+void Soil\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_soil_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_soil_8cpp_source}{Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>name\ =\ name;}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Soil.\+h\item 
+Soil.\+cpp\end{DoxyCompactItemize}

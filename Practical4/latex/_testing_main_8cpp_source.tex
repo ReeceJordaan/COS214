@@ -1,0 +1,247 @@
+\doxysection{Testing\+Main.\+cpp}
+\hypertarget{_testing_main_8cpp_source}{}\label{_testing_main_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_crop_field_8h}{CropField.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_barn_8h}{Barn.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_farm_8h}{Farm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_farm_unit_8h}{FarmUnit.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_crop_field_8h}{CropField.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}BarnDecorator.h"{}}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}FertilizerDecorator.h"{}}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}DrySoil.h"{}}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00010}00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00012}00012\ \textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00014}00014\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}==========\ Testing\ CropField\ ==========\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}\ field1\ =\ \mbox{\hyperlink{class_crop_field}{CropField}}(\textcolor{stringliteral}{"{}Corn"{}},\ 15,\ 30);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}\ field2\ =\ \mbox{\hyperlink{class_crop_field}{CropField}}(\textcolor{stringliteral}{"{}Potato"{}},\ 15,\ 45);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}\ field3\ =\ \mbox{\hyperlink{class_crop_field}{CropField}}(\textcolor{stringliteral}{"{}Tomato"{}},\ 15,\ 60);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}\ field4\ =\ \mbox{\hyperlink{class_crop_field}{CropField}}(\textcolor{stringliteral}{"{}Sugarcane"{}},\ 15,\ 15);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}\ field5\ =\ \mbox{\hyperlink{class_crop_field}{CropField}}(\&field1);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}\ field6\ =\ \mbox{\hyperlink{class_crop_field}{CropField}}(\&field2);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}\ field7\ =\ \mbox{\hyperlink{class_crop_field}{CropField}}(\&field3);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}\ field8\ =\ \mbox{\hyperlink{class_crop_field}{CropField}}(\&field4);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00025}00025\ \ \ \ \ field5.\mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{setTotalCapacity}}(75);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00026}00026\ \ \ \ \ field6.\mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{setTotalCapacity}}(100);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00027}00027\ \ \ \ \ field7.\mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{setTotalCapacity}}(125);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00028}00028\ \ \ \ \ field8.\mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{setTotalCapacity}}(55);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00030}00030\ \ \ \ \ field1.\mbox{\hyperlink{class_crop_field_ae54da2a13ba4d5fe2e3939d379237926}{buildBarn}}(50);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00031}00031\ \ \ \ \ field1.\mbox{\hyperlink{class_crop_field_ae54da2a13ba4d5fe2e3939d379237926}{buildBarn}}(60);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00032}00032\ \ \ \ \ field5.\mbox{\hyperlink{class_crop_field_ae54da2a13ba4d5fe2e3939d379237926}{buildBarn}}(70);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00033}00033\ \ \ \ \ field5.\mbox{\hyperlink{class_crop_field_ae54da2a13ba4d5fe2e3939d379237926}{buildBarn}}(80);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00035}00035\ \ \ \ \ field1.\mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00036}00036\ \ \ \ \ field5.\mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00037}00037\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00039}00039\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}==========\ Testing\ Barn\ =========="{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{class_barn}{Barn}}\ barn1\ =\ \mbox{\hyperlink{class_barn}{Barn}}(60);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{class_barn}{Barn}}\ barn2\ =\ \mbox{\hyperlink{class_barn}{Barn}}(95);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_barn}{Barn}}\ barn3\ =\ \mbox{\hyperlink{class_barn}{Barn}}(\&barn1);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{class_barn}{Barn}}\ barn4\ =\ \mbox{\hyperlink{class_barn}{Barn}}(\&barn2);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00046}00046\ \ \ \ \ barn3.\mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{setTotalCapacity}}(75);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00047}00047\ \ \ \ \ barn4.\mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{setTotalCapacity}}(100);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00049}00049\ \ \ \ \ barn2.\mbox{\hyperlink{class_barn_a01c5a374a9e0dbadfc2ae5ee333a6c62}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00050}00050\ \ \ \ \ barn3.\mbox{\hyperlink{class_barn_a01c5a374a9e0dbadfc2ae5ee333a6c62}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00051}00051\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00053}00053\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}==========\ Testing\ Farm\ =========="{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{class_farm}{Farm}}\ farm\ =\ \mbox{\hyperlink{class_farm}{Farm}}(0,\ 0);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00056}00056\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}}(\&field1);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00057}00057\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}}(\&field2);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00058}00058\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}}(\&field3);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00059}00059\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}}(\&field4);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00060}00060\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}}(\&field5);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00061}00061\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}}(\&field6);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00062}00062\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}}(\&field7);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00063}00063\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}}(\&field8);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00065}00065\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_a5bcf0de08f8f0ae7aa4543d8ed59d74e}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00066}00066\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00068}00068\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_a9563fb997a9dbd178905b17b36d1fb8c}{getChild}}(3)-\/>\mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00069}00069\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00071}00071\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_a9563fb997a9dbd178905b17b36d1fb8c}{getChild}}(6)-\/>\mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00072}00072\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00074}00074\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_a9563fb997a9dbd178905b17b36d1fb8c}{getChild}}(8);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00075}00075\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00077}00077\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_a9563fb997a9dbd178905b17b36d1fb8c}{getChild}}(-\/1);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00078}00078\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00080}00080\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}==========\ Testing\ Iterators\ =========="{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00082}00082\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_a5bcf0de08f8f0ae7aa4543d8ed59d74e}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00083}00083\ \ \ \ \ std::cout\ <<\ std::endl\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00085}00085\ \ \ \ \ \mbox{\hyperlink{class_iterator}{Iterator}}*\ dfs\ =\ farm.\mbox{\hyperlink{class_farm_af0b58a72bf2225ea375b89930091df7e}{createDFSIterator}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00087}00087\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Farms\ cropFieldHeap\ (DFS):\(\backslash\)n["{}};}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{while}(!dfs-\/>\mbox{\hyperlink{class_iterator_aaee909d23a98abaf18ed7aa2ee9bee6f}{isDone}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dfs-\/>\mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{currentFarm}}()\ !=\ dfs-\/>\mbox{\hyperlink{class_iterator_a67f7e6cd8165bde917bc1268dcfb2063}{firstFarm}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ std::cout\ <<\ dfs-\/>\mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{currentFarm}}()-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ dfs-\/>\mbox{\hyperlink{class_iterator_ac639e96c519e2e78cff17bee372ad750}{next}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00096}00096\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00098}00098\ \ \ \ \ \mbox{\hyperlink{class_iterator}{Iterator}}*\ bfs\ =\ farm.\mbox{\hyperlink{class_farm_a8a0f6e2466374d62e72421ad1435f841}{createBFSIterator}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00099}00099\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00100}00100\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nFarms\ cropFieldHeap\ (BFS):\(\backslash\)n["{}};}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{while}(!bfs-\/>\mbox{\hyperlink{class_iterator_aaee909d23a98abaf18ed7aa2ee9bee6f}{isDone}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bfs-\/>\mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{currentFarm}}()\ !=\ bfs-\/>\mbox{\hyperlink{class_iterator_a67f7e6cd8165bde917bc1268dcfb2063}{firstFarm}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ std::cout\ <<\ bfs-\/>\mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{currentFarm}}()-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ bfs-\/>\mbox{\hyperlink{class_iterator_ac639e96c519e2e78cff17bee372ad750}{next}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00109}00109\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00111}00111\ \ \ \ \ std::cout\ <<\ std::endl\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00113}00113\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Removing\ CropFields...\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00114}00114\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_ac02d057a56a5cc7f1753c33c76ef1db6}{remove}}(\&field3);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00115}00115\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_ac02d057a56a5cc7f1753c33c76ef1db6}{remove}}(\&field6);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00117}00117\ \ \ \ \ farm.\mbox{\hyperlink{class_farm_a5bcf0de08f8f0ae7aa4543d8ed59d74e}{print}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00118}00118\ \ \ \ \ std::cout\ <<\ std::endl\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00120}00120\ \ \ \ \ dfs\ =\ farm.\mbox{\hyperlink{class_farm_af0b58a72bf2225ea375b89930091df7e}{createDFSIterator}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00121}00121\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00122}00122\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Farms\ cropFieldHeap\ (DFS):\(\backslash\)n["{}};}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{while}(!dfs-\/>\mbox{\hyperlink{class_iterator_aaee909d23a98abaf18ed7aa2ee9bee6f}{isDone}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dfs-\/>\mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{currentFarm}}()\ !=\ dfs-\/>\mbox{\hyperlink{class_iterator_a67f7e6cd8165bde917bc1268dcfb2063}{firstFarm}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ std::cout\ <<\ dfs-\/>\mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{currentFarm}}()-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ dfs-\/>\mbox{\hyperlink{class_iterator_ac639e96c519e2e78cff17bee372ad750}{next}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00130}00130\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00131}00131\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00133}00133\ \ \ \ \ bfs\ =\ farm.\mbox{\hyperlink{class_farm_a8a0f6e2466374d62e72421ad1435f841}{createBFSIterator}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00134}00134\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00135}00135\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nFarms\ cropFieldHeap\ (BFS):\(\backslash\)n["{}};}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{while}(!bfs-\/>\mbox{\hyperlink{class_iterator_aaee909d23a98abaf18ed7aa2ee9bee6f}{isDone}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bfs-\/>\mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{currentFarm}}()\ !=\ bfs-\/>\mbox{\hyperlink{class_iterator_a67f7e6cd8165bde917bc1268dcfb2063}{firstFarm}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ std::cout\ <<\ bfs-\/>\mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{currentFarm}}()-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ bfs-\/>\mbox{\hyperlink{class_iterator_ac639e96c519e2e78cff17bee372ad750}{next}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00143}00143\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00144}00144\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00146}00146\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}==========\ Testing\ State\ Design\ Patten\ =========="{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00148}00148\ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}*\ testField\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_crop_field}{CropField}}(\textcolor{stringliteral}{"{}Wheat"{}},\ 20,\ 100);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00149}00149\ \ \ \ \ testField-\/>\mbox{\hyperlink{class_crop_field_ab01d92251a97f1cf12b6a992035d5b73}{setSoilState}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_dry_soil}{DrySoil}}());\ \textcolor{comment}{//we're\ going\ to\ start\ with\ dry\ soil}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00151}00151\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Current\ soil\ state:\ "{}}\ <<\ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>getName()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00152}00152\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Testing\ harvest\ on\ Dry\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00153}00153\ \ \ \ \ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>harvestCrops();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00155}00155\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSimulating\ rain\ on\ Dry\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00156}00156\ \ \ \ \ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>rain();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00157}00157\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}New\ soil\ state:\ "{}}\ <<\ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>getName()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00159}00159\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ harvest\ on\ Fruitful\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00160}00160\ \ \ \ \ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>harvestCrops();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00162}00162\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSimulating\ rain\ on\ Fruitful\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00163}00163\ \ \ \ \ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>rain();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00164}00164\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}New\ soil\ state:\ "{}}\ <<\ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>getName()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00166}00166\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ harvest\ on\ Flooded\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00167}00167\ \ \ \ \ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>harvestCrops();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00169}00169\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSimulating\ rain\ on\ Flooded\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00170}00170\ \ \ \ \ testField-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>rain();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00172}00172\ \ \ \ \ \textcolor{keyword}{delete}\ testField;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00174}00174\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}==========\ Testing\ Observer\ Design\ Patten\ =========="{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00176}00176\ \ \ \ \ \mbox{\hyperlink{class_soil}{Soil}}*\ drySoil\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dry_soil}{DrySoil}}();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00177}00177\ \ \ \ \ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ fertilizerTruck1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}(field1,\ drySoil);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00178}00178\ \ \ \ \ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ fertilizerTruck2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}(field2,\ drySoil);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00179}00179\ \ \ \ \ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ fertilizerTruck3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}(field3,\ drySoil);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00181}00181\ \ \ \ \ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\ deliveryTruck1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}(barn1);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00182}00182\ \ \ \ \ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\ deliveryTruck2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}(barn2);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00183}00183\ \ \ \ \ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\ deliveryTruck3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}(barn3);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00184}00184\ \ \ \ \ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\ deliveryTruck4\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}(barn4);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00186}00186\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Testing\ FertilizerTruck1\ on\ Dry\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00187}00187\ \ \ \ \ fertilizerTruck1-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00188}00188\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}New\ soil\ state:\ "{}}\ <<\ field1-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>getName()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00189}00189\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ FertilizerTruck1\ on\ Fruitful\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00190}00190\ \ \ \ \ fertilizerTruck1-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00192}00192\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Testing\ FertilizerTruck2\ on\ Dry\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00193}00193\ \ \ \ \ fertilizerTruck2-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00194}00194\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}New\ soil\ state:\ "{}}\ <<\ field2-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>getName()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00195}00195\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ FertilizerTruck2\ on\ Fruitful\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00196}00196\ \ \ \ \ fertilizerTruck2-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00198}00198\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Testing\ FertilizerTruck3\ on\ Dry\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00199}00199\ \ \ \ \ fertilizerTruck3-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00200}00200\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}New\ soil\ state:\ "{}}\ <<\ field3-\/>\mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()-\/>getName()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00201}00201\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ FertilizerTruck3\ on\ Fruitful\ Soil:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00202}00202\ \ \ \ \ fertilizerTruck1-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00206}00206\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ DeliveryTruck\ with\ Near-\/Full\ Barn:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00207}00207\ \ \ \ \ deliveryTruck1-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00208}00208\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Barn\ current\ capacity\ after\ collection:\ "{}}\ <<\ barn1-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00210}00210\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ DeliveryTruck\ with\ Near-\/Full\ Barn:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00211}00211\ \ \ \ \ deliveryTruck2-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00212}00212\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Barn\ current\ capacity\ after\ collection:\ "{}}\ <<\ barn2-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00213}00213\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00214}00214\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ DeliveryTruck\ with\ Near-\/Full\ Barn:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00215}00215\ \ \ \ \ deliveryTruck3-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00216}00216\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Barn\ current\ capacity\ after\ collection:\ "{}}\ <<\ barn3-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00217}00217\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00218}00218\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nTesting\ DeliveryTruck\ with\ Near-\/Full\ Barn:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00219}00219\ \ \ \ \ deliveryTruck4-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00220}00220\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Barn\ current\ capacity\ after\ collection:\ "{}}\ <<\ barn4-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00221}00221\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00223}00223\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}==========\ Testing\ Decorator\ Design\ Patten\ =========="{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00225}00225\ \ \ \ \ \mbox{\hyperlink{class_farm_unit}{FarmUnit}}*\ fertilizedField\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_fertilizer_decorator}{FertilizerDecorator}}(field1);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00226}00226\ \ \ \ \ fertilizedField-\/>increaseProduction();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00227}00227\ \ \ \ \ fertilizedField-\/>harvest();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00228}00228\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Leftover\ Capacity\ after\ FertilizerDecorator:\ "{}}\ <<\ fertilizedField-\/>getLeftoverCapacity()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00230}00230\ \ \ \ \ \textcolor{comment}{//\ Decorate\ Barn\ with\ BarnDecorator}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00231}00231\ \ \ \ \ \mbox{\hyperlink{class_farm_unit}{FarmUnit}}*\ barnEnhanced\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_barn_decorator}{BarnDecorator}}(barn1);}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00232}00232\ \ \ \ \ barnEnhanced-\/>increaseProduction();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00233}00233\ \ \ \ \ barnEnhanced-\/>harvest();}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00234}00234\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Leftover\ Capacity\ after\ BarnDecorator:\ "{}}\ <<\ barnEnhanced-\/>getLeftoverCapacity()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00235}00235\ \ \ \ \ \textcolor{comment}{//\ Clean\ up\ dynamically\ allocated\ memory}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00236}00236\ \ \ \ \ \textcolor{comment}{//delete\ fertilizerTruck;}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00237}00237\ \ \ \ \ \textcolor{comment}{//delete\ deliveryTruck;}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00238}00238\ \ \ \ \ \textcolor{comment}{//delete\ cropField1;}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00239}00239\ \ \ \ \ \textcolor{comment}{//delete\ barn1;}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00240}00240\ \ \ \ \ \textcolor{comment}{//delete\ drySoil;}}
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{_testing_main_8cpp_source_l00242}00242\ \}}
+
+\end{DoxyCode}

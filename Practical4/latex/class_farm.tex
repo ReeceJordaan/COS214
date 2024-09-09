@@ -1,0 +1,321 @@
+\doxysection{Farm Class Reference}
+\hypertarget{class_farm}{}\label{class_farm}\index{Farm@{Farm}}
+
+
+Represents a farm, inheriting from \doxylink{class_farm_unit}{Farm\+Unit}, managing a collection of Crop\+Fields and providing iterators for traversal.  
+
+
+
+
+{\ttfamily \#include $<$Farm.\+h$>$}
+
+Inheritance diagram for Farm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_farm}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_farm_aa70b4a06c417eedae733929fb765e78d}{Farm}} (int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}}, int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}})
+\item 
+\mbox{\hyperlink{class_farm_a551fad409c44962866226b3eb4d4b518}{\texorpdfstring{$\sim$}{\string~}\+Farm}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_farm}{Farm}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{add}} (\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}crop\+Field)
+\item 
+void \mbox{\hyperlink{class_farm_ac02d057a56a5cc7f1753c33c76ef1db6}{remove}} (\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}crop\+Field)
+\item 
+\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_a9563fb997a9dbd178905b17b36d1fb8c}{get\+Child}} (int index)
+\item 
+\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_af0b58a72bf2225ea375b89930091df7e}{create\+DFSIterator}} ()
+\item 
+\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_a8a0f6e2466374d62e72421ad1435f841}{create\+BFSIterator}} ()
+\item 
+void \mbox{\hyperlink{class_farm_a5bcf0de08f8f0ae7aa4543d8ed59d74e}{print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the details of the farm, including its crop fields and capacity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}{Farm\+Unit}} (int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}}, int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}})
+\item 
+\mbox{\hyperlink{class_farm_unit_ad31654bca82086659adb1c3a2175f74b}{Farm\+Unit}} (\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}farm\+Unit)
+\item 
+virtual \mbox{\hyperlink{class_farm_unit_a27f47dcdc8757e3bf5121b686d140bdc}{\texorpdfstring{$\sim$}{\string~}\+Farm\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_farm_unit}{Farm\+Unit}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a7444c48dc40effe4748a59b48ce2b044}{buy\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Buys a new truck for the farm unit. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a31a9c472afab1077a715d54030143625}{sell\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Sells a truck from the farm unit. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a353c6db3e864d468fb42a091fe8b380a}{call\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Calls a truck for delivery or other tasks. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{get\+Current\+Capacity}} () const
+\item 
+void \mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{set\+Current\+Capacity}} (int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}})
+\item 
+int \mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{get\+Total\+Capacity}} () const
+\item 
+void \mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{set\+Total\+Capacity}} (int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}})
+\item 
+void \mbox{\hyperlink{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}{apply\+Fertilizer}} ()
+\begin{DoxyCompactList}\small\item\em Applies fertilizer using a fertilizer truck. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_truck}{Truck}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}
+\begin{DoxyCompactList}\small\item\em A collection of trucks associated with the farm unit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}}
+\begin{DoxyCompactList}\small\item\em The current capacity of the farm unit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}}
+\begin{DoxyCompactList}\small\item\em The total capacity of the farm unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a farm, inheriting from \doxylink{class_farm_unit}{Farm\+Unit}, managing a collection of Crop\+Fields and providing iterators for traversal. 
+
+Definition at line \mbox{\hyperlink{_farm_8h_source_l00018}{18}} of file \mbox{\hyperlink{_farm_8h_source}{Farm.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_farm_aa70b4a06c417eedae733929fb765e78d}\index{Farm@{Farm}!Farm@{Farm}}
+\index{Farm@{Farm}!Farm@{Farm}}
+\doxysubsubsection{\texorpdfstring{Farm()}{Farm()}}
+{\footnotesize\ttfamily \label{class_farm_aa70b4a06c417eedae733929fb765e78d} 
+Farm\+::\+Farm (\begin{DoxyParamCaption}\item[{int}]{current\+Capacity}{, }\item[{int}]{total\+Capacity}{}\end{DoxyParamCaption})}
+
+Constructor for \doxylink{class_farm}{Farm}. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Capacity} & The current capacity of the farm. \\
+\hline
+{\em total\+Capacity} & The total capacity of the farm. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_farm_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_farm_8cpp_source}{Farm.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}{FarmUnit}}(\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}},\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}})\ \{}
+\DoxyCodeLine{00004\ \ \ \ \ std::vector<CropField*>\ cropFieldHeap\ =\ std::vector<CropField*>();}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_a551fad409c44962866226b3eb4d4b518}\index{Farm@{Farm}!````~Farm@{\texorpdfstring{$\sim$}{\string~}Farm}}
+\index{````~Farm@{\texorpdfstring{$\sim$}{\string~}Farm}!Farm@{Farm}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Farm()}{\string~Farm()}}
+{\footnotesize\ttfamily \label{class_farm_a551fad409c44962866226b3eb4d4b518} 
+Farm\+::\texorpdfstring{$\sim$}{\string~}\+Farm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_farm}{Farm}. 
+
+
+
+Definition at line \mbox{\hyperlink{_farm_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_farm_8cpp_source}{Farm.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ cropFieldHeap.clear();}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}\index{Farm@{Farm}!add@{add}}
+\index{add@{add}!Farm@{Farm}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{class_farm_aefa9c580c6385c6b2c2ad12de265bd85} 
+void Farm\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}}]{crop\+Field}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds a \doxylink{class_crop_field}{Crop\+Field} to the farm. 
+\begin{DoxyParams}{Parameters}
+{\em crop\+Field} & Pointer to the \doxylink{class_crop_field}{Crop\+Field} to add. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_farm_unit_ac369cbcd102b79933aa4ded52622dc2d}{Farm\+Unit}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_farm_8cpp_source}{Farm.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}(cropField\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ cropFieldHeap.push\_back(cropField);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}}\ +=\ cropField-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ +=\ cropField-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::sort(cropFieldHeap.begin(),\ cropFieldHeap.end(),\ [](\mbox{\hyperlink{class_crop_field}{CropField}}*\ a,\ \mbox{\hyperlink{class_crop_field}{CropField}}*\ b)\ \{\ return\ a-\/>getTotalCapacity()\ >\ b-\/>getTotalCapacity();\ \});}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_a8a0f6e2466374d62e72421ad1435f841}\index{Farm@{Farm}!createBFSIterator@{createBFSIterator}}
+\index{createBFSIterator@{createBFSIterator}!Farm@{Farm}}
+\doxysubsubsection{\texorpdfstring{createBFSIterator()}{createBFSIterator()}}
+{\footnotesize\ttfamily \label{class_farm_a8a0f6e2466374d62e72421ad1435f841} 
+\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} Farm\+::create\+BFSIterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a Breadth-\/\+First Search (\doxylink{class_b_f_s}{BFS}) iterator for traversing the farm. \begin{DoxyReturn}{Returns}
+Pointer to an \doxylink{class_iterator}{Iterator} for \doxylink{class_b_f_s}{BFS} traversal. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_farm_unit_ae7d3336a8f274645b3b4bcc2dfa4f570}{Farm\+Unit}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{_farm_8cpp_source}{Farm.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_b_f_s}{BFS}}(cropFieldHeap);}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_af0b58a72bf2225ea375b89930091df7e}\index{Farm@{Farm}!createDFSIterator@{createDFSIterator}}
+\index{createDFSIterator@{createDFSIterator}!Farm@{Farm}}
+\doxysubsubsection{\texorpdfstring{createDFSIterator()}{createDFSIterator()}}
+{\footnotesize\ttfamily \label{class_farm_af0b58a72bf2225ea375b89930091df7e} 
+\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} Farm\+::create\+DFSIterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a Depth-\/\+First Search (\doxylink{class_d_f_s}{DFS}) iterator for traversing the farm. \begin{DoxyReturn}{Returns}
+Pointer to an \doxylink{class_iterator}{Iterator} for \doxylink{class_d_f_s}{DFS} traversal. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_farm_unit_a4623abfd4a7dde965a2dc8be8a9adf88}{Farm\+Unit}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_farm_8cpp_source}{Farm.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_d_f_s}{DFS}}(cropFieldHeap);}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_a9563fb997a9dbd178905b17b36d1fb8c}\index{Farm@{Farm}!getChild@{getChild}}
+\index{getChild@{getChild}!Farm@{Farm}}
+\doxysubsubsection{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily \label{class_farm_a9563fb997a9dbd178905b17b36d1fb8c} 
+\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} Farm\+::get\+Child (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Gets a child \doxylink{class_crop_field}{Crop\+Field} by index. 
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the \doxylink{class_crop_field}{Crop\+Field} to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_crop_field}{Crop\+Field} at the specified index. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_farm_unit_a578cd41fe5dadcc81ab5c9f0b96e3e81}{Farm\+Unit}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_farm_8cpp_source}{Farm.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{if}(index\ >=\ 0\ \&\&\ index\ <\ cropFieldHeap.size())\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cropFieldHeap.at(index);}
+\DoxyCodeLine{00033\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_a5bcf0de08f8f0ae7aa4543d8ed59d74e}\index{Farm@{Farm}!print@{print}}
+\index{print@{print}!Farm@{Farm}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_farm_a5bcf0de08f8f0ae7aa4543d8ed59d74e} 
+void Farm\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the details of the farm, including its crop fields and capacity. 
+
+
+
+Implements \mbox{\hyperlink{class_farm_unit_a47bd9b493c8cffa294e5f7e9fa4afa38}{Farm\+Unit}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_farm_8cpp_source}{Farm.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nFarm\ Information:\(\backslash\)n"{}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::cout\ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Total\ Capacity"{}}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Current\ Capacity"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ std::cout\ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCropField\ Max\ Heap:\(\backslash\)n"{}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ cropFieldHeap.size();\ ++i)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::cout\ <<\ cropFieldHeap.at(i)-\/>getTotalCapacity();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ cropFieldHeap.size()\ -\/\ 1)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_ac02d057a56a5cc7f1753c33c76ef1db6}\index{Farm@{Farm}!remove@{remove}}
+\index{remove@{remove}!Farm@{Farm}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_farm_ac02d057a56a5cc7f1753c33c76ef1db6} 
+void Farm\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}}]{crop\+Field}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Removes a \doxylink{class_crop_field}{Crop\+Field} from the farm. 
+\begin{DoxyParams}{Parameters}
+{\em crop\+Field} & Pointer to the \doxylink{class_crop_field}{Crop\+Field} to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_farm_unit_a20dfa0f535142e74b62808532abeca1b}{Farm\+Unit}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_farm_8cpp_source}{Farm.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(cropFieldHeap.begin(),\ cropFieldHeap.end(),\ cropField);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ cropFieldHeap.end())\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ cropFieldHeap.erase(it);}
+\DoxyCodeLine{00025\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Error!\ CropField\ not\ found."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_farm_8h}{Farm.\+h}}\item 
+Farm.\+cpp\end{DoxyCompactItemize}

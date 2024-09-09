@@ -1,0 +1,101 @@
+\doxysection{Delivery\+Truck Class Reference}
+\hypertarget{class_delivery_truck}{}\label{class_delivery_truck}\index{DeliveryTruck@{DeliveryTruck}}
+Inheritance diagram for Delivery\+Truck\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_delivery_truck}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_delivery_truck_a878e366aa5d776a72b92c3e8859ae7a3}{Delivery\+Truck}} (\mbox{\hyperlink{class_barn}{Barn}} \texorpdfstring{$\ast$}{*}subject)
+\item 
+\mbox{\hyperlink{class_delivery_truck_a237cfc63564cec3334a06d0c4633533d}{Delivery\+Truck}} (const \mbox{\hyperlink{class_delivery_truck}{Delivery\+Truck}} \texorpdfstring{$\ast$}{*}other)
+\item 
+void \mbox{\hyperlink{class_delivery_truck_a2cc9028a83027b4c364bd1fb705475cc}{start\+Engine}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_truck}{Truck}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_truck_a219d1f79f9d09d9f0ab34bd65156e861}{Truck}} (const \mbox{\hyperlink{class_truck}{Truck}} \texorpdfstring{$\ast$}{*}other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_delivery_truck_8h_source_l00010}{10}} of file \mbox{\hyperlink{_delivery_truck_8h_source}{Delivery\+Truck.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_delivery_truck_a878e366aa5d776a72b92c3e8859ae7a3}\index{DeliveryTruck@{DeliveryTruck}!DeliveryTruck@{DeliveryTruck}}
+\index{DeliveryTruck@{DeliveryTruck}!DeliveryTruck@{DeliveryTruck}}
+\doxysubsubsection{\texorpdfstring{DeliveryTruck()}{DeliveryTruck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_delivery_truck_a878e366aa5d776a72b92c3e8859ae7a3} 
+Delivery\+Truck\+::\+Delivery\+Truck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_barn}{Barn}} \texorpdfstring{$\ast$}{*}}]{subject}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_delivery_truck_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_delivery_truck_8cpp_source}{Delivery\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck}{Truck}}()\{}
+\DoxyCodeLine{00006\ \ \ \ \ this-\/>subject\ =\ subject;}
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_delivery_truck_a237cfc63564cec3334a06d0c4633533d}\index{DeliveryTruck@{DeliveryTruck}!DeliveryTruck@{DeliveryTruck}}
+\index{DeliveryTruck@{DeliveryTruck}!DeliveryTruck@{DeliveryTruck}}
+\doxysubsubsection{\texorpdfstring{DeliveryTruck()}{DeliveryTruck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_delivery_truck_a237cfc63564cec3334a06d0c4633533d} 
+Delivery\+Truck\+::\+Delivery\+Truck (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_delivery_truck}{Delivery\+Truck}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_delivery_truck_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_delivery_truck_8cpp_source}{Delivery\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ this-\/>subject\ =\ other-\/>subject;}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_delivery_truck_a2cc9028a83027b4c364bd1fb705475cc}\index{DeliveryTruck@{DeliveryTruck}!startEngine@{startEngine}}
+\index{startEngine@{startEngine}!DeliveryTruck@{DeliveryTruck}}
+\doxysubsubsection{\texorpdfstring{startEngine()}{startEngine()}}
+{\footnotesize\ttfamily \label{class_delivery_truck_a2cc9028a83027b4c364bd1fb705475cc} 
+void Delivery\+Truck\+::start\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_truck}{Truck}}.
+
+
+
+Definition at line \mbox{\hyperlink{_delivery_truck_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_delivery_truck_8cpp_source}{Delivery\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (subject-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ >=\ subject-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()\ *\ 0.8)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Delivery\ truck\ is\ collecting\ crops\ as\ the\ barn\ is\ near\ full\ capacity."{}}<<endl;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ subject-\/>\mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{setCurrentCapacity}}(0);}
+\DoxyCodeLine{00017\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}No\ crop\ collection\ needed\ at\ this\ time."{}}<<endl;}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Delivery\+Truck.\+h\item 
+Delivery\+Truck.\+cpp\end{DoxyCompactItemize}

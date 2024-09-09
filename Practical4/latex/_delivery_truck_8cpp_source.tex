@@ -1,0 +1,25 @@
+\doxysection{Delivery\+Truck.\+cpp}
+\hypertarget{_delivery_truck_8cpp_source}{}\label{_delivery_truck_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}DeliveryTruck.h"{}}}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_barn_8h}{Barn.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00003}00003\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00005}00005\ DeliveryTruck::DeliveryTruck(\mbox{\hyperlink{class_barn}{Barn}}*\ subject)\ :\ \mbox{\hyperlink{class_truck}{Truck}}()\{}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00006}00006\ \ \ \ \ this-\/>subject\ =\ subject;}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00009}00009\ DeliveryTruck::DeliveryTruck(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\ other)\ :\ \mbox{\hyperlink{class_truck}{Truck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00010}00010\ \ \ \ \ this-\/>subject\ =\ other-\/>subject;}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00011}00011\ \}}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00013}00013\ \textcolor{keywordtype}{void}\ DeliveryTruck::startEngine()\ \{}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (subject-\/>\mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ >=\ subject-\/>\mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()\ *\ 0.8)\ \{}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Delivery\ truck\ is\ collecting\ crops\ as\ the\ barn\ is\ near\ full\ capacity."{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ subject-\/>\mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{setCurrentCapacity}}(0);}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00017}00017\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}No\ crop\ collection\ needed\ at\ this\ time."{}}<<endl;}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delivery_truck_8cpp_source_l00020}00020\ \}}
+
+\end{DoxyCode}

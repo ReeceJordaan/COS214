@@ -1,0 +1,63 @@
+\doxysection{Barn.\+cpp}
+\hypertarget{_barn_8cpp_source}{}\label{_barn_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_barn_8h}{Barn.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00004}\mbox{\hyperlink{class_barn_aa7391a5433e48b6f355c3bdf98c3c63f}{00004}}\ \mbox{\hyperlink{class_barn_aa7391a5433e48b6f355c3bdf98c3c63f}{Barn::Barn}}(\textcolor{keywordtype}{int}\ totalCapacity)\ :\ \mbox{\hyperlink{class_farm_unit}{FarmUnit}}(0,\ totalCapacity)\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00006}00006\ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00008}\mbox{\hyperlink{class_barn_a228ae2295a1fd6831b5aa422f04d7c3e}{00008}}\ \mbox{\hyperlink{class_barn_aa7391a5433e48b6f355c3bdf98c3c63f}{Barn::Barn}}(\mbox{\hyperlink{class_barn}{Barn}}*\ barn)\ :\ \mbox{\hyperlink{class_farm_unit}{FarmUnit}}(barn)\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00012}\mbox{\hyperlink{class_barn_a24235aae94c8da869b27b02c07f2420e}{00012}}\ \mbox{\hyperlink{class_barn_a24235aae94c8da869b27b02c07f2420e}{Barn::\string~Barn}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00013}00013\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00016}\mbox{\hyperlink{class_barn_a000266919a22c0f98edd24418916095c}{00016}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_barn_a000266919a22c0f98edd24418916095c}{Barn::buyTruck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}(\textcolor{keyword}{this}));}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00018}00018\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Bought\ one\ delivery\ truck."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00021}\mbox{\hyperlink{class_barn_afe0946e57131120eb5b7639601f1dc46}{00021}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_barn_afe0946e57131120eb5b7639601f1dc46}{Barn::sellTruck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.begin();\ it\ !=\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.end();\ ++it)\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\ deliveryTruck\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\textcolor{keyword}{>}(*it);}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (deliveryTruck\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ deliveryTruck;}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.erase(it);}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Sold\ one\ delivery\ truck."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00033}00033\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}There\ are\ no\ delivery\ trucks\ left\ to\ sell!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00036}\mbox{\hyperlink{class_barn_a1f71f8e0f61297f85e979cae495a550c}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_barn_a1f71f8e0f61297f85e979cae495a550c}{Barn::callTruck}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.begin();\ it\ !=\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.end();\ ++it)\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\ deliveryTruck\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\textcolor{keyword}{>}(*it);}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (deliveryTruck\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ (*it)-\/>startEngine();}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Called\ a\ delivery\ truck."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00047}00047\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}There\ are\ no\ delivery\ trucks\ available\ to\ call!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00050}\mbox{\hyperlink{class_barn_a01c5a374a9e0dbadfc2ae5ee333a6c62}{00050}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_barn_a01c5a374a9e0dbadfc2ae5ee333a6c62}{Barn::print}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00051}00051\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nBarn\ Information:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00053}00053\ \ \ \ \ std::cout\ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Total\ Capacity"{}}}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \textcolor{stringliteral}{"{}Current\ Capacity"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00056}00056\ \ \ \ \ std::cout\ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(20)\ <<\ std::left\ <<\ \mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_barn_8cpp_source_l00058}00058\ \}}
+
+\end{DoxyCode}

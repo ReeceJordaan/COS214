@@ -1,0 +1,147 @@
+\doxysection{Decorator Class Reference}
+\hypertarget{class_decorator}{}\label{class_decorator}\index{Decorator@{Decorator}}
+Inheritance diagram for Decorator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_decorator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_decorator_a709701f27e52b4178bdf8c29103e2c50}{Decorator}} (\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}unit)
+\item 
+\Hypertarget{class_decorator_a324a9837f57ac6391523963bb97bcf11}\label{class_decorator_a324a9837f57ac6391523963bb97bcf11} 
+virtual void {\bfseries harvest} ()=0
+\item 
+\Hypertarget{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe}\label{class_decorator_a66e7fb1eb3d71b18f119eba8ae0b22fe} 
+virtual void {\bfseries increase\+Production} ()=0
+\item 
+\Hypertarget{class_decorator_a92a7f8199f7ca609e7fd37667016fc32}\label{class_decorator_a92a7f8199f7ca609e7fd37667016fc32} 
+virtual int {\bfseries get\+Leftover\+Capacity} ()=0
+\item 
+void \mbox{\hyperlink{class_decorator_a1cf864bc98530aa0463608d777a43851}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}{Farm\+Unit}} (int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}}, int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}})
+\item 
+\mbox{\hyperlink{class_farm_unit_ad31654bca82086659adb1c3a2175f74b}{Farm\+Unit}} (\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}farm\+Unit)
+\item 
+virtual \mbox{\hyperlink{class_farm_unit_a27f47dcdc8757e3bf5121b686d140bdc}{\texorpdfstring{$\sim$}{\string~}\+Farm\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_farm_unit}{Farm\+Unit}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a7444c48dc40effe4748a59b48ce2b044}{buy\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Buys a new truck for the farm unit. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a31a9c472afab1077a715d54030143625}{sell\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Sells a truck from the farm unit. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a353c6db3e864d468fb42a091fe8b380a}{call\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Calls a truck for delivery or other tasks. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{get\+Current\+Capacity}} () const
+\item 
+void \mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{set\+Current\+Capacity}} (int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}})
+\item 
+int \mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{get\+Total\+Capacity}} () const
+\item 
+void \mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{set\+Total\+Capacity}} (int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}})
+\item 
+void \mbox{\hyperlink{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}{apply\+Fertilizer}} ()
+\begin{DoxyCompactList}\small\item\em Applies fertilizer using a fertilizer truck. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_ac369cbcd102b79933aa4ded52622dc2d}{add}} (\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}crop\+Field)
+\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a20dfa0f535142e74b62808532abeca1b}{remove}} (\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}crop\+Field)
+\item 
+virtual \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_unit_a578cd41fe5dadcc81ab5c9f0b96e3e81}{get\+Child}} (int index)
+\item 
+virtual \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_unit_a4623abfd4a7dde965a2dc8be8a9adf88}{create\+DFSIterator}} ()
+\item 
+virtual \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_unit_ae7d3336a8f274645b3b4bcc2dfa4f570}{create\+BFSIterator}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_decorator_aff8c220adcee5df2ba87285c83ca1235}{farm\+Unit}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_truck}{Truck}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}
+\begin{DoxyCompactList}\small\item\em A collection of trucks associated with the farm unit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}}
+\begin{DoxyCompactList}\small\item\em The current capacity of the farm unit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}}
+\begin{DoxyCompactList}\small\item\em The total capacity of the farm unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_decorator_8h_source_l00009}{9}} of file \mbox{\hyperlink{_decorator_8h_source}{Decorator.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_decorator_a709701f27e52b4178bdf8c29103e2c50}\index{Decorator@{Decorator}!Decorator@{Decorator}}
+\index{Decorator@{Decorator}!Decorator@{Decorator}}
+\doxysubsubsection{\texorpdfstring{Decorator()}{Decorator()}}
+{\footnotesize\ttfamily \label{class_decorator_a709701f27e52b4178bdf8c29103e2c50} 
+Decorator\+::\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}}]{unit}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_decorator_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_decorator_8cpp_source}{Decorator.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}{FarmUnit}}(unit)\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ farmUnit\ =\ unit;}
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_decorator_a1cf864bc98530aa0463608d777a43851}\index{Decorator@{Decorator}!print@{print}}
+\index{print@{print}!Decorator@{Decorator}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_decorator_a1cf864bc98530aa0463608d777a43851} 
+void Decorator\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Pure virtual function to print the details of the farm unit. Must be implemented by derived classes. 
+
+Implements \mbox{\hyperlink{class_farm_unit_a47bd9b493c8cffa294e5f7e9fa4afa38}{Farm\+Unit}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d}{Fertilizer\+Decorator}}.
+
+
+
+Definition at line \mbox{\hyperlink{_decorator_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_decorator_8cpp_source}{Decorator.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Print\ in\ Decorator."{}}<<endl;}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_decorator_aff8c220adcee5df2ba87285c83ca1235}\index{Decorator@{Decorator}!farmUnit@{farmUnit}}
+\index{farmUnit@{farmUnit}!Decorator@{Decorator}}
+\doxysubsubsection{\texorpdfstring{farmUnit}{farmUnit}}
+{\footnotesize\ttfamily \label{class_decorator_aff8c220adcee5df2ba87285c83ca1235} 
+\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}}\texorpdfstring{$\ast$}{*} Decorator\+::farm\+Unit\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_decorator_8h_source_l00021}{21}} of file \mbox{\hyperlink{_decorator_8h_source}{Decorator.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Decorator.\+h\item 
+Decorator.\+cpp\end{DoxyCompactItemize}

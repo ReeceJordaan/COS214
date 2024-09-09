@@ -1,0 +1,545 @@
+\doxysection{Farm\+Unit Class Reference}
+\hypertarget{class_farm_unit}{}\label{class_farm_unit}\index{FarmUnit@{FarmUnit}}
+
+
+The base class for all farm units, managing trucks and capacity.  
+
+
+
+
+{\ttfamily \#include $<$Farm\+Unit.\+h$>$}
+
+Inheritance diagram for Farm\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_farm_unit}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}{Farm\+Unit}} (int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}}, int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}})
+\item 
+\mbox{\hyperlink{class_farm_unit_ad31654bca82086659adb1c3a2175f74b}{Farm\+Unit}} (\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}farm\+Unit)
+\item 
+virtual \mbox{\hyperlink{class_farm_unit_a27f47dcdc8757e3bf5121b686d140bdc}{\texorpdfstring{$\sim$}{\string~}\+Farm\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_farm_unit}{Farm\+Unit}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a7444c48dc40effe4748a59b48ce2b044}{buy\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Buys a new truck for the farm unit. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a31a9c472afab1077a715d54030143625}{sell\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Sells a truck from the farm unit. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a353c6db3e864d468fb42a091fe8b380a}{call\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Calls a truck for delivery or other tasks. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{get\+Current\+Capacity}} () const
+\item 
+void \mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{set\+Current\+Capacity}} (int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}})
+\item 
+int \mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{get\+Total\+Capacity}} () const
+\item 
+void \mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{set\+Total\+Capacity}} (int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}})
+\item 
+void \mbox{\hyperlink{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}{apply\+Fertilizer}} ()
+\begin{DoxyCompactList}\small\item\em Applies fertilizer using a fertilizer truck. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_farm_unit_ac369cbcd102b79933aa4ded52622dc2d}{add}} (\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}crop\+Field)
+\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a20dfa0f535142e74b62808532abeca1b}{remove}} (\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}crop\+Field)
+\item 
+virtual \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_unit_a578cd41fe5dadcc81ab5c9f0b96e3e81}{get\+Child}} (int index)
+\item 
+virtual \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_unit_a4623abfd4a7dde965a2dc8be8a9adf88}{create\+DFSIterator}} ()
+\item 
+virtual \mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farm_unit_ae7d3336a8f274645b3b4bcc2dfa4f570}{create\+BFSIterator}} ()
+\item 
+virtual void \mbox{\hyperlink{class_farm_unit_a47bd9b493c8cffa294e5f7e9fa4afa38}{print}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_truck}{Truck}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}
+\begin{DoxyCompactList}\small\item\em A collection of trucks associated with the farm unit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{current\+Capacity}}
+\begin{DoxyCompactList}\small\item\em The current capacity of the farm unit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{total\+Capacity}}
+\begin{DoxyCompactList}\small\item\em The total capacity of the farm unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for all farm units, managing trucks and capacity. 
+
+Definition at line \mbox{\hyperlink{_farm_unit_8h_source_l00018}{18}} of file \mbox{\hyperlink{_farm_unit_8h_source}{Farm\+Unit.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}\index{FarmUnit@{FarmUnit}!FarmUnit@{FarmUnit}}
+\index{FarmUnit@{FarmUnit}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{FarmUnit()}{FarmUnit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63} 
+Farm\+Unit\+::\+Farm\+Unit (\begin{DoxyParamCaption}\item[{int}]{current\+Capacity}{, }\item[{int}]{total\+Capacity}{}\end{DoxyParamCaption})}
+
+Constructor for \doxylink{class_farm_unit}{Farm\+Unit}. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Capacity} & The current capacity of the farm unit. \\
+\hline
+{\em total\+Capacity} & The total capacity of the farm unit. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}\ =\ std::vector<Truck*>();}
+\DoxyCodeLine{00007\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ =\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}};}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}}\ =\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}};}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_ad31654bca82086659adb1c3a2175f74b}\index{FarmUnit@{FarmUnit}!FarmUnit@{FarmUnit}}
+\index{FarmUnit@{FarmUnit}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{FarmUnit()}{FarmUnit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_farm_unit_ad31654bca82086659adb1c3a2175f74b} 
+Farm\+Unit\+::\+Farm\+Unit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_farm_unit}{Farm\+Unit}} \texorpdfstring{$\ast$}{*}}]{farm\+Unit}{}\end{DoxyParamCaption})}
+
+Copy constructor for \doxylink{class_farm_unit}{Farm\+Unit}. 
+\begin{DoxyParams}{Parameters}
+{\em farm\+Unit} & Pointer to another \doxylink{class_farm_unit}{Farm\+Unit} object to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}\ =\ std::vector<Truck*>();}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ =\ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}};}
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}}\ =\ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.begin();\ it\ !=\ farmUnit-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.end();\ ++it)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\ fertilizerTruck\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\textcolor{keyword}{>}(*it);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fertilizerTruck\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_fertilizer_truck}{FertilizerTruck}}*\textcolor{keyword}{>}(*it)));}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_delivery_truck}{DeliveryTruck}}*\textcolor{keyword}{>}(*it)));}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a27f47dcdc8757e3bf5121b686d140bdc}\index{FarmUnit@{FarmUnit}!````~FarmUnit@{\texorpdfstring{$\sim$}{\string~}FarmUnit}}
+\index{````~FarmUnit@{\texorpdfstring{$\sim$}{\string~}FarmUnit}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FarmUnit()}{\string~FarmUnit()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a27f47dcdc8757e3bf5121b686d140bdc} 
+Farm\+Unit\+::\texorpdfstring{$\sim$}{\string~}\+Farm\+Unit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \doxylink{class_farm_unit}{Farm\+Unit}. 
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{while}\ (!this-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.empty())\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.back();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.pop\_back();}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}}.clear();}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_farm_unit_ac369cbcd102b79933aa4ded52622dc2d}\index{FarmUnit@{FarmUnit}!add@{add}}
+\index{add@{add}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{class_farm_unit_ac369cbcd102b79933aa4ded52622dc2d} 
+void Farm\+Unit\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}}]{crop\+Field}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds a \doxylink{class_crop_field}{Crop\+Field} to the farm unit. 
+\begin{DoxyParams}{Parameters}
+{\em crop\+Field} & Pointer to the \doxylink{class_crop_field}{Crop\+Field} to add. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_farm_aefa9c580c6385c6b2c2ad12de265bd85}{Farm}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00068\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}\index{FarmUnit@{FarmUnit}!applyFertilizer@{applyFertilizer}}
+\index{applyFertilizer@{applyFertilizer}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{applyFertilizer()}{applyFertilizer()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a7485921c8fb37749548e4ea88f334dca} 
+void Farm\+Unit\+::apply\+Fertilizer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies fertilizer using a fertilizer truck. 
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Applying\ fertilizer...\(\backslash\)n"{}};}
+\DoxyCodeLine{00054\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Fertilizer\ applied.\(\backslash\)n"{}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ +=\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ *\ 0.1;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ >\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}})\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ =\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}};}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Current\ capacity\ after\ applying\ fertilizer:\ "{}}\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ <<\ \textcolor{stringliteral}{"{}\ (out\ of\ "{}}\ <<\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}}\ <<\ \textcolor{stringliteral}{"{}\ total\ capacity)\(\backslash\)n"{}};}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a7444c48dc40effe4748a59b48ce2b044}\index{FarmUnit@{FarmUnit}!buyTruck@{buyTruck}}
+\index{buyTruck@{buyTruck}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{buyTruck()}{buyTruck()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a7444c48dc40effe4748a59b48ce2b044} 
+void Farm\+Unit\+::buy\+Truck (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Buys a new truck for the farm unit. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_barn_a000266919a22c0f98edd24418916095c}{Barn}}, and \mbox{\hyperlink{class_crop_field_ab910627441cdc7f01adb27f5735b849a}{Crop\+Field}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ CropField/Barn\ object."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00091\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a353c6db3e864d468fb42a091fe8b380a}\index{FarmUnit@{FarmUnit}!callTruck@{callTruck}}
+\index{callTruck@{callTruck}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{callTruck()}{callTruck()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a353c6db3e864d468fb42a091fe8b380a} 
+void Farm\+Unit\+::call\+Truck (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calls a truck for delivery or other tasks. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_barn_a1f71f8e0f61297f85e979cae495a550c}{Barn}}, and \mbox{\hyperlink{class_crop_field_ad68a4ccd9c87331c64978a2a984f5caf}{Crop\+Field}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ CropField/Barn\ object."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00099\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_ae7d3336a8f274645b3b4bcc2dfa4f570}\index{FarmUnit@{FarmUnit}!createBFSIterator@{createBFSIterator}}
+\index{createBFSIterator@{createBFSIterator}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{createBFSIterator()}{createBFSIterator()}}
+{\footnotesize\ttfamily \label{class_farm_unit_ae7d3336a8f274645b3b4bcc2dfa4f570} 
+\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} Farm\+Unit\+::create\+BFSIterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a Breadth-\/\+First Search (\doxylink{class_b_f_s}{BFS}) iterator for traversing the farm unit. \begin{DoxyReturn}{Returns}
+Pointer to an \doxylink{class_iterator}{Iterator} for \doxylink{class_b_f_s}{BFS} traversal. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_farm_a8a0f6e2466374d62e72421ad1435f841}{Farm}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00087\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a4623abfd4a7dde965a2dc8be8a9adf88}\index{FarmUnit@{FarmUnit}!createDFSIterator@{createDFSIterator}}
+\index{createDFSIterator@{createDFSIterator}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{createDFSIterator()}{createDFSIterator()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a4623abfd4a7dde965a2dc8be8a9adf88} 
+\mbox{\hyperlink{class_iterator}{Iterator}} \texorpdfstring{$\ast$}{*} Farm\+Unit\+::create\+DFSIterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a Depth-\/\+First Search (\doxylink{class_d_f_s}{DFS}) iterator for traversing the farm unit. \begin{DoxyReturn}{Returns}
+Pointer to an \doxylink{class_iterator}{Iterator} for \doxylink{class_d_f_s}{DFS} traversal. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_farm_af0b58a72bf2225ea375b89930091df7e}{Farm}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a578cd41fe5dadcc81ab5c9f0b96e3e81}\index{FarmUnit@{FarmUnit}!getChild@{getChild}}
+\index{getChild@{getChild}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a578cd41fe5dadcc81ab5c9f0b96e3e81} 
+\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} Farm\+Unit\+::get\+Child (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Gets a child \doxylink{class_crop_field}{Crop\+Field} by index. 
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the \doxylink{class_crop_field}{Crop\+Field} to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_crop_field}{Crop\+Field} at the specified index. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_farm_a9563fb997a9dbd178905b17b36d1fb8c}{Farm}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}\index{FarmUnit@{FarmUnit}!getCurrentCapacity@{getCurrentCapacity}}
+\index{getCurrentCapacity@{getCurrentCapacity}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{getCurrentCapacity()}{getCurrentCapacity()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3} 
+int Farm\+Unit\+::get\+Current\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Gets the current capacity of the farm unit. \begin{DoxyReturn}{Returns}
+The current capacity. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}};}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}\index{FarmUnit@{FarmUnit}!getTotalCapacity@{getTotalCapacity}}
+\index{getTotalCapacity@{getTotalCapacity}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{getTotalCapacity()}{getTotalCapacity()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4} 
+int Farm\+Unit\+::get\+Total\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Gets the total capacity of the farm unit. \begin{DoxyReturn}{Returns}
+The total capacity. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}};}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a47bd9b493c8cffa294e5f7e9fa4afa38}\index{FarmUnit@{FarmUnit}!print@{print}}
+\index{print@{print}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a47bd9b493c8cffa294e5f7e9fa4afa38} 
+virtual void Farm\+Unit\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Pure virtual function to print the details of the farm unit. Must be implemented by derived classes. 
+
+Implemented in \mbox{\hyperlink{class_barn_a01c5a374a9e0dbadfc2ae5ee333a6c62}{Barn}}, \mbox{\hyperlink{class_barn_decorator_a12a723b1f992f88f63b38bf0113027d2}{Barn\+Decorator}}, \mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{Crop\+Field}}, \mbox{\hyperlink{class_decorator_a1cf864bc98530aa0463608d777a43851}{Decorator}}, \mbox{\hyperlink{class_farm_a5bcf0de08f8f0ae7aa4543d8ed59d74e}{Farm}}, and \mbox{\hyperlink{class_fertilizer_decorator_abbc6787247029c7562f8fe98653cb91d}{Fertilizer\+Decorator}}.
+
+\Hypertarget{class_farm_unit_a20dfa0f535142e74b62808532abeca1b}\index{FarmUnit@{FarmUnit}!remove@{remove}}
+\index{remove@{remove}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a20dfa0f535142e74b62808532abeca1b} 
+void Farm\+Unit\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*}}]{crop\+Field}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Removes a \doxylink{class_crop_field}{Crop\+Field} from the farm unit. 
+\begin{DoxyParams}{Parameters}
+{\em crop\+Field} & Pointer to the \doxylink{class_crop_field}{Crop\+Field} to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_farm_ac02d057a56a5cc7f1753c33c76ef1db6}{Farm}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ Farm\ object."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a31a9c472afab1077a715d54030143625}\index{FarmUnit@{FarmUnit}!sellTruck@{sellTruck}}
+\index{sellTruck@{sellTruck}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{sellTruck()}{sellTruck()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a31a9c472afab1077a715d54030143625} 
+void Farm\+Unit\+::sell\+Truck (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sells a truck from the farm unit. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_barn_afe0946e57131120eb5b7639601f1dc46}{Barn}}, and \mbox{\hyperlink{class_crop_field_a35c7747dea2718f10face80afa80fc4c}{Crop\+Field}}.
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ object\ type.\ Call\ this\ on\ a\ CropField/Barn\ object."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}\index{FarmUnit@{FarmUnit}!setCurrentCapacity@{setCurrentCapacity}}
+\index{setCurrentCapacity@{setCurrentCapacity}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{setCurrentCapacity()}{setCurrentCapacity()}}
+{\footnotesize\ttfamily \label{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c} 
+void Farm\+Unit\+::set\+Current\+Capacity (\begin{DoxyParamCaption}\item[{int}]{current\+Capacity}{}\end{DoxyParamCaption})}
+
+Sets the current capacity of the farm unit. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Capacity} & The new current capacity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}}\ =\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}\index{FarmUnit@{FarmUnit}!setTotalCapacity@{setTotalCapacity}}
+\index{setTotalCapacity@{setTotalCapacity}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{setTotalCapacity()}{setTotalCapacity()}}
+{\footnotesize\ttfamily \label{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f} 
+void Farm\+Unit\+::set\+Total\+Capacity (\begin{DoxyParamCaption}\item[{int}]{total\+Capacity}{}\end{DoxyParamCaption})}
+
+Sets the total capacity of the farm unit. 
+\begin{DoxyParams}{Parameters}
+{\em total\+Capacity} & The new total capacity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{_farm_unit_8cpp_source}{Farm\+Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ this-\/>\mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}}\ =\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}};}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}\index{FarmUnit@{FarmUnit}!currentCapacity@{currentCapacity}}
+\index{currentCapacity@{currentCapacity}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{currentCapacity}{currentCapacity}}
+{\footnotesize\ttfamily \label{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530} 
+int Farm\+Unit\+::current\+Capacity\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The current capacity of the farm unit. 
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8h_source_l00024}{24}} of file \mbox{\hyperlink{_farm_unit_8h_source}{Farm\+Unit.\+h}}.
+
+\Hypertarget{class_farm_unit_a547cf3ba87da60fb031828903f240466}\index{FarmUnit@{FarmUnit}!totalCapacity@{totalCapacity}}
+\index{totalCapacity@{totalCapacity}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{totalCapacity}{totalCapacity}}
+{\footnotesize\ttfamily \label{class_farm_unit_a547cf3ba87da60fb031828903f240466} 
+int Farm\+Unit\+::total\+Capacity\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The total capacity of the farm unit. 
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8h_source_l00027}{27}} of file \mbox{\hyperlink{_farm_unit_8h_source}{Farm\+Unit.\+h}}.
+
+\Hypertarget{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}\index{FarmUnit@{FarmUnit}!trucks@{trucks}}
+\index{trucks@{trucks}!FarmUnit@{FarmUnit}}
+\doxysubsubsection{\texorpdfstring{trucks}{trucks}}
+{\footnotesize\ttfamily \label{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663} 
+std\+::vector$<$\mbox{\hyperlink{class_truck}{Truck}}\texorpdfstring{$\ast$}{*}$>$ Farm\+Unit\+::trucks\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A collection of trucks associated with the farm unit. 
+
+
+
+Definition at line \mbox{\hyperlink{_farm_unit_8h_source_l00021}{21}} of file \mbox{\hyperlink{_farm_unit_8h_source}{Farm\+Unit.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_farm_unit_8h}{Farm\+Unit.\+h}}\item 
+Farm\+Unit.\+cpp\end{DoxyCompactItemize}

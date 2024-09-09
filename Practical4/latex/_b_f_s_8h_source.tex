@@ -1,0 +1,34 @@
+\doxysection{BFS.\+h}
+\hypertarget{_b_f_s_8h_source}{}\label{_b_f_s_8h_source}\mbox{\hyperlink{_b_f_s_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00004}00004\ \textcolor{preprocessor}{\#ifndef\ BFS\_H}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00005}00005\ \textcolor{preprocessor}{\#define\ BFS\_H}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_iterator_8h}{Iterator.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_crop_field_8h}{CropField.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00014}\mbox{\hyperlink{class_b_f_s}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_b_f_s}{BFS}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_iterator}{Iterator}}\ \{}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ std::vector<CropField*>\ breadthFirstSearch(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_b_f_s_ab6d1782aed995a33eab848acfe7d69b6}{BFS}}(std::vector<CropField*>\ \mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}});}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_b_f_s_a49eae2c37b1083d19f70640f0848b1cd}{\string~BFS}}();}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}*\ \mbox{\hyperlink{class_b_f_s_a3b3956339b6cb4623d6e2700f89e704d}{firstFarm}}();}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_b_f_s_a2153e4cb2b44704f4be35e63658e5f76}{next}}();}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_b_f_s_abe5440766e3ea4dbc0817e8a88fac4e3}{isDone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_crop_field}{CropField}}*\ \mbox{\hyperlink{class_b_f_s_aefe56db7566b463ac603496f28211e46}{currentFarm}}();}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00043}00043\ \};}
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_b_f_s_8h_source_l00045}00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BFS\_H}}
+
+\end{DoxyCode}

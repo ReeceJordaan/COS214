@@ -121,19 +121,3 @@ void CropField::print() {
               << std::setw(20) << std::left << getTotalCapacity()
               << std::setw(20) << std::left << getCurrentCapacity() << "\n";
 }
-
-/* for Decorator
-void CropField::harvest(){
-    std::cout<<"Harvesting "<<cropType<<" with current capacity: "<<currentCapacity<<"/"<<totalCapacity<<std::endl;
-}
-
-void CropField::increaseProduction(){
-    std::cout<<"Increasing production for "<<cropType<<"..."<<std::endl;
-    applyFertilizer();
-    cout<<"Fertilizer applied: Production increased!"<<endl;
-}
-
-int CropField::getLeftoverCapacity(){
-    //the remaining storage capacity
-    return totalCapacity - currentCapacity;
-} */
