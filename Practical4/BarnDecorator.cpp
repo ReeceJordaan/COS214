@@ -18,7 +18,7 @@ void BarnDecorator::harvest(){
 
 void BarnDecorator::increaseProduction(){
     farmUnit->setTotalCapacity(farmUnit->getTotalCapacity() * 0.4); //increased the total capacity by 40%
-    cout<<"Barn boosts production capacity by increasing total capacity by 40%."<<endl; //thus crops to harvest and store in the barn
+    cout<<"Barn boosts production capacity by increasing total capacity by 40%. Thus more crops to harvest and store in the barn."<<endl;
     cout<<"Increased production: New total capacity is "<<farmUnit->getTotalCapacity()<<endl;
 }
 
