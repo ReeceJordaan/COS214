@@ -16,7 +16,7 @@ void FertilizerDecorator::harvest(){
 
 void FertilizerDecorator::increaseProduction(){
     farmUnit->applyFertilizer();
-    cout<<"Thus crop yield has increased by 10%."<<endl;
+    cout<<"Thus crop yield has increased by 40%."<<endl;
 }
 
 int FertilizerDecorator::getLeftoverCapacity(){
