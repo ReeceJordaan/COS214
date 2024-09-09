@@ -12,7 +12,7 @@ class Decorator : public FarmUnit
         Decorator(FarmUnit* unit);
         virtual ~Decorator() = default;
         
-        virtual void print() = 0;
+        void print();
 
     protected:
         FarmUnit* farmUnit;
