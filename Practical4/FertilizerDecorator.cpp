@@ -9,8 +9,8 @@ void FertilizerDecorator::harvest(){
 }
 
 void FertilizerDecorator::increaseProduction(){
-    //farmUnit->
-    //apply fertilizer
+    farmUnit->applyFertilizer();
+    
 }
 
 int FertilizerDecorator::getLeftoverCapacity(){
