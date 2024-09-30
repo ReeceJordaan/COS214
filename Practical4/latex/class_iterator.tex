@@ -1,0 +1,195 @@
+\doxysection{Iterator Class Reference}
+\hypertarget{class_iterator}{}\label{class_iterator}\index{Iterator@{Iterator}}
+
+
+Abstract base class for iterating over a collection of Crop\+Fields.  
+
+
+
+
+{\ttfamily \#include $<$Iterator.\+h$>$}
+
+Inheritance diagram for Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_iterator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_iterator_adc61d41a9ff3ae0479a4068e527a5e05}{Iterator}} (std\+::vector$<$ \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{crop\+Field\+Heap}})
+\item 
+virtual \mbox{\hyperlink{class_iterator_aab6716f5bdecb49e9cdd754359408ab6}{\texorpdfstring{$\sim$}{\string~}\+Iterator}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_iterator}{Iterator}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_a67f7e6cd8165bde917bc1268dcfb2063}{first\+Farm}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_iterator_ac639e96c519e2e78cff17bee372ad750}{next}} ()=0
+\begin{DoxyCompactList}\small\item\em Moves the iterator to the next \doxylink{class_crop_field}{Crop\+Field} in the collection. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_iterator_aaee909d23a98abaf18ed7aa2ee9bee6f}{is\+Done}} () const =0
+\item 
+virtual \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_iterator_a49ac053393af2fb99f3a58da31846b76}{current\+Farm}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{crop\+Field\+Heap}}
+\begin{DoxyCompactList}\small\item\em A heap of Crop\+Fields, typically managed by the farm, ordered by total capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_iterator_a4f3e53340004e627f5200e74f54d2bec}{current\+Pos}}
+\begin{DoxyCompactList}\small\item\em The current position in the heap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for iterating over a collection of Crop\+Fields. 
+
+Definition at line \mbox{\hyperlink{_iterator_8h_source_l00012}{12}} of file \mbox{\hyperlink{_iterator_8h_source}{Iterator.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_iterator_adc61d41a9ff3ae0479a4068e527a5e05}\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}}
+{\footnotesize\ttfamily \label{class_iterator_adc61d41a9ff3ae0479a4068e527a5e05} 
+Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} $>$}]{crop\+Field\+Heap}{}\end{DoxyParamCaption})}
+
+Constructor for \doxylink{class_iterator}{Iterator}. 
+\begin{DoxyParams}{Parameters}
+{\em crop\+Field\+Heap} & A vector of Crop\+Fields to iterate over, typically a max heap based on total capacity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_iterator_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_iterator_8cpp_source}{Iterator.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00004\ \ \ \ \ this-\/>\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}\ =\ std::vector<CropField*>();}
+\DoxyCodeLine{00005\ \ \ \ \ this-\/>\mbox{\hyperlink{class_iterator_a4f3e53340004e627f5200e74f54d2bec}{currentPos}}\ =\ 0;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_crop_field}{CropField}}*\ cropField\ :\ \mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ this-\/>cropFieldHeap.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_crop_field}{CropField}}(cropField));}
+\DoxyCodeLine{00009\ \ \ \ \ \}}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_iterator_aab6716f5bdecb49e9cdd754359408ab6}\index{Iterator@{Iterator}!````~Iterator@{\texorpdfstring{$\sim$}{\string~}Iterator}}
+\index{````~Iterator@{\texorpdfstring{$\sim$}{\string~}Iterator}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Iterator()}{\string~Iterator()}}
+{\footnotesize\ttfamily \label{class_iterator_aab6716f5bdecb49e9cdd754359408ab6} 
+Iterator\+::\texorpdfstring{$\sim$}{\string~}\+Iterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \doxylink{class_iterator}{Iterator}. 
+
+
+
+Definition at line \mbox{\hyperlink{_iterator_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_iterator_8cpp_source}{Iterator.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{while}(!this-\/>\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}.empty())\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}.back();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}.pop\_back();}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ this-\/>\mbox{\hyperlink{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}{cropFieldHeap}}.clear();}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_iterator_a49ac053393af2fb99f3a58da31846b76}\index{Iterator@{Iterator}!currentFarm@{currentFarm}}
+\index{currentFarm@{currentFarm}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{currentFarm()}{currentFarm()}}
+{\footnotesize\ttfamily \label{class_iterator_a49ac053393af2fb99f3a58da31846b76} 
+virtual \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} Iterator\+::current\+Farm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the current \doxylink{class_crop_field}{Crop\+Field} in the collection. \begin{DoxyReturn}{Returns}
+Pointer to the current \doxylink{class_crop_field}{Crop\+Field}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_b_f_s_aefe56db7566b463ac603496f28211e46}{BFS}}, and \mbox{\hyperlink{class_d_f_s_ab5789f513a9b5f676856374fce591996}{DFS}}.
+
+\Hypertarget{class_iterator_a67f7e6cd8165bde917bc1268dcfb2063}\index{Iterator@{Iterator}!firstFarm@{firstFarm}}
+\index{firstFarm@{firstFarm}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{firstFarm()}{firstFarm()}}
+{\footnotesize\ttfamily \label{class_iterator_a67f7e6cd8165bde917bc1268dcfb2063} 
+virtual \mbox{\hyperlink{class_crop_field}{Crop\+Field}} \texorpdfstring{$\ast$}{*} Iterator\+::first\+Farm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Initializes the iterator to the first \doxylink{class_crop_field}{Crop\+Field}. \begin{DoxyReturn}{Returns}
+Pointer to the first \doxylink{class_crop_field}{Crop\+Field} in the collection. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_b_f_s_a3b3956339b6cb4623d6e2700f89e704d}{BFS}}, and \mbox{\hyperlink{class_d_f_s_a2fcef1424a531c924924cc30ca8d2dec}{DFS}}.
+
+\Hypertarget{class_iterator_aaee909d23a98abaf18ed7aa2ee9bee6f}\index{Iterator@{Iterator}!isDone@{isDone}}
+\index{isDone@{isDone}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{isDone()}{isDone()}}
+{\footnotesize\ttfamily \label{class_iterator_aaee909d23a98abaf18ed7aa2ee9bee6f} 
+virtual bool Iterator\+::is\+Done (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Checks if the iterator has finished traversing the collection. \begin{DoxyReturn}{Returns}
+{\ttfamily true} if done, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_b_f_s_abe5440766e3ea4dbc0817e8a88fac4e3}{BFS}}, and \mbox{\hyperlink{class_d_f_s_a4d6a7e95272e9fdedb54137c47de74d9}{DFS}}.
+
+\Hypertarget{class_iterator_ac639e96c519e2e78cff17bee372ad750}\index{Iterator@{Iterator}!next@{next}}
+\index{next@{next}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \label{class_iterator_ac639e96c519e2e78cff17bee372ad750} 
+virtual void Iterator\+::next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Moves the iterator to the next \doxylink{class_crop_field}{Crop\+Field} in the collection. 
+
+
+
+Implemented in \mbox{\hyperlink{class_b_f_s_a2153e4cb2b44704f4be35e63658e5f76}{BFS}}, and \mbox{\hyperlink{class_d_f_s_aa50a2f678437054eadad34406dd28693}{DFS}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_iterator_a45ba85b7fe5120807832b9b0032e37c5}\index{Iterator@{Iterator}!cropFieldHeap@{cropFieldHeap}}
+\index{cropFieldHeap@{cropFieldHeap}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{cropFieldHeap}{cropFieldHeap}}
+{\footnotesize\ttfamily \label{class_iterator_a45ba85b7fe5120807832b9b0032e37c5} 
+std\+::vector$<$\mbox{\hyperlink{class_crop_field}{Crop\+Field}}\texorpdfstring{$\ast$}{*}$>$ Iterator\+::crop\+Field\+Heap\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A heap of Crop\+Fields, typically managed by the farm, ordered by total capacity. 
+
+
+
+Definition at line \mbox{\hyperlink{_iterator_8h_source_l00015}{15}} of file \mbox{\hyperlink{_iterator_8h_source}{Iterator.\+h}}.
+
+\Hypertarget{class_iterator_a4f3e53340004e627f5200e74f54d2bec}\index{Iterator@{Iterator}!currentPos@{currentPos}}
+\index{currentPos@{currentPos}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{currentPos}{currentPos}}
+{\footnotesize\ttfamily \label{class_iterator_a4f3e53340004e627f5200e74f54d2bec} 
+int Iterator\+::current\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The current position in the heap. 
+
+
+
+Definition at line \mbox{\hyperlink{_iterator_8h_source_l00018}{18}} of file \mbox{\hyperlink{_iterator_8h_source}{Iterator.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_iterator_8h}{Iterator.\+h}}\item 
+Iterator.\+cpp\end{DoxyCompactItemize}

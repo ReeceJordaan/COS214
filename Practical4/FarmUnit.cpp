@@ -49,37 +49,25 @@ void FarmUnit::setTotalCapacity(int totalCapacity) {
     this->totalCapacity = totalCapacity;
 }
 
-void FarmUnit::add(CropField* cropField) {
-    std::cout << "Invalid object type. Call this on a Farm object." << std::endl;
+void FarmUnit::applyFertilizer() {
+    std::cout << "Applying fertilizer...\n";
+    std::cout << "Fertilizer applied.\n";
+
+    currentCapacity += currentCapacity + (currentCapacity * 0.4);
+
+    if (currentCapacity > totalCapacity) {
+        currentCapacity = totalCapacity;
+    }
+
+    std::cout << "Current capacity after applying fertilizer: " 
+              << currentCapacity << " (out of " << totalCapacity << " total capacity)\n";
 }
 
-void FarmUnit::remove(CropField* cropField) {
-    std::cout << "Invalid object type. Call this on a Farm object." << std::endl;
-}
-
-CropField* FarmUnit::getChild(int index) {
-    std::cout << "Invalid object type. Call this on a Farm object." << std::endl;
-    return nullptr;
-}
-
-Iterator* FarmUnit::createDFSIterator() {
-    std::cout << "Invalid object type. Call this on a Farm object." << std::endl;
-    return nullptr;
-}
-
-Iterator* FarmUnit::createBFSIterator() {
-    std::cout << "Invalid object type. Call this on a Farm object." << std::endl;
-    return nullptr;
-}
-
-void FarmUnit::buyTruck() {
-    std::cout << "Invalid object type. Call this on a CropField/Barn object." << std::endl;
-}
-
-void FarmUnit::sellTruck() {
-    std::cout << "Invalid object type. Call this on a CropField/Barn object." << std::endl;
-}
-
-void FarmUnit::callTruck() {
-    std::cout << "Invalid object type. Call this on a CropField/Barn object." << std::endl;
-}
+void FarmUnit::add(CropField* cropField) { }
+void FarmUnit::remove(CropField* cropField) { }
+CropField* FarmUnit::getChild(int index) { return nullptr; }
+Iterator* FarmUnit::createDFSIterator() { return nullptr; }
+Iterator* FarmUnit::createBFSIterator() { return nullptr; }
+void FarmUnit::buyTruck() { }
+void FarmUnit::sellTruck() { }
+void FarmUnit::callTruck() { }

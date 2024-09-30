@@ -11,3 +11,7 @@ Soil::Soil(const Soil* other) {
 string Soil::getName() {
     return name;
 }
+
+void Soil::setName(string name){
+    this->name = name;
+}

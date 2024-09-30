@@ -11,10 +11,6 @@ DeliveryTruck::DeliveryTruck(const DeliveryTruck* other) : Truck() {
 }
 
 void DeliveryTruck::startEngine() {
-    if (subject->getCurrentCapacity() >= subject->getTotalCapacity() * 0.8) {
-        cout<<"Delivery truck is collecting crops as the barn is near full capacity."<<endl;
-        subject->setCurrentCapacity(0);
-    } else {
-        cout<<"No crop collection needed at this time."<<endl;
-    }
+    cout<<"Delivery truck is collecting crops from the barn."<<endl;
+    subject->setCurrentCapacity(0);
 }

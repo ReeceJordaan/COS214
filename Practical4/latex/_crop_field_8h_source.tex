@@ -1,0 +1,55 @@
+\doxysection{Crop\+Field.\+h}
+\hypertarget{_crop_field_8h_source}{}\label{_crop_field_8h_source}\mbox{\hyperlink{_crop_field_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00004}00004\ \textcolor{preprocessor}{\#ifndef\ CROPFIELD\_H}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00005}00005\ \textcolor{preprocessor}{\#define\ CROPFIELD\_H}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}Soil.h"{}}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_farm_unit_8h}{FarmUnit.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00013}00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_barn}{Barn}};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00017}\mbox{\hyperlink{class_crop_field}{00017}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_crop_field}{CropField}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_farm_unit}{FarmUnit}}\ \{}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ std::string\ cropType;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ std::vector<Barn*>\ barns;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_soil}{Soil}}*\ soilState;}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_crop_field_a675ba2a59ab431fc5fdcd7874310f0dd}{CropField}}(std::string\ cropType,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}});}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_crop_field_a675ba2a59ab431fc5fdcd7874310f0dd}{CropField}}(\mbox{\hyperlink{class_crop_field}{CropField}}*\ cropField);}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_crop_field_a3650366847c5ab679905acc348593112}{\string~CropField}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_crop_field_a14363175d2a442ac3f72b98fa16b1adc}{getCropType}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_soil}{Soil}}*\ \mbox{\hyperlink{class_crop_field_a5bfdc5c0a2a2ce029d421e98f6abb183}{getSoilState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_ab01d92251a97f1cf12b6a992035d5b73}{setSoilState}}(\mbox{\hyperlink{class_soil}{Soil}}*\ soilState);}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_crop_field_a9f952f85cd1409022e808f87b563ca76}{getSoilStateName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_ae54da2a13ba4d5fe2e3939d379237926}{buildBarn}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}});}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_aa89a0cf85108686582f52ea5465d85de}{rain}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_ab910627441cdc7f01adb27f5735b849a}{buyTruck}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_a35c7747dea2718f10face80afa80fc4c}{sellTruck}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_ad68a4ccd9c87331c64978a2a984f5caf}{callTruck}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_crop_field_a9427aebc6282e45a5813f4a31af9a4ae}{print}}();}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00076}00076\ \};}
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_crop_field_8h_source_l00078}00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CROPFIELD\_H}}
+
+\end{DoxyCode}

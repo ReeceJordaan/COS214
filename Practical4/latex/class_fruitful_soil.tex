@@ -1,0 +1,198 @@
+\doxysection{Fruitful\+Soil Class Reference}
+\hypertarget{class_fruitful_soil}{}\label{class_fruitful_soil}\index{FruitfulSoil@{FruitfulSoil}}
+
+
+A concrete state representing fruitful soil in the State design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Fruitful\+Soil.\+h$>$}
+
+Inheritance diagram for Fruitful\+Soil\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fruitful_soil}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fruitful_soil_a1624f7de93bcca8e181e618921a40f68}{Fruitful\+Soil}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_fruitful_soil}{Fruitful\+Soil} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fruitful_soil_a408e3067c16ec434c6db85e6ac8d2c33}{Fruitful\+Soil}} (const \mbox{\hyperlink{class_fruitful_soil}{Fruitful\+Soil}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_fruitful_soil}{Fruitful\+Soil} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_fruitful_soil_ab383cbd6ea880685da5a5dee90a31030}\label{class_fruitful_soil_ab383cbd6ea880685da5a5dee90a31030} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Fruitful\+Soil} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fruitful_soil_a428d794b2503405a0ce54a9aea4c8758}{harvest\+Crops}} ()
+\begin{DoxyCompactList}\small\item\em Handles crop harvesting in the fruitful soil state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fruitful_soil_a56942389eb0450cbedcf54cf0efa4460}{rain}} ()
+\begin{DoxyCompactList}\small\item\em Simulates rain falling on the fruitful soil. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_soil}{Soil}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_soil_ab1b416ed1251bd3e6c11a66457668eef}{Soil}} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_soil}{Soil} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_soil_acdbb3e814cb73a0d062a3b088578bbe4}{Soil}} (const \mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_soil}{Soil} class. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Soil} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the soil type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_soil_a49bd88fa5018a8f5200a0bfabc07945c}{set\+Name}} (string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the soil type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A concrete state representing fruitful soil in the State design pattern. 
+
+\doxylink{class_fruitful_soil}{Fruitful\+Soil} is one of the possible states of soil within the State design pattern. This state indicates that the soil is in an optimal condition for crop growth, and it defines behaviors such as harvesting crops and reacting to rain. When rain occurs, the soil state may transition to another condition if overwatered.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & There’s no template method.\\
+\hline
+\end{DoxyTemplParams}
+class is a concrete state and inherits from \doxylink{class_soil}{Soil}.
+
+\begin{DoxyAuthor}{Author}
+Salome Kalaka 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 September 2024
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_soil}{Soil} class, \doxylink{class_fruitful_soil_a428d794b2503405a0ce54a9aea4c8758}{harvest\+Crops()}, \doxylink{class_fruitful_soil_a56942389eb0450cbedcf54cf0efa4460}{rain()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Implement transition to \doxylink{class_flooded_soil}{Flooded\+Soil} or another state when excess rain occurs.\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+Overwatering may transition the soil to a less desirable state.
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+Ensure proper handling of state transitions to reflect accurate soil conditions and prevent crop damage.
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+\doxylink{class_fruitful_soil}{Fruitful\+Soil} is part of a state machine managing soil conditions to optimize crop growth and harvest. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_fruitful_soil_8h_source_l00033}{33}} of file \mbox{\hyperlink{_fruitful_soil_8h_source}{Fruitful\+Soil.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_fruitful_soil_a1624f7de93bcca8e181e618921a40f68}\index{FruitfulSoil@{FruitfulSoil}!FruitfulSoil@{FruitfulSoil}}
+\index{FruitfulSoil@{FruitfulSoil}!FruitfulSoil@{FruitfulSoil}}
+\doxysubsubsection{\texorpdfstring{FruitfulSoil()}{FruitfulSoil()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_fruitful_soil_a1624f7de93bcca8e181e618921a40f68} 
+Fruitful\+Soil\+::\+Fruitful\+Soil (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_fruitful_soil}{Fruitful\+Soil} class. 
+
+This constructor initializes the \doxylink{class_fruitful_soil}{Fruitful\+Soil} state, indicating that the soil is in an optimal condition for crop growth. 
+
+Definition at line \mbox{\hyperlink{_fruitful_soil_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_fruitful_soil_8cpp_source}{Fruitful\+Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \ \mbox{\hyperlink{class_soil_ab1b416ed1251bd3e6c11a66457668eef}{Soil}}(\textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_fruitful_soil_a408e3067c16ec434c6db85e6ac8d2c33}\index{FruitfulSoil@{FruitfulSoil}!FruitfulSoil@{FruitfulSoil}}
+\index{FruitfulSoil@{FruitfulSoil}!FruitfulSoil@{FruitfulSoil}}
+\doxysubsubsection{\texorpdfstring{FruitfulSoil()}{FruitfulSoil()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_fruitful_soil_a408e3067c16ec434c6db85e6ac8d2c33} 
+Fruitful\+Soil\+::\+Fruitful\+Soil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_fruitful_soil}{Fruitful\+Soil}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{class_fruitful_soil}{Fruitful\+Soil} class. 
+
+This constructor creates a copy of another \doxylink{class_fruitful_soil}{Fruitful\+Soil} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A pointer to the \doxylink{class_fruitful_soil}{Fruitful\+Soil} object to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_fruitful_soil_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_fruitful_soil_8cpp_source}{Fruitful\+Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \ \mbox{\hyperlink{class_soil_ab1b416ed1251bd3e6c11a66457668eef}{Soil}}(\textcolor{stringliteral}{"{}Fruitful"{}})\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_fruitful_soil_a428d794b2503405a0ce54a9aea4c8758}\index{FruitfulSoil@{FruitfulSoil}!harvestCrops@{harvestCrops}}
+\index{harvestCrops@{harvestCrops}!FruitfulSoil@{FruitfulSoil}}
+\doxysubsubsection{\texorpdfstring{harvestCrops()}{harvestCrops()}}
+{\footnotesize\ttfamily \label{class_fruitful_soil_a428d794b2503405a0ce54a9aea4c8758} 
+void Fruitful\+Soil\+::harvest\+Crops (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles crop harvesting in the fruitful soil state. 
+
+This method defines how crops are harvested when the soil is in an optimal condition, typically leading to high yields. 
+
+Implements \mbox{\hyperlink{class_soil_a2fffdd8cace04e9fdecd5376dc174a7a}{Soil}}.
+
+
+
+Definition at line \mbox{\hyperlink{_fruitful_soil_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_fruitful_soil_8cpp_source}{Fruitful\+Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Harvesting\ abundant\ crops\ from\ fruitful\ soil\ (x3)."{}}<<endl;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_fruitful_soil_a56942389eb0450cbedcf54cf0efa4460}\index{FruitfulSoil@{FruitfulSoil}!rain@{rain}}
+\index{rain@{rain}!FruitfulSoil@{FruitfulSoil}}
+\doxysubsubsection{\texorpdfstring{rain()}{rain()}}
+{\footnotesize\ttfamily \label{class_fruitful_soil_a56942389eb0450cbedcf54cf0efa4460} 
+void Fruitful\+Soil\+::rain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Simulates rain falling on the fruitful soil. 
+
+This method triggers rain in the fruitful soil state, potentially transitioning the soil to a different state if excessive. 
+
+Implements \mbox{\hyperlink{class_soil_a2932e8ab8e7bd3a78664c1709e25730e}{Soil}}.
+
+
+
+Definition at line \mbox{\hyperlink{_fruitful_soil_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_fruitful_soil_8cpp_source}{Fruitful\+Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Rain\ has\ flooded\ the\ fruitful\ soil!"{}}<<endl;}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Fruitful\+Soil.\+h\item 
+Fruitful\+Soil.\+cpp\end{DoxyCompactItemize}

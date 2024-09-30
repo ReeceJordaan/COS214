@@ -1,0 +1,175 @@
+\doxysection{Delivery\+Truck Class Reference}
+\hypertarget{class_delivery_truck}{}\label{class_delivery_truck}\index{DeliveryTruck@{DeliveryTruck}}
+
+
+A concrete observer class that reacts to changes in the \doxylink{class_barn}{Barn} subject.  
+
+
+
+
+{\ttfamily \#include $<$Delivery\+Truck.\+h$>$}
+
+Inheritance diagram for Delivery\+Truck\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_delivery_truck}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_delivery_truck_a878e366aa5d776a72b92c3e8859ae7a3}{Delivery\+Truck}} (\mbox{\hyperlink{class_barn}{Barn}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_delivery_truck}{Delivery\+Truck} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_delivery_truck_a237cfc63564cec3334a06d0c4633533d}{Delivery\+Truck}} (const \mbox{\hyperlink{class_delivery_truck}{Delivery\+Truck}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_delivery_truck}{Delivery\+Truck} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_delivery_truck_a22f32967dc8ec089129bb2e67cb7eb46}\label{class_delivery_truck_a22f32967dc8ec089129bb2e67cb7eb46} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Delivery\+Truck} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delivery_truck_a2cc9028a83027b4c364bd1fb705475cc}{start\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Starts the engine of the delivery truck. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_truck}{Truck}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_truck_a87e358bca8fe34e6299c6ff233afb08b}{Truck}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_truck}{Truck} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_truck_a219d1f79f9d09d9f0ab34bd65156e861}{Truck}} (const \mbox{\hyperlink{class_truck}{Truck}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_truck}{Truck} class. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Truck} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A concrete observer class that reacts to changes in the \doxylink{class_barn}{Barn} subject. 
+
+As part of the Observer design pattern, the \doxylink{class_delivery_truck}{Delivery\+Truck} class observes changes in a \doxylink{class_barn}{Barn} object and acts accordingly. This truck is responsible for delivering or collecting goods when notified by the \doxylink{class_barn}{Barn}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & There’s no template method.\\
+\hline
+\end{DoxyTemplParams}
+class is a concrete observer and inherits from \doxylink{class_truck}{Truck}.
+
+\begin{DoxyAuthor}{Author}
+Salome Kalaka 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 September 2024
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_truck}{Truck} class, \doxylink{class_barn}{Barn} class 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Implement the observer\textquotesingle{}s notification mechanism to respond to state changes in \doxylink{class_barn}{Barn}.\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+No warning.
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+This truck can only observe a single \doxylink{class_barn}{Barn} instance at a time.
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+The constructor initializes the subject it is observing (\doxylink{class_barn}{Barn}). 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_delivery_truck_8h_source_l00036}{36}} of file \mbox{\hyperlink{_delivery_truck_8h_source}{Delivery\+Truck.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_delivery_truck_a878e366aa5d776a72b92c3e8859ae7a3}\index{DeliveryTruck@{DeliveryTruck}!DeliveryTruck@{DeliveryTruck}}
+\index{DeliveryTruck@{DeliveryTruck}!DeliveryTruck@{DeliveryTruck}}
+\doxysubsubsection{\texorpdfstring{DeliveryTruck()}{DeliveryTruck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_delivery_truck_a878e366aa5d776a72b92c3e8859ae7a3} 
+Delivery\+Truck\+::\+Delivery\+Truck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_barn}{Barn}} \texorpdfstring{$\ast$}{*}}]{subject}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_delivery_truck}{Delivery\+Truck} class. 
+
+This constructor sets the \doxylink{class_barn}{Barn} that the \doxylink{class_delivery_truck}{Delivery\+Truck} will observe and respond to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & A pointer to the \doxylink{class_barn}{Barn} that the \doxylink{class_delivery_truck}{Delivery\+Truck} will observe. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_delivery_truck_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_delivery_truck_8cpp_source}{Delivery\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck_a87e358bca8fe34e6299c6ff233afb08b}{Truck}}()\{}
+\DoxyCodeLine{00006\ \ \ \ \ this-\/>subject\ =\ subject;}
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_delivery_truck_a237cfc63564cec3334a06d0c4633533d}\index{DeliveryTruck@{DeliveryTruck}!DeliveryTruck@{DeliveryTruck}}
+\index{DeliveryTruck@{DeliveryTruck}!DeliveryTruck@{DeliveryTruck}}
+\doxysubsubsection{\texorpdfstring{DeliveryTruck()}{DeliveryTruck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_delivery_truck_a237cfc63564cec3334a06d0c4633533d} 
+Delivery\+Truck\+::\+Delivery\+Truck (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_delivery_truck}{Delivery\+Truck}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{class_delivery_truck}{Delivery\+Truck} class. 
+
+This constructor creates a copy of another \doxylink{class_delivery_truck}{Delivery\+Truck} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A pointer to the \doxylink{class_delivery_truck}{Delivery\+Truck} object to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_delivery_truck_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_delivery_truck_8cpp_source}{Delivery\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_truck_a87e358bca8fe34e6299c6ff233afb08b}{Truck}}()\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ this-\/>subject\ =\ other-\/>subject;}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_delivery_truck_a2cc9028a83027b4c364bd1fb705475cc}\index{DeliveryTruck@{DeliveryTruck}!startEngine@{startEngine}}
+\index{startEngine@{startEngine}!DeliveryTruck@{DeliveryTruck}}
+\doxysubsubsection{\texorpdfstring{startEngine()}{startEngine()}}
+{\footnotesize\ttfamily \label{class_delivery_truck_a2cc9028a83027b4c364bd1fb705475cc} 
+void Delivery\+Truck\+::start\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Starts the engine of the delivery truck. 
+
+This function handles the process of starting the engine when the truck is ready for a delivery task. 
+
+Implements \mbox{\hyperlink{class_truck_a2d914b649a601c31fff420b90a51dc7f}{Truck}}.
+
+
+
+Definition at line \mbox{\hyperlink{_delivery_truck_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_delivery_truck_8cpp_source}{Delivery\+Truck.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Delivery\ truck\ is\ collecting\ crops\ from\ the\ barn."{}}<<endl;}
+\DoxyCodeLine{00015\ \ \ \ \ subject-\/>\mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{setCurrentCapacity}}(0);}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Delivery\+Truck.\+h\item 
+Delivery\+Truck.\+cpp\end{DoxyCompactItemize}

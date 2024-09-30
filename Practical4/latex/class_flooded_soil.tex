@@ -1,0 +1,198 @@
+\doxysection{Flooded\+Soil Class Reference}
+\hypertarget{class_flooded_soil}{}\label{class_flooded_soil}\index{FloodedSoil@{FloodedSoil}}
+
+
+A concrete state representing flooded soil in the State design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Flooded\+Soil.\+h$>$}
+
+Inheritance diagram for Flooded\+Soil\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_flooded_soil}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flooded_soil_ac013c6c45ecc62506de857d49d059590}{Flooded\+Soil}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_flooded_soil}{Flooded\+Soil} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_flooded_soil_ab01f7d9af16e572e13cc524d93e89bf5}{Flooded\+Soil}} (const \mbox{\hyperlink{class_flooded_soil}{Flooded\+Soil}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_flooded_soil}{Flooded\+Soil} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_flooded_soil_aa5c82a65ce91f8dce6511714da65448e}\label{class_flooded_soil_aa5c82a65ce91f8dce6511714da65448e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Flooded\+Soil} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flooded_soil_a550f663f27fa4f35f62c975f64e287c3}{harvest\+Crops}} ()
+\begin{DoxyCompactList}\small\item\em Handles crop harvesting in the flooded soil state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flooded_soil_a7f6dc00c1f4cc3c3889bd27d88ec5188}{rain}} ()
+\begin{DoxyCompactList}\small\item\em Simulates additional rain falling on the flooded soil. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_soil}{Soil}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_soil_ab1b416ed1251bd3e6c11a66457668eef}{Soil}} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_soil}{Soil} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_soil_acdbb3e814cb73a0d062a3b088578bbe4}{Soil}} (const \mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_soil}{Soil} class. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Soil} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the soil type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_soil_a49bd88fa5018a8f5200a0bfabc07945c}{set\+Name}} (string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the soil type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A concrete state representing flooded soil in the State design pattern. 
+
+\doxylink{class_flooded_soil}{Flooded\+Soil} is one of the possible states of soil within the State design pattern. This state indicates that the soil is flooded, and it defines behaviors such as harvesting crops and reacting to further rain. When rain occurs, the state of the soil may change.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & There’s no template method.\\
+\hline
+\end{DoxyTemplParams}
+class is a concrete state and inherits from \doxylink{class_soil}{Soil}.
+
+\begin{DoxyAuthor}{Author}
+Salome Kalaka 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 September 2024
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_soil}{Soil} class, \doxylink{class_flooded_soil_a550f663f27fa4f35f62c975f64e287c3}{harvest\+Crops()}, \doxylink{class_flooded_soil_a7f6dc00c1f4cc3c3889bd27d88ec5188}{rain()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]Implement transition to \doxylink{class_dry_soil}{Dry\+Soil} or another state when conditions change.\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+Flooded soil may damage crops and impede harvesting.
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+Ensure proper handling of transitions between soil states to reflect accurate soil conditions.
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+\doxylink{class_flooded_soil}{Flooded\+Soil} is part of a larger state machine managing soil conditions in a farm environment. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_flooded_soil_8h_source_l00033}{33}} of file \mbox{\hyperlink{_flooded_soil_8h_source}{Flooded\+Soil.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_flooded_soil_ac013c6c45ecc62506de857d49d059590}\index{FloodedSoil@{FloodedSoil}!FloodedSoil@{FloodedSoil}}
+\index{FloodedSoil@{FloodedSoil}!FloodedSoil@{FloodedSoil}}
+\doxysubsubsection{\texorpdfstring{FloodedSoil()}{FloodedSoil()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_flooded_soil_ac013c6c45ecc62506de857d49d059590} 
+Flooded\+Soil\+::\+Flooded\+Soil (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_flooded_soil}{Flooded\+Soil} class. 
+
+This constructor initializes the \doxylink{class_flooded_soil}{Flooded\+Soil} state, indicating that the soil is in a flooded condition. 
+
+Definition at line \mbox{\hyperlink{_flooded_soil_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_flooded_soil_8cpp_source}{Flooded\+Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_soil_ab1b416ed1251bd3e6c11a66457668eef}{Soil}}(\textcolor{stringliteral}{"{}Flooded"{}})\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_flooded_soil_ab01f7d9af16e572e13cc524d93e89bf5}\index{FloodedSoil@{FloodedSoil}!FloodedSoil@{FloodedSoil}}
+\index{FloodedSoil@{FloodedSoil}!FloodedSoil@{FloodedSoil}}
+\doxysubsubsection{\texorpdfstring{FloodedSoil()}{FloodedSoil()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_flooded_soil_ab01f7d9af16e572e13cc524d93e89bf5} 
+Flooded\+Soil\+::\+Flooded\+Soil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_flooded_soil}{Flooded\+Soil}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{class_flooded_soil}{Flooded\+Soil} class. 
+
+This constructor creates a copy of another \doxylink{class_flooded_soil}{Flooded\+Soil} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A pointer to the \doxylink{class_flooded_soil}{Flooded\+Soil} object to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_flooded_soil_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_flooded_soil_8cpp_source}{Flooded\+Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_soil_ab1b416ed1251bd3e6c11a66457668eef}{Soil}}(\textcolor{stringliteral}{"{}Flooded"{}})\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_flooded_soil_a550f663f27fa4f35f62c975f64e287c3}\index{FloodedSoil@{FloodedSoil}!harvestCrops@{harvestCrops}}
+\index{harvestCrops@{harvestCrops}!FloodedSoil@{FloodedSoil}}
+\doxysubsubsection{\texorpdfstring{harvestCrops()}{harvestCrops()}}
+{\footnotesize\ttfamily \label{class_flooded_soil_a550f663f27fa4f35f62c975f64e287c3} 
+void Flooded\+Soil\+::harvest\+Crops (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles crop harvesting in the flooded soil state. 
+
+This method defines how crops are harvested when the soil is flooded, which may lead to damage or difficulties in harvesting. 
+
+Implements \mbox{\hyperlink{class_soil_a2fffdd8cace04e9fdecd5376dc174a7a}{Soil}}.
+
+
+
+Definition at line \mbox{\hyperlink{_flooded_soil_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_flooded_soil_8cpp_source}{Flooded\+Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}No\ crops\ can\ be\ harvested;\ the\ soil\ is\ flooded."{}}<<endl;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_flooded_soil_a7f6dc00c1f4cc3c3889bd27d88ec5188}\index{FloodedSoil@{FloodedSoil}!rain@{rain}}
+\index{rain@{rain}!FloodedSoil@{FloodedSoil}}
+\doxysubsubsection{\texorpdfstring{rain()}{rain()}}
+{\footnotesize\ttfamily \label{class_flooded_soil_a7f6dc00c1f4cc3c3889bd27d88ec5188} 
+void Flooded\+Soil\+::rain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Simulates additional rain falling on the flooded soil. 
+
+This method triggers further rain in the flooded soil state, potentially transitioning the soil to another state. 
+
+Implements \mbox{\hyperlink{class_soil_a2932e8ab8e7bd3a78664c1709e25730e}{Soil}}.
+
+
+
+Definition at line \mbox{\hyperlink{_flooded_soil_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_flooded_soil_8cpp_source}{Flooded\+Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}The\ soil\ is\ already\ flooded."{}}<<endl;}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Flooded\+Soil.\+h\item 
+Flooded\+Soil.\+cpp\end{DoxyCompactItemize}

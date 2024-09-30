@@ -16,7 +16,7 @@ CropField::CropField(CropField* cropField) : FarmUnit(cropField) {
     this->barns = std::vector<Barn*>();
     this->cropType = cropField->cropType;
     
-    if (cropField->soilState != nullptr && cropField->soilState->getName() == "Dry") {
+    if (cropField->soilState->getName() == "Dry") {
         this->soilState = new DrySoil();
     } else if (cropField->soilState->getName() == "Fruitful") {
         this->soilState = new FruitfulSoil();
@@ -74,6 +74,16 @@ void CropField::buildBarn(int totalCapacity){
     std::cout << "Total storage capacity is now: " << this->totalCapacity << std::endl;
 }
 
+void CropField::rain() {
+    this->soilState->rain();
+
+    if (this->soilState->getName() == "Dry") {
+        this->soilState = new FruitfulSoil();
+    } else if (this->soilState->getName() == "Fruitful") {
+        this->soilState = new FloodedSoil();
+    }
+}
+
 void CropField::buyTruck() {
     trucks.push_back(new FertilizerTruck(this, soilState));
     std::cout << "Bought one fertilizer truck." << std::endl;
@@ -121,19 +131,3 @@ void CropField::print() {
               << std::setw(20) << std::left << getTotalCapacity()
               << std::setw(20) << std::left << getCurrentCapacity() << "\n";
 }
-
-/* for Decorator
-void CropField::harvest(){
-    std::cout<<"Harvesting "<<cropType<<" with current capacity: "<<currentCapacity<<"/"<<totalCapacity<<std::endl;
-}
-
-void CropField::increaseProduction(){
-    std::cout<<"Increasing production for "<<cropType<<"..."<<std::endl;
-    applyFertilizer();
-    cout<<"Fertilizer applied: Production increased!"<<endl;
-}
-
-int CropField::getLeftoverCapacity(){
-    //the remaining storage capacity
-    return totalCapacity - currentCapacity;
-} */

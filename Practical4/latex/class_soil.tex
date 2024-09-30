@@ -1,0 +1,222 @@
+\doxysection{Soil Class Reference}
+\hypertarget{class_soil}{}\label{class_soil}\index{Soil@{Soil}}
+
+
+Abstract base class representing soil in the State design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Soil.\+h$>$}
+
+Inheritance diagram for Soil\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_soil}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_soil_ab1b416ed1251bd3e6c11a66457668eef}{Soil}} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_soil}{Soil} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_soil_acdbb3e814cb73a0d062a3b088578bbe4}{Soil}} (const \mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_soil}{Soil} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_soil_ae412ae84af94173df867e03a16ee0982}\label{class_soil_ae412ae84af94173df867e03a16ee0982} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Soil} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_soil_a2fffdd8cace04e9fdecd5376dc174a7a}{harvest\+Crops}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to handle crop harvesting. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_soil_a2932e8ab8e7bd3a78664c1709e25730e}{rain}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to handle rain. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the soil type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_soil_a49bd88fa5018a8f5200a0bfabc07945c}{set\+Name}} (string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the soil type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class representing soil in the State design pattern. 
+
+The \doxylink{class_soil}{Soil} class serves as an abstract base class for different soil states in the State design pattern. It defines the common interface for various concrete soil states and includes functionality for harvesting crops and handling rain. Specific soil states like \doxylink{class_dry_soil}{Dry\+Soil}, \doxylink{class_flooded_soil}{Flooded\+Soil}, and \doxylink{class_fruitful_soil}{Fruitful\+Soil} inherit from this class and implement the specific behaviors.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & There’s no template method.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyAuthor}{Author}
+Salome Kalaka 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 September 2024
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+Derived classes (\doxylink{class_dry_soil}{Dry\+Soil}, \doxylink{class_flooded_soil}{Flooded\+Soil}, \doxylink{class_fruitful_soil}{Fruitful\+Soil}), \doxylink{class_soil_a2fffdd8cace04e9fdecd5376dc174a7a}{harvest\+Crops()}, \doxylink{class_soil_a2932e8ab8e7bd3a78664c1709e25730e}{rain()}, \doxylink{class_soil_ae429597e2ed1d615210b5798f8a555cd}{get\+Name()}, \doxylink{class_soil_a49bd88fa5018a8f5200a0bfabc07945c}{set\+Name()} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000009}{Todo}}]Implement specific soil state behaviors in derived classes.\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+Ensure proper state transitions to avoid invalid soil conditions.
+\end{DoxyWarning}
+\begin{DoxyAttention}{Attention}
+Derived classes must implement the pure virtual functions to define specific soil behaviors.
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+The \doxylink{class_soil}{Soil} class is part of a state machine that manages soil conditions in a farm environment. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_soil_8h_source_l00035}{35}} of file \mbox{\hyperlink{_soil_8h_source}{Soil.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_soil_ab1b416ed1251bd3e6c11a66457668eef}\index{Soil@{Soil}!Soil@{Soil}}
+\index{Soil@{Soil}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{Soil()}{Soil()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_soil_ab1b416ed1251bd3e6c11a66457668eef} 
+Soil\+::\+Soil (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_soil}{Soil} class. 
+
+Initializes the \doxylink{class_soil}{Soil} object with a name representing the type of soil.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the soil type. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_soil_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_soil_8cpp_source}{Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00004\ \ \ \ \ this-\/>name\ =\ name;}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_soil_acdbb3e814cb73a0d062a3b088578bbe4}\index{Soil@{Soil}!Soil@{Soil}}
+\index{Soil@{Soil}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{Soil()}{Soil()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_soil_acdbb3e814cb73a0d062a3b088578bbe4} 
+Soil\+::\+Soil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_soil}{Soil}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{class_soil}{Soil} class. 
+
+Creates a copy of another \doxylink{class_soil}{Soil} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A pointer to the \doxylink{class_soil}{Soil} object to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_soil_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_soil_8cpp_source}{Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>name\ =\ other-\/>name;}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_soil_ae429597e2ed1d615210b5798f8a555cd}\index{Soil@{Soil}!getName@{getName}}
+\index{getName@{getName}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_soil_ae429597e2ed1d615210b5798f8a555cd} 
+string Soil\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the name of the soil type. 
+
+\begin{DoxyReturn}{Returns}
+The name of the soil type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_soil_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_soil_8cpp_source}{Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_soil_a2fffdd8cace04e9fdecd5376dc174a7a}\index{Soil@{Soil}!harvestCrops@{harvestCrops}}
+\index{harvestCrops@{harvestCrops}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{harvestCrops()}{harvestCrops()}}
+{\footnotesize\ttfamily \label{class_soil_a2fffdd8cace04e9fdecd5376dc174a7a} 
+virtual void Soil\+::harvest\+Crops (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to handle crop harvesting. 
+
+This function must be implemented by derived classes to define how crops are harvested based on the soil condition. 
+
+Implemented in \mbox{\hyperlink{class_dry_soil_a00a28e2ced7d0cfb9e4a18fbd353bcd7}{Dry\+Soil}}, \mbox{\hyperlink{class_flooded_soil_a550f663f27fa4f35f62c975f64e287c3}{Flooded\+Soil}}, and \mbox{\hyperlink{class_fruitful_soil_a428d794b2503405a0ce54a9aea4c8758}{Fruitful\+Soil}}.
+
+\Hypertarget{class_soil_a2932e8ab8e7bd3a78664c1709e25730e}\index{Soil@{Soil}!rain@{rain}}
+\index{rain@{rain}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{rain()}{rain()}}
+{\footnotesize\ttfamily \label{class_soil_a2932e8ab8e7bd3a78664c1709e25730e} 
+virtual void Soil\+::rain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to handle rain. 
+
+This function must be implemented by derived classes to define how the soil state reacts to rain. 
+
+Implemented in \mbox{\hyperlink{class_dry_soil_acd2186aa4038cd458f15a71eec9656e1}{Dry\+Soil}}, \mbox{\hyperlink{class_flooded_soil_a7f6dc00c1f4cc3c3889bd27d88ec5188}{Flooded\+Soil}}, and \mbox{\hyperlink{class_fruitful_soil_a56942389eb0450cbedcf54cf0efa4460}{Fruitful\+Soil}}.
+
+\Hypertarget{class_soil_a49bd88fa5018a8f5200a0bfabc07945c}\index{Soil@{Soil}!setName@{setName}}
+\index{setName@{setName}!Soil@{Soil}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_soil_a49bd88fa5018a8f5200a0bfabc07945c} 
+void Soil\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the name of the soil type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The new name of the soil type. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_soil_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_soil_8cpp_source}{Soil.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>name\ =\ name;}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Soil.\+h\item 
+Soil.\+cpp\end{DoxyCompactItemize}

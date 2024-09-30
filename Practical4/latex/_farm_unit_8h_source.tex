@@ -1,0 +1,64 @@
+\doxysection{Farm\+Unit.\+h}
+\hypertarget{_farm_unit_8h_source}{}\label{_farm_unit_8h_source}\mbox{\hyperlink{_farm_unit_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00004}00004\ \textcolor{preprocessor}{\#ifndef\ FARMUNIT\_H}}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00005}00005\ \textcolor{preprocessor}{\#define\ FARMUNIT\_H}}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}Truck.h"{}}}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}FertilizerTruck.h"{}}}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}DeliveryTruck.h"{}}}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00013}00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_iterator}{Iterator}};}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00014}00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_crop_field}{CropField}};}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00018}\mbox{\hyperlink{class_farm_unit}{00018}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_farm_unit}{FarmUnit}}\ \{}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00019}00019\ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00021}\mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{00021}}\ \ \ \ \ std::vector<Truck*>\ \mbox{\hyperlink{class_farm_unit_aa9d6b1a6a31f8d6c9a973ff0a50e6663}{trucks}};}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00024}\mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{00024}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}};}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00027}\mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{00027}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}};}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00029}00029\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}{FarmUnit}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}});}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_farm_unit_a30e83ce86b2ad96dc3a4fe68254c9d63}{FarmUnit}}(\mbox{\hyperlink{class_farm_unit}{FarmUnit}}*\ farmUnit);}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_farm_unit_a27f47dcdc8757e3bf5121b686d140bdc}{\string~FarmUnit}}();}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_a7444c48dc40effe4748a59b48ce2b044}{buyTruck}}();}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_a31a9c472afab1077a715d54030143625}{sellTruck}}();}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00049}00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_a353c6db3e864d468fb42a091fe8b380a}{callTruck}}();}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_a79d5c7e1e3b403f24f72e39fbe6ffdd3}{getCurrentCapacity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_a6675cd1e310a5fcf38c6382796fe602c}{setCurrentCapacity}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_aa97fc182b3ca0970a21ca53d4d8a8530}{currentCapacity}});}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_a00cae8dfd9011bb6500f019c679e5df4}{getTotalCapacity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_ae09dde8bee8fbbcdc17f1b369604634f}{setTotalCapacity}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_farm_unit_a547cf3ba87da60fb031828903f240466}{totalCapacity}});}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_a7485921c8fb37749548e4ea88f334dca}{applyFertilizer}}();}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_ac369cbcd102b79933aa4ded52622dc2d}{add}}(\mbox{\hyperlink{class_crop_field}{CropField}}*\ cropField);}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_a20dfa0f535142e74b62808532abeca1b}{remove}}(\mbox{\hyperlink{class_crop_field}{CropField}}*\ cropField);}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00081}00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_crop_field}{CropField}}*\ \mbox{\hyperlink{class_farm_unit_a578cd41fe5dadcc81ab5c9f0b96e3e81}{getChild}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00085}00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_iterator}{Iterator}}*\ \mbox{\hyperlink{class_farm_unit_a4623abfd4a7dde965a2dc8be8a9adf88}{createDFSIterator}}();}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_iterator}{Iterator}}*\ \mbox{\hyperlink{class_farm_unit_ae7d3336a8f274645b3b4bcc2dfa4f570}{createBFSIterator}}();}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00093}\mbox{\hyperlink{class_farm_unit_a47bd9b493c8cffa294e5f7e9fa4afa38}{00093}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farm_unit_a47bd9b493c8cffa294e5f7e9fa4afa38}{print}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00094}00094\ \};}
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_farm_unit_8h_source_l00096}00096\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FARMUNIT\_H}}
+
+\end{DoxyCode}
