@@ -51,6 +51,11 @@
         "stack": "cpp",
         "algorithm": "cpp",
         "random": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "iomanip": "cpp",
+        "list": "cpp",
+        "queue": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     }
 }
