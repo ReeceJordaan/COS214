@@ -47,3 +47,8 @@ SmartDevice* Light::getChild(int index) {
         return nullptr;
     }
 }
+
+void Light::update() {
+    this->performAction();
+    cout << "Light is turned on due to sensor trigger." << endl;
+}

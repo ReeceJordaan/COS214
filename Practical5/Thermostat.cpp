@@ -49,3 +49,9 @@ SmartDevice* Thermostat::getChild(int index) {
         return nullptr;
     }
 }
+
+void Thermostat::update() {
+    cout << "Thermostat is adjusting temperature due to sensor trigger." << endl;
+    temperature = 25;
+    cout << "Temperature is now " << temperature << "degrees celcius." << endl;
+}

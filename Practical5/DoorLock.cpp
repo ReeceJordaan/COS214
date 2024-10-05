@@ -47,3 +47,9 @@ SmartDevice* DoorLock::getChild(int index) {
         return nullptr;
     }
 }
+
+void DoorLock::update() {
+    status = true;
+    this->performAction();
+    cout << "Door is being locked due to sensor trigger." << endl;
+}

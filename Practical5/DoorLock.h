@@ -27,6 +27,7 @@ class DoorLock : public SmartDevice
         void addDevice(SmartDevice* device);
         void remove(SmartDevice* device);
         SmartDevice* getChild(int index);
+        void update();
 };
 
 
