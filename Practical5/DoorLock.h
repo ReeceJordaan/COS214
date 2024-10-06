@@ -9,6 +9,7 @@ using namespace std;
 class DoorLock : public SmartDevice
 {
     public:
+        DoorLock(string type, bool status, bool doorStatus);
         DoorLock(string type, bool status);
         virtual ~DoorLock();
 
@@ -28,6 +29,9 @@ class DoorLock : public SmartDevice
         void remove(SmartDevice* device);
         SmartDevice* getChild(int index);
         void update();
+
+    private:
+        bool doorStatus;
 };
 
 

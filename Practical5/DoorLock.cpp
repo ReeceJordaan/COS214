@@ -3,7 +3,9 @@
 #include <iostream>
 using namespace std;
 
-DoorLock::DoorLock(string type, bool status) : SmartDevice(type, status) {}
+DoorLock::DoorLock(string type, bool status) : SmartDevice(type, status), doorStatus(true) {}
+
+DoorLock::DoorLock(string type, bool status, doorStatus) : SmartDevice(type, status), doorStatus(doorStatus) {}
 
 DoorLock::~DoorLock() {}
 

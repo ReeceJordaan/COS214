@@ -9,6 +9,7 @@ using namespace std;
 class Light : public SmartDevice
 {
     public:
+        Light(string type, bool status, bool lightStatus);
         Light(string type, bool status);
         virtual ~Light();
 
@@ -28,6 +29,8 @@ class Light : public SmartDevice
         void remove(SmartDevice* device);
         SmartDevice* getChild(int index);
         void update();
+    private:
+        bool lightStatus;
 };
 
 

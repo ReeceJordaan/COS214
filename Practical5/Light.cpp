@@ -3,7 +3,9 @@
 #include <iostream>
 using namespace std;
 
-Light::Light(string type, bool status) : SmartDevice(type, status) {}
+Light::Light(string type, bool status) : SmartDevice(type, status), lightStatus(true) {}
+
+Light::Light(string type, bool status, bool lightStatus) : SmartDevice(type, status), lightStatus(lightStatus) {}
 
 Light::~Light() {}
 

@@ -1,4 +1,6 @@
 #include "LegacyThermostat.h"
+#include <iostream>
+using namespace std;
 
 LegacyThermostat::LegacyThermostat(bool status, int temperature) : temperature(temperature), legacyStatus(status), type("Legacy Thermostat") {}
 
