@@ -9,15 +9,18 @@ using namespace std;
 class SmartHomeSystem : public SmartDevice
 {
     public:
-        SmartHomeSystem(string type, bool status);
+        SmartHomeSystem(bool status);
         virtual ~SmartHomeSystem();
 
         void performAction();
         bool getStatus();
         string getDeviceType();
-        void addDevice(SmartDevice* device);
+        
+        void add(SmartDevice* device);
         void remove(SmartDevice* device);
         SmartDevice* getChild(int index);
+
+        void update();
 
     private:
         vector<SmartDevice*> devices;

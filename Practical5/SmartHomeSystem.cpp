@@ -3,12 +3,12 @@
 #include <stdexcept>
 using namespace std;
 
-SmartHomeSystem::SmartHomeSystem(string type, bool status) : SmartDevice(type, status), devices() {}
+SmartHomeSystem::SmartHomeSystem(bool status) : SmartDevice(status), devices() {}
 
 SmartHomeSystem::~SmartHomeSystem() {
-    for (int i = 0; i < devices.size(); i++) {
+    /* for (int i = 0; i < devices.size(); i++) {
         delete devices[i];
-    }
+    } */
 }
 
 void SmartHomeSystem::performAction() {
@@ -21,16 +21,16 @@ void SmartHomeSystem::performAction() {
 bool SmartHomeSystem::getStatus() {
     cout << "Getting status of all devices in " << getDeviceType() << endl;
     for (int i = 0; i < devices.size(); i++) {
-        cout << devices[i]->getDeviceType() << " is " << (devices[i]->getStatus() ? "on" : "off") << endl;
+        cout << devices[i]->getDeviceType() << ": " << devices[i]->getStatus() << endl;
     }
-    return status;  //returns overall status
+    return status;  // returns overall status
 }
 
 string SmartHomeSystem::getDeviceType() {
-    return type;
+    return "Smart Home System";
 }
 
-void SmartHomeSystem::addDevice(SmartDevice* device) {
+void SmartHomeSystem::add(SmartDevice* device) {
     devices.push_back(device);
 }
 
@@ -52,4 +52,8 @@ SmartDevice* SmartHomeSystem::getChild(int index) {
     } else {
         throw out_of_range("Index out of range.");
     }
+}
+
+void update() {
+    std::cout << "Smart Home System update()" << std::endl;
 }

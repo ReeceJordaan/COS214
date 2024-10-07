@@ -9,8 +9,7 @@ using namespace std;
 class Light : public SmartDevice
 {
     public:
-        Light(string type, bool status, bool lightStatus);
-        Light(string type, bool status);
+        Light(bool status);
         virtual ~Light();
 
         void performAction();
@@ -25,12 +24,12 @@ class Light : public SmartDevice
         // override them with an exception to indicate that
         // adding/removing a device is not allowed for a Light
         // node.
-        void addDevice(SmartDevice* device);
-        void remove(SmartDevice* device);
-        SmartDevice* getChild(int index);
+        
+        //void addDevice(SmartDevice* device);
+        //void remove(SmartDevice* device);
+        //SmartDevice* getChild(int index);
+        
         void update();
-    private:
-        bool lightStatus;
 };
 
 

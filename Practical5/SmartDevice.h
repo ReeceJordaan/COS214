@@ -3,27 +3,39 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 #include "SmartDevice.h"
+#include "Sensor.h"
 
 using namespace std;
 
 class SmartDevice
 {
     public:
-        SmartDevice(string type, bool status);
+        SmartDevice(bool status);
         virtual ~SmartDevice();
 
         virtual void performAction() = 0;
         virtual bool getStatus() = 0;
         virtual string getDeviceType() = 0;
-        virtual void addDevice(SmartDevice* device) = 0;
-        virtual void remove(SmartDevice* device) = 0;
-        virtual SmartDevice* getChild(int index) = 0;
+
+        // For adding to composite
+        virtual void add(SmartDevice* device);
+        virtual void remove(SmartDevice* device);
+        virtual SmartDevice* getChild(int index);
+
+        // For adding sensors
+        void addDevice(Sensor* device); // = 0;
+        void removeDevice(Sensor* device); // = 0;
+        Sensor* getDevice(int index); // = 0;
+
         virtual void update() = 0;
 
     protected:
-        string type;
         bool status;
+
+    private:
+        vector<Sensor*> sensorList;
 };
 
 #endif

@@ -3,18 +3,21 @@
 #include <iostream>
 using namespace std;
 
-Thermostat::Thermostat(string type, bool status, int temperature) : SmartDevice(type, status), temperature(temperature) {}
+Thermostat::Thermostat(bool status, int temperature) : SmartDevice(status), temperature(temperature) {}
 
-Thermostat::Thermostat(string type, bool status) : SmartDevice(type, status), temperature(25) {}
+Thermostat::Thermostat(bool status) : SmartDevice(status), temperature(25) {}
 
 Thermostat::~Thermostat() {}
 
 void Thermostat::performAction() {
     if (getStatus()) {
-        cout << getDeviceType() << " is turned on." << endl;
+        cout << getDeviceType() << " has been turned off." << endl;
     } else {
-        cout << getDeviceType() << " is turned off." << endl;
+        cout << getDeviceType() << " has been turned on and is automatically adjusting the temperature." << endl;
+        temperature = 25;
     }
+
+    this->status = !status;
 }
 
 bool Thermostat::getStatus() {
@@ -22,8 +25,10 @@ bool Thermostat::getStatus() {
 }
 
 string Thermostat::getDeviceType() {
-    return type;
+    return "Thermostat";
 }
+
+/*
 
 void Thermostat::addDevice(SmartDevice* device) {
     try {
@@ -49,6 +54,8 @@ SmartDevice* Thermostat::getChild(int index) {
         return nullptr;
     }
 }
+
+*/
 
 void Thermostat::update() {
     cout << "Thermostat is adjusting temperature due to sensor trigger." << endl;

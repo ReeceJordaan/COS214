@@ -3,18 +3,18 @@
 #include <iostream>
 using namespace std;
 
-Light::Light(string type, bool status) : SmartDevice(type, status), lightStatus(true) {}
-
-Light::Light(string type, bool status, bool lightStatus) : SmartDevice(type, status), lightStatus(lightStatus) {}
+Light::Light(bool status) : SmartDevice(status) {}
 
 Light::~Light() {}
 
 void Light::performAction() {
     if (getStatus()) {
-        cout << getDeviceType() << " is turned on." << endl;
+        cout << getDeviceType() << " has been turned off." << endl;
     } else {
-        cout << getDeviceType() << " is turned off." << endl;
+        cout << getDeviceType() << " has been turned on." << endl;
     }
+
+    this->status = !status;
 }
 
 bool Light::getStatus() {
@@ -22,8 +22,10 @@ bool Light::getStatus() {
 }
 
 string Light::getDeviceType() {
-    return type;
+    return "Light";
 }
+
+/*
 
 void Light::addDevice(SmartDevice* device) {
     try {
@@ -49,6 +51,8 @@ SmartDevice* Light::getChild(int index) {
         return nullptr;
     }
 }
+
+*/
 
 void Light::update() {
     this->performAction();

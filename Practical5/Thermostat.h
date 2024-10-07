@@ -9,16 +9,16 @@ using namespace std;
 class Thermostat : public SmartDevice
 {
     public:
-        Thermostat(string type, bool status, int temperature);
-        Thermostat(string type, bool status);
+        Thermostat(bool status, int temperature);
+        Thermostat(bool status);
         virtual ~Thermostat();
 
         void performAction();
         bool getStatus();
         string getDeviceType();
 
-        virtual void setTemperature(int temperature) = 0;
-        virtual int getTemperature() = 0;
+        //virtual void setTemperature(int temperature) = 0;
+        //virtual int getTemperature() = 0;
 
         //Since Thermostat is a Leaf node in the 
         //composite pattern (i.e., it doesn't contain other 
@@ -28,9 +28,11 @@ class Thermostat : public SmartDevice
         // override them with an exception to indicate that
         // adding/removing a device is not allowed for a Thermostat
         // node.
-        void addDevice(SmartDevice* device);
-        void remove(SmartDevice* device);
-        SmartDevice* getChild(int index);
+
+        //void addDevice(SmartDevice* device);
+        //void remove(SmartDevice* device);
+        //SmartDevice* getChild(int index);
+
         void update();
     private:
         int temperature;

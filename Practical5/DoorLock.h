@@ -9,8 +9,8 @@ using namespace std;
 class DoorLock : public SmartDevice
 {
     public:
-        DoorLock(string type, bool status, bool doorStatus);
-        DoorLock(string type, bool status);
+        DoorLock(bool status, bool doorStatus);
+        DoorLock(bool status);
         virtual ~DoorLock();
 
         void performAction();
@@ -25,9 +25,12 @@ class DoorLock : public SmartDevice
         // override them with an exception to indicate that
         // adding/removing a device is not allowed for a DoorLock
         // node.
-        void addDevice(SmartDevice* device);
-        void remove(SmartDevice* device);
-        SmartDevice* getChild(int index);
+
+
+        //void addDevice(SmartDevice* device);
+        //void remove(SmartDevice* device);
+        //SmartDevice* getChild(int index);
+
         void update();
 
     private:

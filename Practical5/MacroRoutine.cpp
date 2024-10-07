@@ -10,16 +10,16 @@ MacroRoutine::~MacroRoutine() {
     for (int i = 0; i < commands.size(); i++) {
         delete commands[i];
     }
+
     commands.clear();
 }
 
 void MacroRoutine::execute() {
     for (int i = 0; i < commands.size(); i++) {
-    if(commands[i]) {
-        commands[i]->execute();
+        if(commands[i]) {
+            commands[i]->execute();
+        }
     }
-}
-
 }
 
 void MacroRoutine::AddProcedure(SmartDeviceCommand* procedure) {

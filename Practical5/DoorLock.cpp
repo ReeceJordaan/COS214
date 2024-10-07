@@ -3,18 +3,20 @@
 #include <iostream>
 using namespace std;
 
-DoorLock::DoorLock(string type, bool status) : SmartDevice(type, status), doorStatus(true) {}
+DoorLock::DoorLock(bool status) : SmartDevice(status), doorStatus(true) {}
 
-DoorLock::DoorLock(string type, bool status, doorStatus) : SmartDevice(type, status), doorStatus(doorStatus) {}
+DoorLock::DoorLock(bool status, bool doorStatus) : SmartDevice(status), doorStatus(doorStatus) {}
 
 DoorLock::~DoorLock() {}
 
 void DoorLock::performAction() {
     if (getStatus()) {
-        cout << getDeviceType() << " is turned on." << endl;
+        cout << getDeviceType() << " has been unlocked." << endl;
     } else {
-        cout << getDeviceType() << " is turned off." << endl;
+        cout << getDeviceType() << " has been locked." << endl;
     }
+
+    this->status = !status;
 }
 
 bool DoorLock::getStatus() {
@@ -22,8 +24,10 @@ bool DoorLock::getStatus() {
 }
 
 string DoorLock::getDeviceType() {
-    return type;
+    return "Door Lock";
 }
+
+/*
 
 void DoorLock::addDevice(SmartDevice* device) {
     try {
@@ -49,6 +53,8 @@ SmartDevice* DoorLock::getChild(int index) {
         return nullptr;
     }
 }
+
+*/
 
 void DoorLock::update() {
     status = true;
