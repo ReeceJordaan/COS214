@@ -10,7 +10,7 @@ using namespace std;
 class ThermostatSensor : public Sensor {
     public:
         ThermostatSensor();
-        virtual ~ThermostatSensor();
+        ~ThermostatSensor();
 
         //! Returns the value of thresholdReached.
         bool getThresholdReached();

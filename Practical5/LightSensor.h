@@ -10,7 +10,7 @@ using namespace std;
 class LightSensor : public Sensor {
     public:
         LightSensor();
-        virtual ~LightSensor();
+        ~LightSensor();
 
         //! Returns the value of motionDetected.
         bool getMotionDetected();

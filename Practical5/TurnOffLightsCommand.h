@@ -10,7 +10,7 @@ class TurnOffLightsCommand : public SmartDeviceCommand
 {
     public:
         TurnOffLightsCommand(Light* light);
-        virtual ~TurnOffLightsCommand();
+        ~TurnOffLightsCommand();
         
         void execute();
     

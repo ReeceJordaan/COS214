@@ -4,13 +4,10 @@ using namespace std;
 
 LockDoorsCommand::LockDoorsCommand(DoorLock* doorLock) : doorLock(doorLock) {}
 
-LockDoorsCommand::~LockDoorsCommand() {
-    delete doorLock;
-    doorLock = nullptr;
-}
+LockDoorsCommand::~LockDoorsCommand() { }
 
 void LockDoorsCommand::execute() {
-    if (doorLock) {
+    if (!doorLock->getStatus()) {
         doorLock->performAction();
     }
 }

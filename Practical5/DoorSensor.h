@@ -10,7 +10,7 @@ using namespace std;
 class DoorSensor : public Sensor {
     public:
         DoorSensor();
-        virtual ~DoorSensor();
+        ~DoorSensor();
 
         //! Returns the value of inactivityDetected.
         bool getInactivityDetected();

@@ -4,13 +4,10 @@ using namespace std;
 
 SetTemperatureCommand::SetTemperatureCommand(Thermostat* thermostat) : thermostat(thermostat) {}
 
-SetTemperatureCommand::~SetTemperatureCommand() {
-    delete thermostat;
-    thermostat = nullptr;
-}
+SetTemperatureCommand::~SetTemperatureCommand() { }
 
 void SetTemperatureCommand::execute() {
-    if (thermostat) {
+    if (!thermostat->getStatus()) {
         thermostat->performAction();
     }
 }

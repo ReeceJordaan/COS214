@@ -22,11 +22,11 @@ class SmartDevice
         //! Updates the state of the subject that it is observing.
         virtual void update() = 0;
 
-        //! Adds to the composite.
+        //! Adds a device to the list of devices.
         virtual void add(SmartDevice* device);
-        //! Removes from the composite.
+        //! Removes a device to the list of devices.
         virtual void remove(SmartDevice* device);
-        //! Returns nth element in the composite.
+        //! Retrieves a device from the list of devices at the nth position.
         virtual SmartDevice* getChild(int index);
 
         //! Returns the smart device's status.

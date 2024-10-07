@@ -4,13 +4,10 @@ using namespace std;
 
 TurnOffLightsCommand::TurnOffLightsCommand(Light* light) : light(light) {}
 
-TurnOffLightsCommand::~TurnOffLightsCommand() {
-    delete light;
-    light = nullptr;
-}
+TurnOffLightsCommand::~TurnOffLightsCommand() { }
 
 void TurnOffLightsCommand::execute() {
-    if (light) {
+    if (light->getStatus()) {
         light->performAction();
     }
 }

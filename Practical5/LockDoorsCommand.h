@@ -10,7 +10,7 @@ class LockDoorsCommand : public SmartDeviceCommand
 {
     public:
         LockDoorsCommand(DoorLock* doorLock);
-        virtual ~LockDoorsCommand();
+        ~LockDoorsCommand();
 
         void execute();
     

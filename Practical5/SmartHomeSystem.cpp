@@ -23,17 +23,24 @@ void SmartHomeSystem::performAction() {
 }
 
 bool SmartHomeSystem::getStatus() {
-    cout << "Getting status of all devices in " << getDeviceType() << endl;
+    cout << "Getting status of all devices in the Smart Home System." << endl;
 
     for (int i = 0; i < devices.size(); i++) {
         cout << devices[i]->getDeviceType() << ": " << devices[i]->getStatus() << endl;
     }
 
-    return status;  // returns overall status
+    return status;  // Returns overall status. All devices are either ON (status = 1) otherwise (status = 0)
 }
 
 string SmartHomeSystem::getDeviceType() {
-    return "Smart Home System";
+    cout << "Getting type of all devices in the Smart Home System." << endl;
+    string types = "";
+
+    for (int i = 0; i < devices.size(); i++) {
+        types += "Device " + to_string(i) + ": " + devices[i]->getDeviceType() + "\n";
+    }
+
+    return types;
 }
 
 void SmartHomeSystem::add(SmartDevice* device) {
@@ -60,5 +67,9 @@ SmartDevice* SmartHomeSystem::getChild(int index) {
 }
 
 void SmartHomeSystem::update() {
-    std::cout << "Smart Home System update()" << std::endl;
+    cout << "Updating all of the devices in the Smart Home System." << endl;
+
+    for (int i = 0; i < devices.size(); i++) {
+        devices[i]->update();
+    }
 }

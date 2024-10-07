@@ -10,7 +10,7 @@ class MacroRoutine
 {
     public:
         MacroRoutine();
-        virtual ~MacroRoutine();
+        ~MacroRoutine();
         
         void execute();
         void AddProcedure(SmartDeviceCommand* procedure);

@@ -10,7 +10,7 @@ class SetTemperatureCommand : public SmartDeviceCommand
 {
     public:
         SetTemperatureCommand(Thermostat* thermostat);
-        virtual ~SetTemperatureCommand();
+        ~SetTemperatureCommand();
 
         void execute();
     
