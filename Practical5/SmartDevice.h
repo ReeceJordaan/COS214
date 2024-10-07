@@ -122,9 +122,13 @@ class SmartDevice {
          * @brief The status of the smart device (true for on, false for off).
          */
         bool status;
-        //! State of the Sensor that the SmartDevice is observing.
+        /**
+         * @brief State of the Sensor that the SmartDevice is observing.
+         */
         bool sensorState;
-        //! Pointer to the Sensor that the SmartDevice is observing.
+        /**
+         * @brief Pointer to the Sensor that the SmartDevice is observing.
+         */
         Sensor* sensor;
 };
 
