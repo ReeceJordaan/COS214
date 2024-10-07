@@ -5,11 +5,15 @@ using namespace std;
 
 Thermostat::Thermostat(bool status, int temperature) : SmartDevice(status) {
     this->temperature = temperature;
+    sensorState = false;
+    sensor = nullptr;
 
 }
 
 Thermostat::Thermostat(bool status) : SmartDevice(status) {
     temperature = 25;
+    sensorState = false;
+    sensor = nullptr;
 }
 
 Thermostat::~Thermostat() {}
@@ -20,7 +24,7 @@ void Thermostat::performAction() {
     } else {
         // A random temperature (It detects the optimal temperature)
         temperature = 20 + (rand() % 11);
-        cout << getDeviceType() << " has been turned on and is adjusting the temperature to an optimal level of " << temperature << "°C." << endl;
+        cout << getDeviceType() << " has been turned on and is adjusting the temperature to an optimal level of " << temperature << "C." << endl;
     }
 
     this->status = !status;
@@ -31,10 +35,14 @@ string Thermostat::getDeviceType() {
 }
 
 void Thermostat::update() {
-    thermostatSensorState = thermostatSensor->getThresholdReached();
+    if (sensor != nullptr) {
+        sensorState = ((ThermostatSensor*) sensor)->getThresholdReached();
 
-    if((thermostatSensorState && !status) || (!thermostatSensorState && status)) {
-        performAction();
+        if((sensorState && !status) || (!sensorState && status)) {
+            performAction();
+        }
+    } else {
+        cout << getDeviceType() << " does not have a sensor." << endl;
     }
 }
 
@@ -44,5 +52,5 @@ int Thermostat::getTemperature() {
 
 void Thermostat::setTemperature(int temp) {
     this->temperature = temp;
-    cout << "Thermostat temperature set to " << temperature << "°C." << endl;
+    cout << "Thermostat temperature set to " << temperature << "C." << endl;
 }

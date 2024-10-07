@@ -24,12 +24,6 @@ class Thermostat : public SmartDevice
         //! Sets the Thermostat's temperature.
         virtual void setTemperature(int temp);
 
-    protected:
-        //! State of the ThermostatSensor that Thermostat is observing.
-        bool thermostatSensorState;
-        //! Pointer to the ThermostatSensor that Thermostat is observing.
-        ThermostatSensor* thermostatSensor;
-
     private:
         //! Thermostat's current temperature.
         int temperature;

@@ -7,20 +7,18 @@ Sensor::Sensor() {
 }
 
 Sensor::~Sensor() {
-    // This wont work because Sensor doesn't own the devices in deviceList
-    /* for (int i = 0; i < deviceList.size(); i++) {
-        delete deviceList[i];
-    } */
+    deviceList.clear();
 }
 
-void Sensor::addDevice(SmartDevice* sensor) {
-    deviceList.push_back(sensor);
+void Sensor::addDevice(SmartDevice* device) {
+    deviceList.push_back(device);
+    device->setSensor(this);
 }
 
 void Sensor::removeDevice(SmartDevice* device) {
     for (int i = 0; i < deviceList.size(); i++) {
         if (deviceList[i] == device) {
-            delete deviceList[i];
+            device->setSensor(nullptr);
             deviceList.erase(deviceList.begin() + i);
             cout << "Device removed from the sensor." << std::endl;
             return;

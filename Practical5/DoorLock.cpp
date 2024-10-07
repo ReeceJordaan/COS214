@@ -3,7 +3,10 @@
 #include <iostream>
 using namespace std;
 
-DoorLock::DoorLock(bool status) : SmartDevice(status) { }
+DoorLock::DoorLock(bool status) : SmartDevice(status) {
+    sensorState = false;
+    sensor = nullptr;
+}
 
 DoorLock::~DoorLock() {}
 
@@ -22,10 +25,14 @@ string DoorLock::getDeviceType() {
 }
 
 void DoorLock::update() {
-    doorSensorState = doorSensor->getInactivityDetected();
+    if(sensor != nullptr) {
+        sensorState = ((DoorSensor*) sensor)->getInactivityDetected();
 
-    // A door can only lock since unlocking the door simply due to activity defeats the purpose of a lock.
-    if(doorSensorState && !status) {
-        performAction();
+        // A door can only lock since unlocking the door simply due to activity defeats the purpose of a lock.
+        if(sensorState && !status) {
+            performAction();
+        }
+    } else {
+        cout << getDeviceType() << " does not have a sensor." << endl;
     }
 }

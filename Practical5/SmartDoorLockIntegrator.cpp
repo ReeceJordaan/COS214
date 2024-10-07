@@ -26,9 +26,13 @@ string SmartDoorLockIntegrator::getDeviceType() {
 }
 
 void SmartDoorLockIntegrator::update() {
-    doorSensorState = doorSensor->getInactivityDetected();
+    if (sensor != nullptr) {
+        sensorState = ((DoorSensor*) sensor)->getInactivityDetected();
 
-    if(doorSensorState && !status) {
-        adaptee->legacyUpdate();
+        if(sensorState && !status) {
+            adaptee->legacyUpdate();
+        }
+    } else {
+        cout << adaptee->getLegacyDeviceType() << " does not have a sensor." << endl;
     }
 }

@@ -25,9 +25,13 @@ string SmartLightIntegrator::getDeviceType() {
 }
 
 void SmartLightIntegrator::update() {
-    lightSensorState = lightSensor->getMotionDetected();
+    if (sensor != nullptr) {
+        sensorState = ((LightSensor*) sensor)->getMotionDetected();
 
-    if((lightSensorState && !status) || (!lightSensorState && status)) {
-        adaptee->legacyUpdate();
+        if((sensorState && !status) || (!sensorState && status)) {
+            adaptee->legacyUpdate();
+        }
+    } else {
+        cout << adaptee->getLegacyDeviceType() << " does not have a sensor." << endl;
     }
 }

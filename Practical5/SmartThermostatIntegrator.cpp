@@ -25,10 +25,14 @@ string SmartThermostatIntegrator::getDeviceType() {
 }
 
 void SmartThermostatIntegrator::update() {
-    thermostatSensorState = thermostatSensor->getThresholdReached();
+    if (sensor != nullptr) {
+        sensorState = ((ThermostatSensor*) sensor)->getThresholdReached();
 
-    if((thermostatSensorState && !status) || (!thermostatSensorState && status)) {
-        adaptee->legacyUpdate();
+        if((sensorState && !status) || (!sensorState && status)) {
+            adaptee->legacyUpdate();
+        }
+    } else {
+        cout << adaptee->getLegacyDeviceType() << " does not have a sensor." << endl;
     }
 }
 

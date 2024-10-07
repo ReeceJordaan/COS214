@@ -3,6 +3,7 @@
 
 #include "SmartDevice.h"
 #include "LightSensor.h"
+#include "Sensor.h"
 #include <iostream>
 using namespace std;
 
@@ -18,12 +19,6 @@ class Light : public SmartDevice
         virtual string getDeviceType();
         //! Updates lightSensorState and performs an action if necessary.
         virtual void update();
-
-    protected:
-        //! State of the LightSensor that Light is observing.
-        bool lightSensorState;
-        //! Pointer to the LightSensor that Light is observing.
-        LightSensor* lightSensor;
 };
 
 

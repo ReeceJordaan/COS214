@@ -4,13 +4,12 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "SmartDevice.h"
-#include "Sensor.h"
 
 using namespace std;
 
-class SmartDevice
-{
+class Sensor;
+
+class SmartDevice {
     public:
         SmartDevice(bool status);
         virtual ~SmartDevice();
@@ -34,9 +33,16 @@ class SmartDevice
         //! Sets the smart device's status.
         void setStatus(bool status);
 
+        //! Sets the SmartDevice's sensor.
+        virtual void setSensor(Sensor* sensor);
+
     protected:
         //! Status of the smart device eg. On/Off
         bool status;
+        //! State of the Sensor that the SmartDevice is observing.
+        bool sensorState;
+        //! Pointer to the Sensor that the SmartDevice is observing.
+        Sensor* sensor;
 };
 
 #endif

@@ -2,7 +2,10 @@
 #include <iostream>
 using namespace std;
 
-Light::Light(bool status) : SmartDevice(status) {}
+Light::Light(bool status) : SmartDevice(status) {
+    sensorState = false;
+    sensor = nullptr;
+}
 
 Light::~Light() {}
 
@@ -21,9 +24,13 @@ string Light::getDeviceType() {
 }
 
 void Light::update() {
-    lightSensorState = lightSensor->getMotionDetected();
+    if(sensor != nullptr) {
+        sensorState = ((LightSensor*) sensor)->getMotionDetected();
 
-    if((lightSensorState && !status) || (!lightSensorState && status)) {
-        performAction();
+        if((sensorState && !status) || (!sensorState && status)) {
+            performAction();
+        }
+    } else {
+        cout << getDeviceType() << " does not have a sensor." << endl;
     }
 }

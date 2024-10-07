@@ -18,12 +18,6 @@ class DoorLock : public SmartDevice
         virtual string getDeviceType();
         //! Updates doorSensorState and performs an action if necessary.
         virtual void update();
-
-    protected:
-        //! State of the DoorSensor that DoorLock is observing.
-        bool doorSensorState;
-        //! Pointer to the DoorSensor that DoorLock is observing.
-        DoorSensor* doorSensor;
 };
 
 

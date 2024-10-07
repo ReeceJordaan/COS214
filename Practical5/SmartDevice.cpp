@@ -41,3 +41,7 @@ SmartDevice* SmartDevice::getChild(int index) {
         return nullptr;
     }
 }
+
+void SmartDevice::setSensor(Sensor* sensor) {
+    this-> sensor = sensor;
+}

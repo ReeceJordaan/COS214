@@ -6,9 +6,7 @@ using namespace std;
 SmartHomeSystem::SmartHomeSystem(bool status) : SmartDevice(status), devices() {}
 
 SmartHomeSystem::~SmartHomeSystem() {
-    /* for (int i = 0; i < devices.size(); i++) {
-        delete devices[i];
-    } */
+    devices.clear();
 }
 
 void SmartHomeSystem::performAction() {
