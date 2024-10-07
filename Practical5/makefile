@@ -12,3 +12,6 @@ clean:
 
 clear:
 	clear
+
+valgrind: main
+	valgrind --leak-check=full --show-leak-kinds=all ./main
