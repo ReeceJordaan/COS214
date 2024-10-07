@@ -2,20 +2,32 @@
 #include <iostream>
 using namespace std;
 
-LegacyLight::LegacyLight(bool status) : legacyStatus(status), type("Legacy Light") {}
+LegacyLight::LegacyLight(bool status) : legacyStatus(status) {}
 
 LegacyLight::~LegacyLight() {}
 
 void LegacyLight::performLegacyAction() {
-    cout << "Legacy Light performing action..." << endl;
-    legacyStatus = !legacyStatus;
-    cout << "Light is now " << (legacyStatus ? "on" : "off") << endl;
+    if (getLegacyStatus()) {
+        cout << getLegacyDeviceType() << " has been turned off." << endl;
+    } else {
+        cout << getLegacyDeviceType() << " has been turned on." << endl;
+    }
+
+    this->legacyStatus = !legacyStatus;
 }
 
 bool LegacyLight::getLegacyStatus() {
     return legacyStatus;
 }
 
+void LegacyLight::setLegacyStatus(bool status) {
+    this->legacyStatus = status;
+}
+
 string LegacyLight::getLegacyDeviceType() {
-    return type;
+    return "Legacy Light";
+}
+
+void LegacyLight::legacyUpdate() {
+    performLegacyAction();
 }

@@ -2,20 +2,32 @@
 #include <iostream>
 using namespace std;
 
-LegacyDoorLock::LegacyDoorLock(bool status) : legacyStatus(status), type("Legacy DoorLock") {}
+LegacyDoorLock::LegacyDoorLock(bool status) : legacyStatus(status) {}
 
 LegacyDoorLock::~LegacyDoorLock() {}
 
 void LegacyDoorLock::performLegacyAction() {
-    cout << "Legacy DoorLock performing action..." << endl;
-    legacyStatus = !legacyStatus;
-    cout << "DoorLock is now " << (legacyStatus ? "on" : "off") << endl;
+    if (getLegacyStatus()) {
+        cout << getLegacyDeviceType() << " has been unlocked." << endl;
+    } else {
+        cout << getLegacyDeviceType() << " has been locked." << endl;
+    }
+
+    this->legacyStatus = !legacyStatus;
 }
 
 bool LegacyDoorLock::getLegacyStatus() {
     return legacyStatus;
 }
 
+void LegacyDoorLock::setLegacyStatus(bool status) {
+this->legacyStatus = status;
+}
+
 string LegacyDoorLock::getLegacyDeviceType() {
-    return type;
+    return "Legacy Door Lock";
+}
+
+void LegacyDoorLock::legacyUpdate() {
+    performLegacyAction();
 }

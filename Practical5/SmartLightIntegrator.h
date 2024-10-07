@@ -12,11 +12,13 @@ class SmartLightIntegrator : public Light
 {
     public:
         SmartLightIntegrator(LegacyLight* legacyLight);
-        virtual ~SmartLightIntegrator();
+        ~SmartLightIntegrator();
 
         void performAction();
         bool getStatus();
+        void setStatus(bool status);
         string getDeviceType();
+        void update();
 
     private:
         LegacyLight* adaptee;

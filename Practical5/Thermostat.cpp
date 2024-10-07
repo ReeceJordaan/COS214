@@ -44,4 +44,5 @@ int Thermostat::getTemperature() {
 
 void Thermostat::setTemperature(int temp) {
     this->temperature = temp;
+    cout << "Thermostat temperature set to " << temperature << "°C." << endl;
 }

@@ -3,7 +3,6 @@
 
 #include <string>
 #include <iostream>
-//#include "SmartDevice.h"
 
 using namespace std;
 
@@ -11,18 +10,20 @@ class LegacyThermostat
 {
     public:
         LegacyThermostat(bool status, int temperature);
-        virtual ~LegacyThermostat();
+        ~LegacyThermostat();
 
         void performLegacyAction();
         bool getLegacyStatus();
+        void setLegacyStatus(bool status);
         string getLegacyDeviceType();
+        void legacyUpdate();
+
         void setLegacyTemperature(int temp);
         int getLegacyTemperature();
 
     private:
         int temperature;
         bool legacyStatus;
-        string type;
 };
 
 #endif

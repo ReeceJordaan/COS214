@@ -19,7 +19,7 @@ class Light : public SmartDevice
         //! Updates lightSensorState and performs an action if necessary.
         virtual void update();
 
-    private:
+    protected:
         //! State of the LightSensor that Light is observing.
         bool lightSensorState;
         //! Pointer to the LightSensor that Light is observing.

@@ -12,11 +12,13 @@ class SmartDoorLockIntegrator : public DoorLock
 {
     public:
         SmartDoorLockIntegrator(LegacyDoorLock* legacyDoorLock);
-        virtual ~SmartDoorLockIntegrator();
+        ~SmartDoorLockIntegrator();
 
         void performAction();
         bool getStatus();
+        void setStatus(bool status);
         string getDeviceType();
+        void update();
 
     private:
         LegacyDoorLock* adaptee;

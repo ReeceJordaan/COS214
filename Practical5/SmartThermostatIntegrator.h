@@ -12,11 +12,13 @@ class SmartThermostatIntegrator : public Thermostat
 {
     public:
         SmartThermostatIntegrator(LegacyThermostat* legacyThermostat);
-        virtual ~SmartThermostatIntegrator();
+        ~SmartThermostatIntegrator();
 
         void performAction();
         bool getStatus();
+        void setStatus(bool status);
         string getDeviceType();
+        void update();
         
         void setTemperature(int temperature);
         int getTemperature();

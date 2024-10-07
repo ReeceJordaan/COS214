@@ -3,7 +3,6 @@
 
 #include <string>
 #include <iostream>
-//#include "SmartDevice.h"
 
 using namespace std;
 
@@ -11,15 +10,16 @@ class LegacyLight
 {
     public:
         LegacyLight(bool status);
-        virtual ~LegacyLight();
+        ~LegacyLight();
 
         void performLegacyAction();
         bool getLegacyStatus();
+        void setLegacyStatus(bool status);
         string getLegacyDeviceType();
+        void legacyUpdate();
 
     private:
         bool legacyStatus;
-        string type;
 };
 
 #endif

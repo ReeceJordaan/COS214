@@ -5,7 +5,7 @@
 using namespace std;
 
 SmartDoorLockIntegrator::SmartDoorLockIntegrator(LegacyDoorLock* legacyDoorLock)
-    : DoorLock("Legacy DoorLock", true), adaptee(legacyDoorLock) {}
+    : DoorLock(true), adaptee(legacyDoorLock) {}
 
 SmartDoorLockIntegrator::~SmartDoorLockIntegrator() {}
 
@@ -17,6 +17,18 @@ bool SmartDoorLockIntegrator::getStatus() {
     return adaptee->getLegacyStatus();
 }
 
+void SmartDoorLockIntegrator::setStatus(bool status) {
+    adaptee->setLegacyStatus(status);
+}
+
 string SmartDoorLockIntegrator::getDeviceType() {
     return adaptee->getLegacyDeviceType();
+}
+
+void SmartDoorLockIntegrator::update() {
+    doorSensorState = doorSensor->getInactivityDetected();
+
+    if(doorSensorState && !status) {
+        adaptee->legacyUpdate();
+    }
 }
