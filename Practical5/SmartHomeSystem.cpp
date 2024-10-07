@@ -48,8 +48,8 @@ void SmartHomeSystem::add(SmartDevice* device) {
 void SmartHomeSystem::remove(SmartDevice* device) {
     for (int i = 0; i < devices.size(); i++) {
         if (devices[i] == device) {
-            devices.erase(devices.begin() + i);
             cout << devices[i]->getDeviceType() << " removed from the Smart Home System." << std::endl;
+            devices.erase(devices.begin() + i);
             return;
         }
     }

@@ -9,6 +9,12 @@
 #include "LightSensor.h"
 #include "DoorSensor.h"
 #include "ThermostatSensor.h"
+#include "LegacyLight.h"
+#include "SmartLightIntegrator.h"
+#include "LegacyDoorLock.h"
+#include "SmartDoorLockIntegrator.h"
+#include "LegacyThermostat.h"
+#include "SmartThermostatIntegrator.h"
 
 static void CompositeTest();
 static void CommandTest();
@@ -19,7 +25,7 @@ int main() {
     CompositeTest();
     CommandTest();
     ObserverTest();
-    //AdapterTest();
+    AdapterTest();
 }
 
 static void CompositeTest() {
@@ -34,10 +40,10 @@ static void CompositeTest() {
 
     
     light1.performAction();
-    std::cout << "Object 'light1': " << light1.getDeviceType() << "'s status is \t" << (light1.getStatus() == 0 ? "OFF" : "ON") << "\t before any action has been performed.\n" << std::endl;
+    std::cout << "Object 'light1': " << light1.getDeviceType() << "'s status is \t" << (light1.getStatus() == 0 ? "OFF" : "ON") << "\t after an action has been performed.\n" << std::endl;
 
     light1.performAction();
-    std::cout << "Object 'light1': " << light1.getDeviceType() << "'s status is \t" << (light1.getStatus() == 0 ? "OFF" : "ON") << "\t before any action has been performed.\n" << std::endl;
+    std::cout << "Object 'light1': " << light1.getDeviceType() << "'s status is \t" << (light1.getStatus() == 0 ? "OFF" : "ON") << "\t after an action has been performed.\n" << std::endl;
 
     std::cout << "======================================== Testing DoorLocks (Leaf) ========================================\n" << std::endl;
     
@@ -47,10 +53,10 @@ static void CompositeTest() {
     std::cout << "Object 'doorLock1': " << doorLock1.getDeviceType() << "'s status is \t" << (doorLock1.getStatus() == 0 ? "UNLOCKED" : "LOCKED") << "\t before any action has been performed.\n" << std::endl;
     
     doorLock1.performAction();
-    std::cout << "Object 'doorLock1': " << doorLock1.getDeviceType() << "'s status is \t" << (doorLock1.getStatus() == 0 ? "UNLOCKED" : "LOCKED") << "\t\t before any action has been performed.\n" << std::endl;
+    std::cout << "Object 'doorLock1': " << doorLock1.getDeviceType() << "'s status is \t" << (doorLock1.getStatus() == 0 ? "UNLOCKED" : "LOCKED") << "\t\t after an action has been performed.\n" << std::endl;
 
     doorLock1.performAction();
-    std::cout << "Object 'doorLock1': " << doorLock1.getDeviceType() << "'s status is \t" << (doorLock1.getStatus() == 0 ? "UNLOCKED" : "LOCKED") << "\t before any action has been performed.\n" << std::endl;
+    std::cout << "Object 'doorLock1': " << doorLock1.getDeviceType() << "'s status is \t" << (doorLock1.getStatus() == 0 ? "UNLOCKED" : "LOCKED") << "\t after an action has been performed.\n" << std::endl;
 
     std::cout << "======================================== Testing Thermostat (Leaf) ========================================\n" << std::endl;
 
@@ -59,10 +65,10 @@ static void CompositeTest() {
     std::cout << "Object 'thermostat': " << thermostat.getDeviceType() << "'s status is \t" << (thermostat.getStatus() == 0 ? "OFF" : "ON") << "\t before any action has been performed.\n" << std::endl;
     
     thermostat.performAction();
-    std::cout << "Object 'thermostat': " << thermostat.getDeviceType() << "'s status is \t" << (thermostat.getStatus() == 0 ? "OFF" : "ON") << "\t before any action has been performed.\n" << std::endl;
+    std::cout << "Object 'thermostat': " << thermostat.getDeviceType() << "'s status is \t" << (thermostat.getStatus() == 0 ? "OFF" : "ON") << "\t after an action has been performed.\n" << std::endl;
 
     thermostat.performAction();
-    std::cout << "Object 'thermostat': " << thermostat.getDeviceType() << "'s status is \t" << (thermostat.getStatus() == 0 ? "OFF" : "ON") << "\t before any action has been performed.\n" << std::endl;
+    std::cout << "Object 'thermostat': " << thermostat.getDeviceType() << "'s status is \t" << (thermostat.getStatus() == 0 ? "OFF" : "ON") << "\t after an action has been performed.\n" << std::endl;
 
     std::cout << "======================================== Testing Smart Home System (Composite) ========================================\n" << std::endl;
 
@@ -232,5 +238,79 @@ static void ObserverTest() {
 }
 
 static void AdapterTest() {
+    std::cout << "\n======================================== Testing Light Adapter ========================================\n" << std::endl;
 
+    LegacyLight legacyLight = LegacyLight(false);
+    SmartLightIntegrator lightIntegrator = SmartLightIntegrator(&legacyLight);
+
+    std::cout << lightIntegrator.getDeviceType() << "'s status is \t" << (lightIntegrator.getStatus() == 0 ? "OFF" : "ON") << "\t before any action has been performed.\n" << std::endl;
+
+    lightIntegrator.performAction();
+    std::cout << lightIntegrator.getDeviceType() << "'s status is \t" << (lightIntegrator.getStatus() == 0 ? "OFF" : "ON") << "\t after an action has been performed.\n" << std::endl;
+
+    lightIntegrator.performAction();
+    std::cout << lightIntegrator.getDeviceType() << "'s status is \t" << (lightIntegrator.getStatus() == 0 ? "OFF" : "ON") << "\t after an action has been performed.\n" << std::endl;
+
+    std::cout << "\n======================================== Testing DoorLock Adapter ========================================\n" << std::endl;
+
+    LegacyDoorLock legacyDoorLock = LegacyDoorLock(false);
+    SmartDoorLockIntegrator doorLockIntegrator = SmartDoorLockIntegrator(&legacyDoorLock);
+
+    std::cout << doorLockIntegrator.getDeviceType() << "'s status is \t" << (doorLockIntegrator.getStatus() == 0 ? "UNLOCKED" : "LOCKED") << "\t before any action has been performed.\n" << std::endl;
+
+    doorLockIntegrator.performAction();
+    std::cout << doorLockIntegrator.getDeviceType() << "'s status is \t" << (doorLockIntegrator.getStatus() == 0 ? "UNLOCKED" : "LOCKED") << "\t after an action has been performed.\n" << std::endl;
+
+    doorLockIntegrator.performAction();
+    std::cout << doorLockIntegrator.getDeviceType() << "'s status is \t" << (doorLockIntegrator.getStatus() == 0 ? "UNLOCKED" : "LOCKED") << "\t after an action has been performed.\n" << std::endl;
+
+    std::cout << "\n======================================== Testing Thermostat Adapter ========================================\n" << std::endl;
+
+    LegacyThermostat legacyThermostat = LegacyThermostat(false, 25);
+    SmartThermostatIntegrator thermostatIntegrator = SmartThermostatIntegrator(&legacyThermostat);
+
+    std::cout << thermostatIntegrator.getDeviceType() << "'s status is \t" << (thermostatIntegrator.getStatus() == 0 ? "OFF" : "ON") << "\t before any action has been performed.\n" << std::endl;
+
+    thermostatIntegrator.performAction();
+    std::cout << thermostatIntegrator.getDeviceType() << "'s status is \t" << (thermostatIntegrator.getStatus() == 0 ? "OFF" : "ON") << "\t after an action has been performed.\n" << std::endl;
+
+    thermostatIntegrator.performAction();
+    std::cout << thermostatIntegrator.getDeviceType() << "'s status is \t" << (thermostatIntegrator.getStatus() == 0 ? "OFF" : "ON") << "\t after an action has been performed.\n" << std::endl;
+
+    std::cout << "\n======================================== Testing Composite with Adapter ========================================\n" << std::endl;
+
+    SmartHomeSystem smartHome = SmartHomeSystem(false);
+
+    std::cout << "Adding adapted legacy devices to the smart home system...\n\n" << std::endl;
+
+    smartHome.add(&lightIntegrator);
+    smartHome.add(&doorLockIntegrator);
+    smartHome.add(&thermostatIntegrator);
+
+    std::cout << smartHome.getDeviceType();
+    std::cout << std::endl << std::endl;
+
+    smartHome.getStatus(); // Expected: all devices are off/unlocked
+    std::cout << std::endl << std::endl;
+    
+    smartHome.performAction(); 
+    std::cout << std::endl;
+    smartHome.getStatus(); // Expected: all devices are on/locked
+    std::cout << std::endl << std::endl; 
+
+    smartHome.performAction();
+    std::cout << std::endl;
+    smartHome.getStatus(); // Expected: all devices are off/unlocked
+    std::cout << std::endl << std::endl;
+
+    std::cout << "Removing a device from the smart home system...\n" << std::endl;
+    smartHome.remove(&doorLockIntegrator);
+    std::cout << std::endl;
+
+    std::cout << "Checking child devices of the smart home system..." << std::endl;
+    std::cout << "The 1st item in the smart home system is a " << smartHome.getChild(0)->getDeviceType() << std::endl;
+    std::cout << "The 2st item in the smart home system is a " << smartHome.getChild(1)->getDeviceType() << std::endl;
+    std::cout << std::endl;
+
+    std::cout << smartHome.getDeviceType();
 }

@@ -105,17 +105,21 @@ class SmartDevice {
          * 
          * @return A boolean representing the smart device's status (true for on, false for off).
          */
-        bool getStatus();
+        virtual bool getStatus();
 
         /**
          * @brief Sets the status of the smart device.
          * 
          * @param status A boolean indicating the new status of the smart device.
          */
-        void setStatus(bool status);
+        virtual void setStatus(bool status);
 
-        //! Sets the SmartDevice's sensor.
-        virtual void setSensor(Sensor* sensor);
+        /**
+         * @brief Sets the SmartDevice's sensor.
+         * 
+         * @param sensor A Sensor which is observed by the SmartDevice.
+         */
+        void setSensor(Sensor* sensor);
 
     protected:
         /**
