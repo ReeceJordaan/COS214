@@ -1,14 +1,16 @@
 #include "LightSensor.h"
 #include "SmartDevice.h"
 
-LightSensor::LightSensor() {}
+LightSensor::LightSensor() {
+    motionDetected = false;
+}
 
 LightSensor::~LightSensor() {}
 
-void LightSensor::notifyDevices() {
-    cout << "Light detected. Notifying all connected devices." << endl;
-    
-    for (vector<SmartDevice*>::iterator it = sensorList.begin(); it != sensorList.end(); ++it) {
-        (*it)->update();
-    }
+bool LightSensor::getMotionDetected() {
+    return motionDetected;
+}
+
+void LightSensor::setMotionDetected(bool motionDetected) {
+    this->motionDetected = motionDetected;
 }

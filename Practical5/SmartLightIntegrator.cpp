@@ -5,7 +5,7 @@
 using namespace std;
 
 SmartLightIntegrator::SmartLightIntegrator(LegacyLight* legacyLight)
-    : Light("Legacy Light", true), adaptee(legacyLight) {}
+    : Light(legacyLight->getLegacyStatus()), adaptee(legacyLight) {}
 
 SmartLightIntegrator::~SmartLightIntegrator() {}
 

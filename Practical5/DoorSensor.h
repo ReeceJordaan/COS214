@@ -7,13 +7,19 @@
 
 using namespace std;
 
-class DoorSensor : Sensor
-{
+class DoorSensor : public Sensor {
     public:
         DoorSensor();
         virtual ~DoorSensor();
 
-        void notifyDevices(); 
+        //! Returns the value of inactivityDetected.
+        bool getInactivityDetected();
+        //! Sets the value of inactivityDetected.
+        void setInactivityDetected(bool inactivityDetected);
+
+    private:
+        //! Stores the current state of the sensor.
+        bool inactivityDetected;
 };
 
 #endif

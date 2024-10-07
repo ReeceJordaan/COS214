@@ -1,13 +1,16 @@
 #include "DoorSensor.h"
 #include "SmartDevice.h"
 
-DoorSensor::DoorSensor() {}
+DoorSensor::DoorSensor() {
+    inactivityDetected = false;
+}
 
 DoorSensor::~DoorSensor() {}
 
-void DoorSensor::notifyDevices() {
-    cout << "Door sensor triggered. Notifying all connected devices." << endl;
-    for (vector<SmartDevice*>::iterator it = sensorList.begin(); it != sensorList.end(); ++it) {
-        (*it)->update();
-    }
+bool DoorSensor::getInactivityDetected() {
+    return inactivityDetected;
+}
+
+void DoorSensor::setInactivityDetected(bool inactivityDetected) {
+    this->inactivityDetected = inactivityDetected;
 }

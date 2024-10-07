@@ -1,4 +1,5 @@
 #include "SmartDevice.h"
+#include "LeafOperationException.h"
 #include <iostream>
 using namespace std;
 
@@ -8,36 +9,35 @@ SmartDevice::SmartDevice(bool status) {
 
 SmartDevice::~SmartDevice() {}
 
-
-
-void SmartDevice::add(SmartDevice* device) { }
-
-void SmartDevice::remove(SmartDevice* device) { }
-
-SmartDevice* SmartDevice::getChild(int index) { }
-
-
-
-void SmartDevice::addDevice(Sensor* sensor) {
-    sensorList.push_back(sensor);
+bool SmartDevice::getStatus() {
+    return status;
 }
 
-void SmartDevice::removeDevice(Sensor* device) {
-    for (int i = 0; i < sensorList.size(); i++) {
-        if (sensorList[i] == device) {
-            delete sensorList[i];
-            sensorList.erase(sensorList.begin() + i);
-            cout << "Device removed from the Smart Home System." << std::endl;
-            return;
-        }
+void SmartDevice::setStatus(bool status) {
+    this->status = status;
+}
+
+void SmartDevice::add(SmartDevice* device) {
+    try {
+        throw LeafOperationException("Cannot add a device to a leaf node.");
+    } catch (const LeafOperationException& e) {
+        cout << "Error: " << e.what() << endl;
     }
-    cout << "Device not found in the Smart Home System." << std::endl;
 }
 
-Sensor* SmartDevice::getDevice(int index) {
-    if (index >= 0 && index < sensorList.size()) {
-        return sensorList[index];
-    } else {
-        throw out_of_range("Index out of range.");
+void SmartDevice::remove(SmartDevice* device) {
+    try {
+        throw LeafOperationException("Cannot remove a device from a leaf node.");
+    } catch (const LeafOperationException& e) {
+        cout << "Error: " << e.what() << endl;
+    }
+}
+
+SmartDevice* SmartDevice::getChild(int index) {
+    try {
+        throw LeafOperationException("Leaf nodes do not have children.");
+    } catch (const LeafOperationException& e) {
+        cout << "Error: " << e.what() << endl;
+        return nullptr;
     }
 }

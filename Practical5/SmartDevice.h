@@ -15,27 +15,28 @@ class SmartDevice
         SmartDevice(bool status);
         virtual ~SmartDevice();
 
+        //! Device performs an action such as turning on/off or locking/unlocking.
         virtual void performAction() = 0;
-        virtual bool getStatus() = 0;
+        //! Returns the device's type.
         virtual string getDeviceType() = 0;
-
-        // For adding to composite
-        virtual void add(SmartDevice* device);
-        virtual void remove(SmartDevice* device);
-        virtual SmartDevice* getChild(int index);
-
-        // For adding sensors
-        void addDevice(Sensor* device); // = 0;
-        void removeDevice(Sensor* device); // = 0;
-        Sensor* getDevice(int index); // = 0;
-
+        //! Updates the state of the subject that it is observing.
         virtual void update() = 0;
 
-    protected:
-        bool status;
+        //! Adds to the composite.
+        virtual void add(SmartDevice* device);
+        //! Removes from the composite.
+        virtual void remove(SmartDevice* device);
+        //! Returns nth element in the composite.
+        virtual SmartDevice* getChild(int index);
 
-    private:
-        vector<Sensor*> sensorList;
+        //! Returns the smart device's status.
+        bool getStatus();
+        //! Sets the smart device's status.
+        void setStatus(bool status);
+
+    protected:
+        //! Status of the smart device eg. On/Off
+        bool status;
 };
 
 #endif

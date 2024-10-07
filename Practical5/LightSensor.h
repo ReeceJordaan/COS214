@@ -7,13 +7,19 @@
 
 using namespace std;
 
-class LightSensor : Sensor
-{
+class LightSensor : public Sensor {
     public:
         LightSensor();
         virtual ~LightSensor();
 
-        void notifyDevices(); 
+        //! Returns the value of motionDetected.
+        bool getMotionDetected();
+        //! Sets the value of motionDetected.
+        void setMotionDetected(bool motionDetected);
+
+    private:
+        //! Stores the current state of the sensor.
+        bool motionDetected;
 };
 
 #endif

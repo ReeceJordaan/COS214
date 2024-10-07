@@ -12,17 +12,23 @@ SmartHomeSystem::~SmartHomeSystem() {
 }
 
 void SmartHomeSystem::performAction() {
-    cout << "Performing action for all devices in the " << getDeviceType() << endl;
+    status = !status;
+    cout << "Switching all devices in the Smart Home System to the " << (status == 0 ? "OFF/UNLOCKED" : "ON/LOCKED") << " state." << endl;
+
     for (int i = 0; i < devices.size(); i++) {
-        devices[i]->performAction();
+        if(devices[i]->getStatus() != status) {
+            devices[i]->performAction();
+        }
     }
 }
 
 bool SmartHomeSystem::getStatus() {
     cout << "Getting status of all devices in " << getDeviceType() << endl;
+
     for (int i = 0; i < devices.size(); i++) {
         cout << devices[i]->getDeviceType() << ": " << devices[i]->getStatus() << endl;
     }
+
     return status;  // returns overall status
 }
 
@@ -37,9 +43,8 @@ void SmartHomeSystem::add(SmartDevice* device) {
 void SmartHomeSystem::remove(SmartDevice* device) {
     for (int i = 0; i < devices.size(); i++) {
         if (devices[i] == device) {
-            delete devices[i];
             devices.erase(devices.begin() + i);
-            cout << "Device removed from the Smart Home System." << std::endl;
+            cout << devices[i]->getDeviceType() << " removed from the Smart Home System." << std::endl;
             return;
         }
     }
@@ -54,6 +59,6 @@ SmartDevice* SmartHomeSystem::getChild(int index) {
     }
 }
 
-void update() {
+void SmartHomeSystem::update() {
     std::cout << "Smart Home System update()" << std::endl;
 }
