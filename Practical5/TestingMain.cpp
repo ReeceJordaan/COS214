@@ -313,4 +313,34 @@ static void AdapterTest() {
     std::cout << std::endl;
 
     std::cout << smartHome.getDeviceType();
+
+    std::cout << "\n======================================== Testing Observer with Adapter ========================================\n" << std::endl;
+
+    lightIntegrator.update();
+    doorLockIntegrator.update();
+    thermostatIntegrator.update();
+    std::cout << std::endl;
+
+    LightSensor lightSensor = LightSensor();
+    DoorSensor doorSensor = DoorSensor();
+    ThermostatSensor thermostatSensor = ThermostatSensor();
+
+    lightSensor.addDevice(&lightIntegrator);
+    doorSensor.addDevice(&doorLockIntegrator);
+    thermostatSensor.addDevice(&thermostatIntegrator);
+
+    lightSensor.setMotionDetected(true);
+    doorSensor.setInactivityDetected(true);
+    thermostatSensor.setThresholdReached(true);
+
+    lightIntegrator.setStatus(false);
+    doorLockIntegrator.setStatus(false);
+    thermostatIntegrator.setStatus(false);
+
+    lightSensor.notifyDevices();
+    std::cout << std::endl;
+    doorSensor.notifyDevices();
+    std::cout << std::endl;
+    thermostatSensor.notifyDevices();
+    std::cout << std::endl;
 }

@@ -28,7 +28,7 @@ void SmartThermostatIntegrator::update() {
     if (sensor != nullptr) {
         sensorState = ((ThermostatSensor*) sensor)->getThresholdReached();
 
-        if((sensorState && !status) || (!sensorState && status)) {
+        if((sensorState && !getStatus()) || (!sensorState && getStatus())) {
             adaptee->legacyUpdate();
         }
     } else {

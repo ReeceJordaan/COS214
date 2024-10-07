@@ -28,7 +28,7 @@ void SmartLightIntegrator::update() {
     if (sensor != nullptr) {
         sensorState = ((LightSensor*) sensor)->getMotionDetected();
 
-        if((sensorState && !status) || (!sensorState && status)) {
+        if((sensorState && !getStatus()) || (!sensorState && getStatus())) {
             adaptee->legacyUpdate();
         }
     } else {

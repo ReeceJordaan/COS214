@@ -21,7 +21,7 @@ bool LegacyDoorLock::getLegacyStatus() {
 }
 
 void LegacyDoorLock::setLegacyStatus(bool status) {
-this->legacyStatus = status;
+    this->legacyStatus = status;
 }
 
 string LegacyDoorLock::getLegacyDeviceType() {

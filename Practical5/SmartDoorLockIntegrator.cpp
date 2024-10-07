@@ -29,7 +29,7 @@ void SmartDoorLockIntegrator::update() {
     if (sensor != nullptr) {
         sensorState = ((DoorSensor*) sensor)->getInactivityDetected();
 
-        if(sensorState && !status) {
+        if(sensorState && !getStatus()) {
             adaptee->legacyUpdate();
         }
     } else {
