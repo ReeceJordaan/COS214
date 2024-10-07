@@ -11,15 +11,15 @@
 #include "ThermostatSensor.h"
 
 static void CompositeTest();
-static void AdapterTest();
 static void CommandTest();
 static void ObserverTest();
+static void AdapterTest();
 
 int main() {
     CompositeTest();
-    //AdapterTest();
-    //CommandTest();
+    CommandTest();
     ObserverTest();
+    //AdapterTest();
 }
 
 static void CompositeTest() {
@@ -112,6 +112,56 @@ static void CompositeTest() {
     std::cout << smartHome.getDeviceType();
 }
 
+static void CommandTest() {
+    std::cout << "======================================== Testing TurnOffLights, LockDoors and SetTemperature commands ========================================\n" << std::endl;
+
+    // Scenario: 4 Lights, all ON. 2 DoorLocks, UNLOCKED. 1 Thermostat, OFF.
+    Light light1 = Light(true);
+    Light light2 = Light(true);
+    Light light3 = Light(true);
+    Light light4 = Light(true);
+    DoorLock doorLock1 = DoorLock(false);
+    DoorLock doorLock2 = DoorLock(false);
+    Thermostat thermostat = Thermostat(false);
+
+    TurnOffLightsCommand lightCommand1 = TurnOffLightsCommand(&light1);
+    TurnOffLightsCommand lightCommand2 = TurnOffLightsCommand(&light2);
+    TurnOffLightsCommand lightCommand3 = TurnOffLightsCommand(&light3);
+    TurnOffLightsCommand lightCommand4 = TurnOffLightsCommand(&light4);
+    LockDoorsCommand doorCommand1 = LockDoorsCommand(&doorLock1);
+    LockDoorsCommand doorCommand2 = LockDoorsCommand(&doorLock2);
+    SetTemperatureCommand temperatureCommand = SetTemperatureCommand(&thermostat);
+
+    MacroRoutine nightRoutine = MacroRoutine();
+    nightRoutine.AddProcedure(&lightCommand1);
+    nightRoutine.AddProcedure(&lightCommand2);
+    nightRoutine.AddProcedure(&lightCommand3);
+    nightRoutine.AddProcedure(&lightCommand4);
+    nightRoutine.AddProcedure(&doorCommand1);
+    nightRoutine.AddProcedure(&doorCommand2);
+    nightRoutine.AddProcedure(&temperatureCommand);
+
+    std::cout << "Executing night time routine. Good night!\n" << std::endl;
+    nightRoutine.execute();
+
+    std::cout << "\nRemoving some commands from night time routine.\n" << std::endl;
+    nightRoutine.RemoveProcedure(&lightCommand3);
+    nightRoutine.RemoveProcedure(&lightCommand4);
+    nightRoutine.RemoveProcedure(&doorCommand2);
+
+    // Resetting devices
+    light1.setStatus(true);
+    light2.setStatus(true);
+    light3.setStatus(true);
+    light4.setStatus(true);
+    doorLock1.setStatus(false);
+    doorLock2.setStatus(false);
+    thermostat.setStatus(false);
+
+    std::cout << "Executing smaller night time routine. Good night!\n" << std::endl;
+    nightRoutine.execute();
+}
+
 static void ObserverTest() {
     std::cout << "\n======================================== Testing LightSensor ========================================\n" << std::endl;
 
@@ -179,6 +229,8 @@ static void ObserverTest() {
     std::cout << "\nThe ThermostatSensor reaches an acceptable temperature and it's state is updated...\n" << std::endl;
     thermostatSensor.setThresholdReached(false); // Simulate thermostat turning off automatically when a certain temperature is reached.
     thermostatSensor.notifyDevices();
+}
 
+static void AdapterTest() {
 
 }
