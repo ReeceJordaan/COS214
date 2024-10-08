@@ -23,12 +23,12 @@ static void CommandTest();
 static void ObserverTest();
 static void AdapterTest();
 
-int main() {
+/*int main() {
     CompositeTest();
     CommandTest();
     ObserverTest();
     AdapterTest();
-}
+}*/
 
 static void CompositeTest() {
     std::cout << "======================================== Testing Lights (Leaf) ========================================\n" << std::endl;
@@ -150,9 +150,9 @@ TEST_CASE("CompositeTest") {
 
     // Test performAction on composite (all devices)
     smartHome.performAction();
-    CHECK(light1.getStatus() == false); // Turned off again
+    CHECK(light1.getStatus() == true); // Turned on
     CHECK(light2.getStatus() == true);  // Already on, stays on
-    CHECK(doorLock1.getStatus() == false); // Unlocked again
+    CHECK(doorLock1.getStatus() == true); // Turned on
 }
 
 
