@@ -1,3 +1,5 @@
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
 #include "Light.h"
 #include "DoorLock.h"
 #include "Thermostat.h"
@@ -118,6 +120,42 @@ static void CompositeTest() {
     std::cout << smartHome.getDeviceType();
 }
 
+TEST_CASE("CompositeTest") {
+    Light light1(false);
+    Light light2(false);
+    Light light3(false);
+    Light light4(false);
+
+    CHECK(light1.getStatus() == false); // Initially off
+    light1.performAction();
+    CHECK(light1.getStatus() == true);  // Turned on after action
+
+    DoorLock doorLock1(false);
+    CHECK(doorLock1.getStatus() == false); // Initially unlocked
+    doorLock1.performAction();
+    CHECK(doorLock1.getStatus() == true);  // Locked after action
+
+    Thermostat thermostat(false);
+    CHECK(thermostat.getStatus() == false); // Initially off
+    thermostat.performAction();
+    CHECK(thermostat.getStatus() == true);  // Turned on after action
+
+    SmartHomeSystem smartHome(false);
+    smartHome.add(&light1);
+    smartHome.add(&light2);
+    smartHome.add(&light3);
+    smartHome.add(&light4);
+    smartHome.add(&doorLock1);
+    smartHome.add(&thermostat);
+
+    // Test performAction on composite (all devices)
+    smartHome.performAction();
+    CHECK(light1.getStatus() == false); // Turned off again
+    CHECK(light2.getStatus() == true);  // Already on, stays on
+    CHECK(doorLock1.getStatus() == false); // Unlocked again
+}
+
+
 static void CommandTest() {
     std::cout << "======================================== Testing TurnOffLights, LockDoors and SetTemperature commands ========================================\n" << std::endl;
 
@@ -167,6 +205,36 @@ static void CommandTest() {
     std::cout << "Executing smaller night time routine. Good night!\n" << std::endl;
     nightRoutine.execute();
 }
+
+TEST_CASE("CommandTest") {
+    Light light1(true);
+    DoorLock doorLock1(false);
+    Thermostat thermostat(false);
+
+    TurnOffLightsCommand turnOffCommand(&light1);
+    turnOffCommand.execute();
+    CHECK(light1.getStatus() == false); // Light should be off after command
+
+    LockDoorsCommand lockCommand(&doorLock1);
+    lockCommand.execute();
+    CHECK(doorLock1.getStatus() == true); // Door should be locked after command
+
+    SetTemperatureCommand tempCommand(&thermostat);
+    tempCommand.execute();
+    CHECK(thermostat.getStatus() == true); // Thermostat should be on after command
+
+    // Test MacroRoutine
+    MacroRoutine routine;
+    routine.AddProcedure(&turnOffCommand);
+    routine.AddProcedure(&lockCommand);
+    routine.AddProcedure(&tempCommand);
+    routine.execute();
+
+    CHECK(light1.getStatus() == false);
+    CHECK(doorLock1.getStatus() == true);
+    CHECK(thermostat.getStatus() == true);
+}
+
 
 static void ObserverTest() {
     std::cout << "\n======================================== Testing LightSensor ========================================\n" << std::endl;
@@ -235,6 +303,31 @@ static void ObserverTest() {
     std::cout << "\nThe ThermostatSensor reaches an acceptable temperature and it's state is updated...\n" << std::endl;
     thermostatSensor.setThresholdReached(false); // Simulate thermostat turning off automatically when a certain temperature is reached.
     thermostatSensor.notifyDevices();
+}
+
+TEST_CASE("ObserverTest") {
+    Light light1(false);
+    Light light2(false);
+    LightSensor lightSensor;
+    lightSensor.addDevice(&light1);
+    lightSensor.addDevice(&light2);
+
+    lightSensor.setMotionDetected(true);
+    lightSensor.notifyDevices();
+    CHECK(light1.getStatus() == true); // Light should be on when motion is detected
+    CHECK(light2.getStatus() == true);
+
+    lightSensor.setMotionDetected(false);
+    lightSensor.notifyDevices();
+    CHECK(light1.getStatus() == false); // Light should be off when no motion is detected
+    CHECK(light2.getStatus() == false);
+
+    DoorLock doorLock1(false);
+    DoorSensor doorSensor;
+    doorSensor.addDevice(&doorLock1);
+    doorSensor.setInactivityDetected(true);
+    doorSensor.notifyDevices();
+    CHECK(doorLock1.getStatus() == true); // Door should be locked after inactivity
 }
 
 static void AdapterTest() {
@@ -343,4 +436,25 @@ static void AdapterTest() {
     std::cout << std::endl;
     thermostatSensor.notifyDevices();
     std::cout << std::endl;
+}
+
+TEST_CASE("AdapterTest") {
+    LegacyLight legacyLight(false);
+    SmartLightIntegrator smartLight(&legacyLight);
+
+    CHECK(smartLight.getStatus() == false); // Initially off
+    smartLight.performAction();
+    CHECK(smartLight.getStatus() == true);  // Turned on after action
+
+    LegacyDoorLock legacyDoorLock(false);
+    SmartDoorLockIntegrator smartDoorLock(&legacyDoorLock);
+    CHECK(smartDoorLock.getStatus() == false); // Initially unlocked
+    smartDoorLock.performAction();
+    CHECK(smartDoorLock.getStatus() == true);  // Locked after action
+
+    LegacyThermostat legacyThermostat(false, 25);
+    SmartThermostatIntegrator smartThermostat(&legacyThermostat);
+    CHECK(smartThermostat.getStatus() == false); // Initially off
+    smartThermostat.performAction();
+    CHECK(smartThermostat.getStatus() == true);  // Turned on after action
 }
